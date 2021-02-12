@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+
+<h3>Could we build a super computer out of wires and switches instead of a microchip?</h3>
+
+<p>This is an important question of parallelizability. Can you write any program with a distributed computer composed of switches and wires, as you say, that is efficient, that gets the same type of computation done as a microprocessor computer, with cache and memory.</p>
+
+<p>The first point is that Turing universality guarantees that nearly any nontrivial system that can store data in nonlinear switches and make other switches flip based on the contents, can be capable of universal computation with an appropriate initial state and appropriately adjusted switch interactions. For example, just by wiring the switches and wires to play Conway's game of life, or Wolfram and Cook's cellular automaton 110, you get a full computer. This part is easy, and it isn't your question. Your question is about efficiency.</p>
+
+<p>These computers have a bit-capacity which is roughly equal to the number of switches, give or take a factor of 2. This means that to get a supercomputer's worth of data, 10^12 bits (100 Gigs), you need a million by million square of switches. This gives you an idea of the scale. You can do it in a 10,000 cube, again, this would be enormous with ordinary size switches. You didn't specify the size of the switches, but if even if they are a mm across, you need a 10m cube. If they are neurons, you can pack approximately this many neurons in 10cm cube, and this is a human brain.</p>
+
+<p>Your question is therefore one that is relevant in biology, because it is asking whether the neurons in a brain can function as a wire and switch computer, toggling other neurons. Nearly all current models of brain functions postulate that this is the way the brain works. This idea is the neural net model, related to Hopfield nets, which are a variation on the long-range random-coupling Ising model. In this model, the working memory at any one instant in the brain is contained in the pattern of firing and non-firing neurons, and the computation is performed by toggling the firing/non-firing state of other neurons in response.</p>
+
+<p>This idea gives a bit-capacity of the RAM in the head roughly equal to the number of neurons, and a processing rate which is about 1 step per millisecond, distributed, meaning each neuron is computing independently of any other. This is the typical computational density in the brain in normal models of brain function. This working bit capacity is a hard wall, it is only modified in superficial way by neuron potentiation.</p>
+
+<h3>Neural nets are too slow</h3>
+
+<p>The neural net model, while fine in terms of the computational ideas, is clearly wrong from immediate experience with brains. I must pause here to say that neuroscientists by and large do not agree, and many of them believe that neurons strictly do a net computation still, although this opinion is likely changing, because it is obviously false.</p>
+
+<p>The first observation is that the memory capacity of the brain is extraordinarily limited, in both time and memory. For exmaple, if I glance at a street, and I see a car, it takes about 1/10th of a second for the visual processing to complete, and for me to identify the car. In that process, there are only <em>100 cycles</em> of neural activity possible, in other words, the neurons can only fire 100 times. Each neuron holding a bit, even with the most efficient computation you can imagine, there is <em>absolutely no way</em> that you will identify the car and recall properties of cars, like "driving, there is a wheel, on the road, right side up" and all the innumerable little dormant things, from a trillion bits in 100 steps of a millisecond.</p>
+
+<p>What you <em>can</em> do in this time is produce a unique pattern of firing that serves to uniquely identify the observation of a car, and bin the firing into the appropriate bin. This then can be used by <em>something else</em> to do the rest of the computation in thinking.</p>
+
+<p>This is the problem of too-low computational capacity of neural nets. It cannot be improved by making brains bigger, because it is a problem of depth, not of breadth.</p>
+
+<h3>Neural nets forget</h3>
+
+<p>The second problem is that neural nets can't remember anything. Even if at one instant, the net sees the car, it must remember the pattern for the car at subsequent steps. This requires crazy "resonant circuits" which store the computational data. The resonant circuits means that the neurons excite other neurons and so on, in a loop, which stays active when you turn off the stimulus.</p>
+
+<p>The loop idea leads to a serious problem--- neural nets with loops, as they are usually made, are unstable either to runaway activity, or to shutting off. If you activate neurons, and these activate others, the stable state is that all the neurons are either turned on or turned off. In order to get over this, you need a global control on neuron activity, which restricts the number which are turned on, and this global control is difficult to imagine.</p>
+
+<p>In order to get around this, artificial neural nets just forbid loops. They make layers, where each neuron tells the next layer what to do. These layers are also observed in visual cortex, and they exist, but they are clearly impossible for storing memories. This only works for a quick run-through-once neural computation from input to output, not for steady-state thinking in closed loop.</p>
+
+<p>The instability problem has not been satisfactorily adressed, although it is theoretically possible to do so. You can make complicated sum-rules for total firing, and try to get the computation to proceed naturally with these sum rules. But here, it is next to impossible to imagine how these resonant circuits recall distant memories, or do anything more than store the last immediate stimulus for a short time.</p>
+
+<h3>Neural nets are expensive</h3>
+
+<p>Storing and transmitting a bit by making a neuron fire is <em>ridiculously expensive</em> on the biological scale. You need to pump ions to keep the neuron at potential, let these ions leak, and expend a huge amount of energy to pump the ions out at each firing. This requires mountains of ATP per bit, a cellular level of energy usage. The brain is already metabolically expensive, but in terms of energy cost per bit, it's thousands of ATP's per bit per millisecond, because to keep the bit in working memory, it must be kept going in a closed loop of firing. There is no permanent storage in this model which does not require horrendous energy expenditure.</p>
+
+<p>The mechanisms of bit storage in the genetic level are very cheap in comparison. DNA stores lots of memory reliably for years with no energy expenditure. RNA stores memory reliably on the hour time scale, with no energy expenditure, and rewrites and writes are accoplished using only a few ATP per bit, and then only once.</p>
+
+<p>This leads one to expect that the actual memory storage in the brain in intracellular, not cellular, and based on RNA. This idea is not in the recent biology literature. The closest is a paper by John Mattick on RNA in the brain from 2010 or thereabouts.</p>
+
+<h3>Neural nets have no DNA programmable instincts</h3>
+
+<p>If you have RNA as the active component of memory, you can easily understand instinctive knowledge--- things that are not learned, but pre-programmed. In humans, this pre-programmed stuff includes face-recognition, walking, smiling, visual processing, certain language facilities, and a billion other invisible things that direct internal senses and processing.</p>
+
+<p>If you have to encode these computations on the neural network level, you fail, because the neural net is removed by several layers from DNA. The DNA has to make RNA which makes regulatory RNA and proteins, which work to place the neurons, which then do the expensive neuron level switch and wire computation. It is obvious that the layers of translation required reduce the fidelity of the information, so that if there are only a few billion bits in the DNA, only a few kilobytes of instinct would remain. This is insufficient for any reasonable model of biological instinctive behavior.</p>
+
+<p>This is another place where the current model is clearly wrong.</p>
+
+<h3>RNA ticker tape</h3>
+
+<p>It is clear that there is hidden computation internal to the neurons. The source of these computations is almost certainly intracellular RNA, which is the main computational workhorse in the cell.</p>
+
+<p>The RNA in a cell is the only entity which is active and carries significant bit density. It can transform by cutting and splicing, and it can double bind to identify complementary strands. These operations are very sensitive to the precise bit content, and allow rich full computation. The RNA analogous to a microprocessor.</p>
+
+<p>In order to make a decent model for the brain, this RNA must be coupled to neuron level electrochemical computation directly. This requires a model in which RNA directly affects what signals come out of neurons.</p>
+
+<p>I will give a model for this behavior, which is just a guess, but a reasonable one. The model is the ticker-tape. You have RNA attached to the neuron at the axon, which is read out base by base. Every time you hit a C, you fire the neuron. The recieving dendrite then writes out RNA constantly, and writes out a T every time it recieves a signal. The RNA is then read out by complementary binding at the ticker tape, and the RNA computes the rest of the thing intracellularly. If the neuron identifies the signal recieved RNA, it takes another strand of RNA and puts it on the membrane, and reads this one to give the output.</p>
+
+<p>The amount of memory in the brain is then the number of bits in the RNA involved, which is about a gigabyte per cell. There are hundreds of billions of cells in the brain, which translates to hundreds of billions of gigabytes. The efficiency of memory retrieval and modification is a few ATP's per bit, with thousands of ATP's used for long-range neural communication only.</p>
+
+<p>The brain then becomes an internet of independent computers, each neuron itself being a sizable computer itself.</p>
+
+<h3>Mattick's experimental compilation</h3>
+
+<p>John Mattick has recently pointed out that the biggest component of brain by weight, other than water, is genetic material. This is noncoding RNA which is actively transported up and down from dendrites, and is clearly doing something important. While it is not stated explicitly in his paper, it is clear that he expects the RNA to function along the lines suggested above.</p>
+
+<p>This idea is not accepted in neuroscience. RNA memory was originally proposed in the 1950s, in a worm model, when it was found that RNA was capable of transmitting memory from worm to worm. This idea floated around in science fiction circles in the 1970s and 1980s, since the idea of RNA memory led writers to imagine a pill which stored knowledge in RNA, and then you take the pill and learn something. This is described on the Wikipedia page on RNA memory, and it is unfairly discredited. There is no substitute.</p>
+
+<h3>Distributed computing</h3>
+
+<p>Outside of biology, the goal of parallel computing in the late 1980s was to produce computing devices which were as parallel as the brain was imagined to be. With this goal in mind, Thinking Machines produced a line of supercomputers in the late 1980s and early 1990s, with a goal of having a great number of very simple processors that worked together to produce the computation.</p>
+
+<p>Engineeringwise, the method was not great, because of the expense of the communication overhead. The better solution was to have powerful processors, and to use communication only when necessary. Modern supercomputers are now made from clusters of commercial stand-alone computers, with communication between processors only accounting for a small fraction of the bit content.</p>
+
+<p>This solution was puzzling, because it seems the brain found another solution. But I am saying that this is not so, that the brain operates in exactly
+the way the the human engineered computers were found to be more efficient.</p>
+
+<p>So the basic answer is no--- the distributed solution is not the efficient way to build a computer, you want to have small components with a lot of processing, and do long-distance wire communication only when necessary to link the independent computers together. This is the solution found both by biological evolution and the evolution of human engineering.</p>
+
+<p>A note on these ideas: while I knew that RNA is the major computational component in the cell, because it is the only way to explain the missing information paradox in genetic regulation and evolution, I had no idea to suspect it should be important to brain function. Gaby Maimon suggested that there is a paradox of missing information in the brain which should be solved the same way, and I was skeptical of this for a week or so, but he was right. The ideas about brain RNA were all developed in conversation with Gaby, who is my brother.</p>
+
+</body>
+</html>
