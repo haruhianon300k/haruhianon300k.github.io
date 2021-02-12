@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" class="js">
+<head></head>
+<body>
+<div>
+    <h3>What is infinity in mathematics?</h3>
+    <p>
+        There are two distinct notions, infinite ordinals, which are extremely important, and infinite cardinals which are more intuitive, but less useful.
+    </p>
+    <p>
+            Infinite ordinals can be understood by considering sequences of points on a line. The rules are that you can move to the right only to add points, in discrete steps, and whenever these points reaach any sort of limiting
+            accumulation point, the accumulation point is in the set.
+    </p>
+    <p>
+            So you can make infinitely many steps to the right, reach an accumulation point, and make infinitely many steps again. You can have accumulation points of accumulation points, the structure can be incredibly complex. But it is
+            easy to see, under these conditions, that moving to the left, you always hit zero after a finite number of steps. The reason is that you can't reach an accumulation point when going down, because then the limiting point would
+            have no neighbor to the right, so it wasn't produced by a step, contrary to the construction.
+    </p>
+    <p>
+            This construction produces the countable ordinals, and you can understand it as the partial sums of a sequence, the sequence which is the length of the steps. Cantor identified these infinite ordinal structures as important, and
+            founded set theory to study them. He understood that ordinals allow induction--- if a property holds for the ordinal "0" and it is true that the property for ordinal a implies the property for a+1, and also that the property for
+            all ordinals limiting to ordinal b implies the property holds at b, then the property holds for all ordinals. This is the transfinite induction which gives set theory power over arithmetic.
+    </p>
+    <p>
+            He also identified the notion of set cardinality, and used it to argue that the real numbers are uncountable. But he was so in love with the ordinal structure, that he was sure that the real numbers too could be given an ordinal
+            structure. He believed that the real numbers were the size of the first uncountable ordinal, and this is the continuum hypothesis, and he struggled to prove it.
+    </p>
+    <p>
+            Now that we have modern logic, Cantor's intuitions regarding the importance of the ordinals are understood. The ordinals capture the notion of iteration beyond the limits of the integers. The greater the ordinals you have, the
+            deeper you can iterate certain constructions.
+    </p>
+    <p>
+            The most important of this is Godel's construction. If S is an axiomatic system, then S cannot prove it is consistent. Adding "S is consistent" as an axiom, you go to S+1 (in a manner of speaking), and then adding "S+1 is
+            consistent" you go to S+2. If you have an increasing such tower of consistent systems, you can take the union of all the statements proved in these systems and produce the system corresponding to the limit. You can iterate this
+            over all countable computable ordinals, the ones you can produce by a computer program spitting out points on a line.
+    </p>
+    <p>
+            This iterative procedure over ordinals is key to completing mathematics. When you have larger computable ordinals, you have a better way to iterate consistency statements, and this allows you, in the limit of the Church-Kleene
+            ordinal (the limit of computable ordinals), to prove all objectively true statements about the halting of computer programs, as shown by Turing. This allows you to prove arbitrarily strong systems are consistent. It resolves the
+            question of Hilbert: what computational properties are required to prove the consistency of axiom systems? The only such properties are the well-foundedness (ordinal nature) of large countable computable ordinals. It resolves it
+            in exactly the opposite direction of what everyone says (except certain logicians, like Fefferman or Rathjen).
+    </p>
+    <p>
+            The countable ordinals are sufficient for producing models of arbitrarily complicated axiomatic systems, by Skolem's theorem. They are the essence of the useful mathematical infinity. The uncountable ordinals have arbitrary
+            properties which can be modified this way and that, by Cohen's forcing construction, so Cantor's continuum hypothesis can be made true or false, at whim, depending on the model.
+    </p>
+    <p>
+            The conclusion from this is that the invariant notion of infinity in mathematics is the tower of computable ordinals. The tower of cardinals, which is more familiar, is more of a figure of speech. It is something you can
+            construct in axiomatic systems like ZFC, and it is a useful figure of speech for intuitions, but it is not something to take too seriously when thinking about the foundations of mathematics. The ordinals are.
+    </p>
+</div>
+</body>
+</html>
