@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<!-- 󠛡 󠛡 | -->
+
+<body>
+
+
+    <p style="margin-top: 0px;">Here is a brief historical ideosyncratic intro to calculus.</p>
+        <h3>Calculus of finite differences</h3>
+        <p>Consider this problem from a typical IQ test:</p>
+        <p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=\text{2&space;5&space;10&space;17&space;26}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{2&space;5&space;10&space;17&space;26}" title="\text{2 5 10 17 26}" /></a>󠛡 󠛡 ?</p>
+        <p>What's the next number you expect in the sequence (this is not hard, you should do it). The n-th term in the sequence is given by:</p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=n^2&space;&plus;&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n^2&space;&plus;&space;1" title="n^2 + 1" /></a><br>
+        </p>
+        <p>as you can see by substituting 󠛡 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;n=1,2,3,4,5,&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;n=1,2,3,4,5,&space;}" title="\mathrm{ n=1,2,3,4,5, }" /></a> 󠛡 so the next term is <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;37&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;37&space;}" title="\mathrm{ 37 }" /></a>. But if you did the problem, you probably noticed first that the differences are:</p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\text{5&space;-&space;2&space;=&space;3&space;~~&space;10&space;-&space;5&space;=&space;5&space;~~&space;17&space;-&space;10&space;=&space;7&space;~~&space;26&space;-&space;17&space;=&space;9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{5&space;-&space;2&space;=&space;3&space;~~&space;10&space;-&space;5&space;=&space;5&space;~~&space;17&space;-&space;10&space;=&space;7&space;~~&space;26&space;-&space;17&space;=&space;9}" title="\text{5 - 2 = 3 ~~ 10 - 5 = 5 ~~ 17 - 10 = 7 ~~ 26 - 17 = 9}" /></a><br>
+        </p>
+
+        <p>
+        	and then filled in <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;37&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;37&space;}" title="\mathrm{ 37 }" /></a> by adding <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;11&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;11&space;}" title="\mathrm{ 11 }" /></a> to <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;26&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;26&space;}" title="\mathrm{ 26 }" /></a>. This thing you did above, of finding the difference between successive terms, is called "taking the first difference", and given any sequence of numbers <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{A_n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{A_n}" title="\mathrm{A_n}" /></a>󠛡 , the derived sequence 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{\Delta&space;A_n&space;=&space;A_{n&plus;1}&space;-&space;A_{n}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{\Delta&space;A_n&space;=&space;A_{n&plus;1}&space;-&space;A_{n}&space;}" title="\mathrm{\Delta A_n = A_{n+1} - A_{n} }" /></a>
+        </p>
+        <p>
+            From the definition, you can check 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;1&space;=&space;0&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;1&space;=&space;0&space;}" title="\mathrm{ \Delta 1 = 0 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;n&space;=&space;1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;n&space;=&space;1&space;}" title="\mathrm{ \Delta n = 1 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;n^2&space;=&space;2n&plus;1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;n^2&space;=&space;2n&plus;1&space;}" title="\mathrm{ \Delta n^2 = 2n+1 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;n^3&space;=&space;3n^2&plus;3n&plus;1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;n^3&space;=&space;3n^2&plus;3n&plus;1&space;}" title="\mathrm{ \Delta n^3 = 3n^2+3n+1 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;n^4&space;=&space;4n^3&space;&plus;&space;6n^2&space;&plus;&space;4n&space;&plus;&space;1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;n^4&space;=&space;4n^3&space;&plus;&space;6n^2&space;&plus;&space;4n&space;&plus;&space;1&space;}" title="\mathrm{ \Delta n^4 = 4n^3 + 6n^2 + 4n + 1 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;2^n&space;=&space;2^n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;2^n&space;=&space;2^n&space;}" title="\mathrm{ \Delta 2^n = 2^n }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;{1\over&space;n}&space;=&space;-&space;{1\over&space;n(n&plus;1)}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;{1\over&space;n}&space;=&space;-&space;{1\over&space;n(n&plus;1)}&space;}" title="\mathrm{ \Delta {1\over n} = - {1\over n(n+1)} }" /></a>
+        </p>
+        <p>and you can prove the general properties</p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;A_n&space;&plus;&space;\Delta&space;A_n&space;=&space;A_{n&plus;1}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;A_n&space;&plus;&space;\Delta&space;A_n&space;=&space;A_{n&plus;1}&space;}" title="\mathrm{ A_n + \Delta A_n = A_{n+1} }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;(A&space;&plus;&space;B)&space;=&space;\Delta&space;A&space;&plus;&space;\Delta&space;B&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;(A&space;&plus;&space;B)&space;=&space;\Delta&space;A&space;&plus;&space;\Delta&space;B&space;}" title="\mathrm{ \Delta (A + B) = \Delta A + \Delta B }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;cA&space;=&space;c&space;\Delta&space;A&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;cA&space;=&space;c&space;\Delta&space;A&space;}" title="\mathrm{ \Delta cA = c \Delta A }" /></a>
+        </p>
+        <p>
+            This says that <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;}" title="\mathrm{ \Delta }" /></a> is a linear operator. Further, you have a product rule
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;(AB)&space;=&space;A&space;\Delta&space;B&space;&plus;&space;B&space;\Delta&space;A&space;&plus;&space;\Delta&space;A\Delta&space;B&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;(AB)&space;=&space;A&space;\Delta&space;B&space;&plus;&space;B&space;\Delta&space;A&space;&plus;&space;\Delta&space;A\Delta&space;B&space;}" title="\mathrm{ \Delta (AB) = A \Delta B + B \Delta A + \Delta A\Delta B }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;(AB)_n&space;=&space;A_{n&plus;1}&space;\Delta&space;B_n&space;&plus;&space;B_n&space;\Delta&space;A_n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;(AB)_n&space;=&space;A_{n&plus;1}&space;\Delta&space;B_n&space;&plus;&space;B_n&space;\Delta&space;A_n&space;}" title="\mathrm{ \Delta (AB)_n = A_{n+1} \Delta B_n + B_n \Delta A_n }" /></a>
+        </p>
+        <p>
+            So now you can see that
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;(n^2&space;-&space;n)&space;=&space;(2n&plus;1&space;-&space;1)&space;=&space;2n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;(n^2&space;-&space;n)&space;=&space;(2n&plus;1&space;-&space;1)&space;=&space;2n&space;}" title="\mathrm{ \Delta (n^2 - n) = (2n+1 - 1) = 2n }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;(n^2&space;2^n)&space;=&space;(2n&plus;1)&space;2^{n&plus;1}&space;&plus;&space;n^2&space;2^n&space;=&space;(n^2&space;&plus;&space;4n&space;&plus;&space;2)&space;2^n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;(n^2&space;2^n)&space;=&space;(2n&plus;1)&space;2^{n&plus;1}&space;&plus;&space;n^2&space;2^n&space;=&space;(n^2&space;&plus;&space;4n&space;&plus;&space;2)&space;2^n&space;}" title="\mathrm{ \Delta (n^2 2^n) = (2n+1) 2^{n+1} + n^2 2^n = (n^2 + 4n + 2) 2^n }" /></a>
+        </p>
+        <p>
+            And so on. It is good practice toward calculus to find the derived sequence of all common functions. This was done by early modern mathematicians, and this calculus of finite differences directly inspired calculus.
+        </p>
+        <p>
+            The main identity is the fundamental theorem of derived sequences--- the sum of the derived sequence is found from the original sequence. For example, 3+5+7+9+11 = 37 - 2 (because adding the differences steps up the sequence). Convince yourself that it is true (or prove it by induction). So that
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\sum_{k=a}^{b}&space;\Delta&space;A_k&space;=&space;A_{b&plus;1}&space;-&space;A_a&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\sum_{k=a}^{b}&space;\Delta&space;A_k&space;=&space;A_{b&plus;1}&space;-&space;A_a&space;}" title="\mathrm{ \sum_{k=a}^{b} \Delta A_k = A_{b+1} - A_a }" /></a>
+        </p>
+        <p>
+            This is a remarkable formula, because now you learn a summation formula from each difference formula above:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\sum_{n=a}^b&space;(2n&plus;1)&space;=&space;(b&plus;1)^2&space;-&space;a^2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\sum_{n=a}^b&space;(2n&plus;1)&space;=&space;(b&plus;1)^2&space;-&space;a^2&space;}" title="\mathrm{ \sum_{n=a}^b (2n+1) = (b+1)^2 - a^2 }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\sum_{n=a}^b&space;(2n)&space;=&space;2&space;\sum_{k=a}^b&space;n&space;=&space;b(b&plus;1)&space;-&space;a(a-1)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\sum_{n=a}^b&space;(2n)&space;=&space;2&space;\sum_{k=a}^b&space;n&space;=&space;b(b&plus;1)&space;-&space;a(a-1)&space;}" title="\mathrm{ \sum_{n=a}^b (2n) = 2 \sum_{k=a}^b n = b(b+1) - a(a-1) }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\sum_{n=a}^b&space;2^n&space;=&space;2^{b&plus;1}&space;-&space;2^a&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\sum_{n=a}^b&space;2^n&space;=&space;2^{b&plus;1}&space;-&space;2^a&space;}" title="\mathrm{ \sum_{n=a}^b 2^n = 2^{b+1} - 2^a }" /></a>
+        </p>
+        <p>
+            The second difference is defined as the difference of the difference:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta^2&space;A_n&space;=&space;\Delta&space;\Delta&space;A_n&space;=&space;(A_{n&plus;2}&space;-2&space;A_{n&plus;1}&space;&plus;A_n)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta^2&space;A_n&space;=&space;\Delta&space;\Delta&space;A_n&space;=&space;(A_{n&plus;2}&space;-2&space;A_{n&plus;1}&space;&plus;A_n)&space;}" title="\mathrm{ \Delta^2 A_n = \Delta \Delta A_n = (A_{n+2} -2 A_{n+1} +A_n) }" /></a>
+        </p>
+        <p>
+            So that
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;A_n&space;&plus;&space;\Delta^2&space;A_n&space;=&space;\Delta&space;A_{n&plus;1}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;A_n&space;&plus;&space;\Delta^2&space;A_n&space;=&space;\Delta&space;A_{n&plus;1}&space;}" title="\mathrm{ \Delta A_n + \Delta^2 A_n = \Delta A_{n+1} }" /></a>
+        </p>
+        <p>
+            and this says
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;A_{n&plus;2}&space;=&space;A_n&space;&plus;&space;\Delta&space;A_n&space;&plus;&space;\Delta&space;A_{n&plus;1}&space;=&space;A_n&space;&plus;&space;2\Delta&space;A_n&space;&plus;&space;\Delta^2&space;A_n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;A_{n&plus;2}&space;=&space;A_n&space;&plus;&space;\Delta&space;A_n&space;&plus;&space;\Delta&space;A_{n&plus;1}&space;=&space;A_n&space;&plus;&space;2\Delta&space;A_n&space;&plus;&space;\Delta^2&space;A_n&space;}" title="\mathrm{ A_{n+2} = A_n + \Delta A_n + \Delta A_{n+1} = A_n + 2\Delta A_n + \Delta^2 A_n }" /></a>
+        </p>
+        <p>
+            and so on for third differences etc. You can prove that if two sequences have all of
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;A_0,&space;\Delta&space;A_0,&space;\Delta^2A_0,&space;\Delta^3&space;A_0&space;,&space;...&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;A_0,&space;\Delta&space;A_0,&space;\Delta^2A_0,&space;\Delta^3&space;A_0&space;,&space;...&space;}" title="\mathrm{ A_0, \Delta A_0, \Delta^2A_0, \Delta^3 A_0 , ... }" /></a>
+        </p>
+        <p>
+            equal, then the two sequences are equal, since the only way for the n-th differences to agree is if the first n terms are equal.
+        </p>
+        <p>
+            There is a nice quantity you can define:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;n^{(k)}&space;=&space;n(n-1)(n-2)...(n-k&plus;1)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;n^{(k)}&space;=&space;n(n-1)(n-2)...(n-k&plus;1)&space;}" title="\mathrm{ n^{(k)} = n(n-1)(n-2)...(n-k+1) }" /></a>
+        </p>
+        <p>
+            and for completeness, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;n^{(0)}=1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;n^{(0)}=1&space;}" title="\mathrm{ n^{(0)}=1 }" /></a> The factorial <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;n!=n^{(n)}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;n!=n^{(n)}&space;}" title="\mathrm{ n!=n^{(n)} }" /></a> by definition. This alternate definition of raising to a power has the property that
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;n^{(k)}&space;=&space;k&space;n^{(k-1)}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;n^{(k)}&space;=&space;k&space;n^{(k-1)}&space;}" title="\mathrm{ \Delta n^{(k)} = k n^{(k-1)} }" /></a>
+        </p>
+        <p>
+            And in terms of this quantity, there is a formal expression for the n-th term of any sequence
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;A_n&space;=&space;A_0&space;&plus;&space;\Delta&space;A_0&space;n&space;&plus;&space;\Delta^2&space;A_0&space;{n^{(2)}\over&space;2!}&space;&plus;&space;\Delta^3&space;A_0&space;{n^{(4)}\over&space;4!}&space;&plus;&space;...&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;A_n&space;=&space;A_0&space;&plus;&space;\Delta&space;A_0&space;n&space;&plus;&space;\Delta^2&space;A_0&space;{n^{(2)}\over&space;2!}&space;&plus;&space;\Delta^3&space;A_0&space;{n^{(4)}\over&space;4!}&space;&plus;&space;...&space;}" title="\mathrm{ A_n = A_0 + \Delta A_0 n + \Delta^2 A_0 {n^{(2)}\over 2!} + \Delta^3 A_0 {n^{(4)}\over 4!} + ... }" /></a>
+        </p>
+        <p>
+            and this gives an explicit polynomial expression whose first <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;n&space;}" title="\mathrm{ n }" /></a> differences at <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;0&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;0&space;}" title="\mathrm{ 0 }" /></a> coincide with those of the sequence <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;A&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;A&space;}" title="\mathrm{ A }" /></a>. This allows you to fit a polynomial to any evenly spaced points easily.
+        </p>
+        <p>
+        The above looks like an infinite sum, but on an integer position, only finitely many terms are nonzero. If it is convergent as an infinite series, you might expect it to interpolate good non-integer values for a reasonably well behaved sequence.
+        </p>
+        <p>
+            This is called the Gregory series, and it was developed by Gregory in the early half of the 17th century. Gregory used this to give infinite polynomial series expansions for common trigonometric functions, including the arc-tangent. This stuff seems like a bag of formal tricks that is not particularly more insightful than what you can see just by piddling around with intuition. Still, it allows you to quickly prove all the annoying sum identities you learn in high-school.
+        </p>
+
+    <h3>Infinitesimal Calculus</h3>
+
+        <p>
+            Consider now a sequence defined not at the points <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;1,2,3,...,&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;1,2,3,...,&space;}" title="\mathrm{ 1,2,3,..., }" /></a> but on a very fine grid of points spaced <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> apart, so that the n-th point is at position <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;n\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;n\mathrm{&space;\epsilon&space;}" title="n\mathrm{ \epsilon }" /></a> All the ideas of the previous section transfer to this situation, since all you have to do is rescale everything to make the unit of length <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> and the points lie on top of the integers.
+        </p>
+        <p>
+            In this case, the sequence <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;A(n)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;A(n)&space;}" title="\mathrm{ A(n) }" /></a> turns into a function <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;A(x)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;A(x)&space;}" title="\mathrm{ A(x) }" /></a>  defined on all <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;x&space;}" title="\mathrm{ x }" /></a>'s on the lattice. The derived sequence is 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta_\epsilon&space;A&space;=&space;A(x&plus;\epsilon)&space;-&space;A(x)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta_\epsilon&space;A&space;=&space;A(x&plus;\epsilon)&space;-&space;A(x)&space;}" title="\mathrm{ \Delta_\epsilon A = A(x+\epsilon) - A(x) }" /></a>
+        </p>
+        <p>
+            And you can see that as <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> goes to zero, it goes to zero. For a typical function, like multiplication or raising <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;2&space;}" title="\mathrm{ 2 }" /></a> to a power, we can ask, how does it go to zero?
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\Delta&space;x^2&space;=&space;(x&plus;\epsilon)^2&space;-&space;x^2&space;=&space;2x&space;\epsilon&space;&plus;&space;\epsilon^2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\Delta&space;x^2&space;=&space;(x&plus;\epsilon)^2&space;-&space;x^2&space;=&space;2x&space;\epsilon&space;&plus;&space;\epsilon^2&space;}" title="\mathrm{ \Delta x^2 = (x+\epsilon)^2 - x^2 = 2x \epsilon + \epsilon^2 }" /></a>
+        </p>
+        <p>
+            This is just the rescaled version of the first difference of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;n^2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;n^2&space;}" title="\mathrm{ n^2 }" /></a> (you can work it out directly, and it is good if you do). The lesson is that the thing tends to vanish linearly, meaning that if <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> is small, and it is made twice as small, your derived sequence is generally made about twice as small.
+        </p>
+
+        <p>
+            So you can take out this scaling and define the derivative of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a>
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{df\over&space;dx}&space;=&space;{\Delta&space;f&space;\over&space;\epsilon}&space;=&space;{\Delta&space;f\over&space;\Delta&space;x}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{df\over&space;dx}&space;=&space;{\Delta&space;f&space;\over&space;\epsilon}&space;=&space;{\Delta&space;f\over&space;\Delta&space;x}&space;}" title="\mathrm{ {df\over dx} = {\Delta f \over \epsilon} = {\Delta f\over \Delta x} }" /></a>
+        </p>
+        <p>
+            Where the idea here is that you define the derivative for each <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, and let <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> become so miniscule that the derivative stops changing. This never happens for any finite nonzero positive value of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, so it is formally useful to introduce the concept of an infinitesimal <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>.
+        </p>
+
+        <p>
+            An infinitesimal <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> is an <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> that is so small, that it behaves as if it were zero for the purpose of order of magnitude comparison, but it is not yet zero. It can be formally defined as a procedure: given any quantity you can calculate with  <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, the quantity for infinitesimal  <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> is defined as the limiting value a <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> gets smaller of the finite quantity.
+        </p>
+
+        <p>
+            I will call the limiting infinitesimal <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;dx&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;dx&space;}" title="\mathrm{ dx }" /></a>, as in "the difference between successive allowed values of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;x&space;}" title="\mathrm{ x }" /></a>". It is important not to read this as "<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;d&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;d&space;}" title="\mathrm{ d }" /></a> times <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;x&space;}" title="\mathrm{ x }" /></a>", but as a rounder version of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;A&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;A&space;}" title="\mathrm{ \Delta A }" /></a>, which is not <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;}" title="\mathrm{ \Delta }" /></a> times <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;A&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;A&space;}" title="\mathrm{ A }" /></a>, but <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;}" title="\mathrm{ \Delta }" /></a> of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;A&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;A&space;}" title="\mathrm{ A }" /></a>. Then the derivative can be calculated from the finite differences:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{&space;d&space;x^2&space;\over&space;dx}&space;=&space;2x&space;&plus;&space;dx&space;=&space;2x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{&space;d&space;x^2&space;\over&space;dx}&space;=&space;2x&space;&plus;&space;dx&space;=&space;2x&space;}" title="\mathrm{ { d x^2 \over dx} = 2x + dx = 2x }" /></a>
+        </p>
+        <p>
+            Where I have thrown away the infinitesimal term. Likewise the analog of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;x^{(k)}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;x^{(k)}&space;}" title="\mathrm{ x^{(k)} }" /></a> is
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;x^{(k)}&space;=&space;x(x-dx)(x-2dx)...(x-ndx)&space;=&space;x^k&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;x^{(k)}&space;=&space;x(x-dx)(x-2dx)...(x-ndx)&space;=&space;x^k&space;}" title="\mathrm{ x^{(k)} = x(x-dx)(x-2dx)...(x-ndx) = x^k }" /></a>
+        </p>
+        <p>
+            So that 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{d\over&space;dx}&space;x^k&space;=&space;k&space;x^{k-1}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{d\over&space;dx}&space;x^k&space;=&space;k&space;x^{k-1}&space;}" title="\mathrm{ {d\over dx} x^k = k x^{k-1} }" /></a>
+        </p>
+        <p>
+            Further, 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{d\over&space;dx}&space;{1\over&space;x}&space;=&space;-&space;{1\over&space;x^2}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{d\over&space;dx}&space;{1\over&space;x}&space;=&space;-&space;{1\over&space;x^2}&space;}" title="\mathrm{ {d\over dx} {1\over x} = - {1\over x^2} }" /></a>
+        </p>
+        <p>
+            Since the small lattice analog of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;{1\over&space;x(x&plus;1)}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;{1\over&space;x(x&plus;1)}&space;}" title="\mathrm{ {1\over x(x+1)} }" /></a> is <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;1\over&space;x(x&plus;dx)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;1\over&space;x(x&plus;dx)&space;}" title="\mathrm{ 1\over x(x+dx) }" /></a>.
+        </p>
+
+        <p>
+            The derivative of a function <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a> is also called <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;{f}'&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;{f}'&space;}" title="\mathrm{ {f}' }" /></a> There is a notion of a second derivative, derived from the second difference--- it is the derivative of the derivative. On a lattice: 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{f}''(x)&space;=&space;{&space;f(x&plus;\epsilon)&space;-&space;2f(x)&space;&plus;&space;f(x-\epsilon)\over&space;\epsilon^2}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{f}''(x)&space;=&space;{&space;f(x&plus;\epsilon)&space;-&space;2f(x)&space;&plus;&space;f(x-\epsilon)\over&space;\epsilon^2}&space;}" title="\mathrm{ {f}''(x) = { f(x+\epsilon) - 2f(x) + f(x-\epsilon)\over \epsilon^2} }" /></a>
+        </p>
+        <p>
+            In the limit as <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> goes to zero. This is the formula for the second difference, but now divided by <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon^2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon^2&space;}" title="\mathrm{ \epsilon^2 }" /></a> as required from the typical way the second difference vanishes. The difference vanishes as the first power of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, and if you were to divide out by <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, you would get something constant, and the difference of this thing vanishes as <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>. So the second difference goes to zero as the second power of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>.
+        </p>
+
+        <p>
+            You can define third derivatives, and so on. A physicist generally has to be familiar with these discrete forms of the second derivative, since there are many cases, like atomic lattices in a solid, where there is a real, actual  <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a>, and you are only dealing with an approximate continuum. It is likely that every notion of spatial continuum is related to a limiting quantity which in our universe is large, but finite.
+        </p>
+
+        <p>
+            The properties of calculus of finite differences translate to derivatives very simply:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{d\over&space;dx}(f&plus;g)&space;=&space;{f}'&space;&plus;&space;{g}'&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{d\over&space;dx}(f&plus;g)&space;=&space;{f}'&space;&plus;&space;{g}'&space;}" title="\mathrm{ {d\over dx}(f+g) = {f}' + {g}' }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{d\over&space;dx}&space;(fg)&space;=&space;{f}'g&space;&plus;&space;f{g}'&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{d\over&space;dx}&space;(fg)&space;=&space;{f}'g&space;&plus;&space;f{g}'&space;}" title="\mathrm{ {d\over dx} (fg) = {f}'g + f{g}' }" /></a>
+        </p>
+        <p>
+            Anyway, going to infinitesimal calculus gives you a few new things: 
+        </p><blockquote>
+        <p>
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;1.&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;1.&space;}" title="\mathrm{ 1. }" /></a> The formulas simplify somewhat, since you are only interested in asymptotics. 
+        </p>
+        <p>
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;2.&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;2.&space;}" title="\mathrm{ 2. }" /></a> The derivative gives a meaning to the notion of "how far do you go in an infinitesimal amount of time", and this defines the notion of velocity at a given time. 
+        </p>
+        <p>
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;3.&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;3.&space;}" title="\mathrm{ 3. }" /></a> The derivative obeys the chain rule.
+        </p></blockquote>
+
+        <p>
+            The chain rule is a rule for composite functions, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(g(x))&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(g(x))&space;}" title="\mathrm{ f(g(x)) }" /></a>. In the discrete case, you couldn't do anything regarding this, because there is no relation between <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(g(n&plus;1))&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(g(n&plus;1))&space;}" title="\mathrm{ f(g(n+1)) }" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(g(n))&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(g(n))&space;}" title="\mathrm{ f(g(n)) }" /></a> that is simple regarding <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;g&space;}" title="\mathrm{ g }" /></a>, since the steps <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;g&space;}" title="\mathrm{ g }" /></a> takes might be large. You can write this as 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;f(g(n&plus;1))&space;=&space;f(g(n)&space;&plus;&space;\Delta&space;g)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;f(g(n&plus;1))&space;=&space;f(g(n)&space;&plus;&space;\Delta&space;g)&space;}" title="\mathrm{ f(g(n+1)) = f(g(n) + \Delta g) }" /></a>
+        </p>
+        <p>
+            but now you are stuck, since <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;g&space;}" title="\mathrm{ \Delta g }" /></a> is not necessarily an integer.
+        </p>
+
+        <p>
+            But for infinitesimal lattices, <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;g&space;}" title="\mathrm{ \Delta g }" /></a> is still infinitesimal, and this problem vanishes. We know that <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\Delta&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\Delta&space;g&space;}" title="\mathrm{ \Delta g }" /></a> is small, so
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;f(g(x&plus;\epsilon))&space;=&space;f(g(x)&space;&plus;&space;g'(x)\epsilon)&space;=&space;f(g(x))&space;&plus;&space;f'(g(x))g'(x)\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;f(g(x&plus;\epsilon))&space;=&space;f(g(x)&space;&plus;&space;g'(x)\epsilon)&space;=&space;f(g(x))&space;&plus;&space;f'(g(x))g'(x)\epsilon&space;}" title="\mathrm{ f(g(x+\epsilon)) = f(g(x) + g'(x)\epsilon) = f(g(x)) + f'(g(x))g'(x)\epsilon }" /></a>
+        </p>
+        <p>
+            so you learn the derivative of composite functions. From this, you learn 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{1\over&space;x^n}&space;=&space;-&space;{1\over&space;(x^n)^2}&space;n&space;x^{n-1}&space;=&space;-{n\over&space;x^{n&plus;1}}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{1\over&space;x^n}&space;=&space;-&space;{1\over&space;(x^n)^2}&space;n&space;x^{n-1}&space;=&space;-{n\over&space;x^{n&plus;1}}&space;}" title="\mathrm{ {1\over x^n} = - {1\over (x^n)^2} n x^{n-1} = -{n\over x^{n+1}} }" /></a>
+        </p>
+        <p>
+            This derivative fits the same pattern as positive powers, except plugging in a negative number in the exponent. From the chain rule, you have the following theorem. If <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(x)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(x)&space;}" title="\mathrm{ f(x) }" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;g(x)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;g(x)&space;}" title="\mathrm{ g(x) }" /></a> are inverse functions, then:
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;f(g(x))&space;=&space;x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;f(g(x))&space;=&space;x&space;}" title="\mathrm{ f(g(x)) = x }" /></a>
+        </p>
+        <p>
+            Differentiating both sides: 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{f}'(g(x)){g}'(x)&space;=1&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{f}'(g(x)){g}'(x)&space;=1&space;}" title="\mathrm{ {f}'(g(x)){g}'(x) =1 }" /></a>
+        </p>
+        <p>
+            so the derivative of the inverse function <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;g&space;}" title="\mathrm{ g }" /></a> is determined by the derivative of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a> at the location of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;g&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;g&space;}" title="\mathrm{ g }" /></a>: 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{g}'(x)&space;=&space;{1\over&space;{f}'(g(x))}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{g}'(x)&space;=&space;{1\over&space;{f}'(g(x))}&space;}" title="\mathrm{ {g}'(x) = {1\over {f}'(g(x))} }" /></a>
+        </p>
+        <p>
+            Using this formula for <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(x)&space;=&space;x^2&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(x)&space;=&space;x^2&space;}" title="\mathrm{ f(x) = x^2 }" /></a>, you learn that 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{d\over&space;dx}&space;\sqrt{x}&space;=&space;{1\over&space;2\sqrt{x}}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{d\over&space;dx}&space;\sqrt{x}&space;=&space;{1\over&space;2\sqrt{x}}&space;}" title="\mathrm{ {d\over dx} \sqrt{x} = {1\over 2\sqrt{x}} }" /></a>
+        </p>
+        <p>
+            again, the same pattern <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;k&space;x^{k-1}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;k&space;x^{k-1}&space;}" title="\mathrm{ k x^{k-1} }" /></a>, except now with half-integer powers! You can now prove this in general by using inverse functions for <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;1/n&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;1/n&space;}" title="\mathrm{ 1/n }" /></a> and continuity.
+        </p>
+
+        <p>
+            The summation theorem becomes more breathtaking: 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\int_a^b&space;{f}'(x)&space;dx&space;=&space;f(b)&space;-&space;f(a)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\int_a^b&space;{f}'(x)&space;dx&space;=&space;f(b)&space;-&space;f(a)&space;}" title="\mathrm{ \int_a^b {f}'(x) dx = f(b) - f(a) }" /></a>
+        </p>
+        <p>
+            Where the integral simply means the sum of all values of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a> on the lattice, multiplied by the lattice spacing. 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;\int&space;f(x)&space;dx&space;=&space;\sum_x&space;f(x)&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;\int&space;f(x)&space;dx&space;=&space;\sum_x&space;f(x)&space;\epsilon&space;}" title="\mathrm{ \int f(x) dx = \sum_x f(x) \epsilon }" /></a>
+        </p>
+        <p>
+            Where the sum is over <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;x&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;x&space;}" title="\mathrm{ x }" /></a> in the interval <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;a&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;a&space;}" title="\mathrm{ a }" /></a>,<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;b&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;b&space;}" title="\mathrm{ b }" /></a> in steps of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;\epsilon&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;\epsilon&space;}" title="\mathrm{ \epsilon }" /></a> beginning at <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;a&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;a&space;}" title="\mathrm{ a }" /></a>. This has the interpretation on the graph of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a> as the area under the curve of <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f&space;}" title="\mathrm{ f }" /></a>.
+        </p>
+
+        <p>
+            Further, for a general function, you expect that if 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;f(0)&space;=&space;g(0)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;f(0)&space;=&space;g(0)&space;}" title="\mathrm{ f(0) = g(0) }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{f}'(0)&space;=&space;{g}'(0)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{f}'(0)&space;=&space;{g}'(0)&space;}" title="\mathrm{ {f}'(0) = {g}'(0) }" /></a>
+        </p>
+        <p></p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;{f}''(0)&space;=&space;{g}''(0)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;{f}''(0)&space;=&space;{g}''(0)&space;}" title="\mathrm{ {f}''(0) = {g}''(0) }" /></a>
+        </p>
+        <p>
+            and so on, you will have <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathrm{&space;f(x)=g(x)&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\mathrm{&space;f(x)=g(x)&space;}" title="\mathrm{ f(x)=g(x) }" /></a>. This is not true, but it is true for a class of functions of high importance, which are called "analytic functions".
+        </p>
+
+        <p>
+            The analytic functions obey the analog of the Gregory series: 
+        </p>
+        <p align="center">
+            <a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{&space;f(x)&space;=&space;f(0)&space;&plus;&space;{f}'(0)x&space;&plus;&space;{f}''(0)&space;{x^2\over&space;2}&space;&plus;&space;{f}'''(0)&space;{&space;x^3\over&space;3!}&space;...&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{&space;f(x)&space;=&space;f(0)&space;&plus;&space;{f}'(0)x&space;&plus;&space;{f}''(0)&space;{x^2\over&space;2}&space;&plus;&space;{f}'''(0)&space;{&space;x^3\over&space;3!}&space;...&space;}" title="\mathrm{ f(x) = f(0) + {f}'(0)x + {f}''(0) {x^2\over 2} + {f}'''(0) { x^3\over 3!} ... }" /></a>
+        </p>
+        <p>
+            Which is usually called a Taylor series, but was already known to Newton and contemporaries (who were familiar with Gregory series already).
+        </p>
+
+        <p>
+            So you see that the calculus is simply a method of defining a limiting calculation method for finite differences where all the arbitrariness and ugliness of the finite differences go away. It is essential for motion, because it tells you what "velocity" means at any one time. It is essential for physics, because it describes how quantities change continuously, the same way that the finite difference business describes how quantities change discretely.
+        </p>
+
+        <p>
+            For a good book, I would recommend Lang's calculus, although it is good to learn everything that appears in every book (there isn't that much).
+        </p>
+
+</body>
+</html>
