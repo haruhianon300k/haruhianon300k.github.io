@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 
+<!-- popups 1
+<li><a href="JavaScript:newPopup('(why)/W.SCUM.html');"><b><input type="BUTTON" value="?"></b></a>&nbsp;&nbsp;&nbsp;―&nbsp;&nbsp;&nbsp;<a href="DOCS/SCUM.html">SCUM Manifesto</a></li>
+-->
+
+<!-- popups 2
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+-->
+
 <head>
 		<title>Table of Contents</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<script type="text/javascript">
+		// Popup window code
+		function newPopup(url) {
+			popupWindow = window.open(
+				url,'popUpWindow','height=100,width=650,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+		}
+		</script>
 </head>
 
 <body>
-	
+
 		<div>
 			<hr>
 			<h3>gods and superrationality</h3>
@@ -103,7 +119,10 @@
 			<hr>
 			<h3>DOCS</h3>
 			<ul>
-				<li><a href="(why)/W.SCUM.html"><b>?</b></a>&nbsp;&nbsp;&nbsp;―&nbsp;&nbsp;&nbsp;<a href="DOCS/SCUM.html">SCUM Manifesto</a></li>
+				<!--
+				<li><b><button type="button" onclick="alert('Do I need to justify everything I like? It is probably the most radical thing you will ever read.')">?</button></b></a>&nbsp;&nbsp;&nbsp;―&nbsp;&nbsp;&nbsp;<a href="DOCS/SCUM.html">SCUM Manifesto</a></li>
+				-->
+				<li><a href="JavaScript:newPopup('(why)/W.SCUM.html');"><b><input type="BUTTON" value="?"></b></a>&nbsp;&nbsp;&nbsp;―&nbsp;&nbsp;&nbsp;<a href="DOCS/SCUM.html">SCUM Manifesto</a></li>
 				<br>
 				<li><a href="sci/putnam.html">/sci/ Putnam Problems</a></li>
 				<br>
