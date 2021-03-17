@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax v3 loaded only if there is math</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+
+<div>
+<p>Here is a brief historical ideosyncratic intro to calculus.</p>
+
+<h3>Calculus of finite differences</h3>
+
+<p>Consider this problem from a typical IQ test:</p>
+
+<p>$$2~~5~~10~~17~~26~~?$$</p>
+
+<p>What's the next number you expect in the sequence (this is not hard, you should do it). The n-th term in the sequence is given by:</p>
+
+<p>$$ n^2 + 1 $$</p>
+
+<p>as you can see by substituting $n=1,2,3,4,5,$ so the next term is $37$. But if you did the problem, you probably noticed first that the differences are:</p>
+
+<p>$$5-2 = 3~~~~~
+10-5 = 5~~~~~
+17-10 = 7~~~~~
+26-17 = 9$$</p>
+
+<p>and then filled in $37$ by adding $11$ to $26$. This thing you did above, of finding the difference between successive terms, is called "taking the first difference", and given any sequence of numbers $A_n$, the derived sequence</p>
+
+<p>$$ \Delta A_n = A_{n+1} - A_{n} $$</p>
+
+<p>$$ \Delta 1 = 0 $$
+$$ \Delta n = 1 $$
+$$ \Delta n^2 = 2n+1 $$
+$$ \Delta n^3 = 3n^2+3n+1 $$
+$$ \Delta n^4 = 4n^3 + 6n^2 + 4n + 1 $$
+$$ \Delta 2^n = 2^n $$
+$$ \Delta {1\over n} = - {1\over n(n+1)}$$</p>
+
+<p>and you can prove the general properties</p>
+
+<p>$$ A_n + \Delta A_n = A_{n+1} $$
+$$ \Delta (A + B) = \Delta A + \Delta B $$
+$$ \Delta cA = c \Delta A $$</p>
+
+<p>This says that $\Delta$ is a linear operator. Further, you have a product rule</p>
+
+<p>$$ \Delta (AB) = A \Delta B + B \Delta A + \Delta A\Delta B $$
+$$ \Delta (AB)_n = A_{n+1} \Delta B_n + B_n \Delta A_n $$</p>
+
+<p>So now you can see that</p>
+
+<p>$$ \Delta (n^2 - n) = (2n+1 - 1) = 2n $$
+$$ \Delta (n^2 2^n) = (2n+1) 2^{n+1} + n^2 2^n = (n^2 + 4n + 2) 2^n $$</p>
+
+<p>And so on. It is good practice toward calculus to find the derived sequence of all common functions. This was done by early modern mathematicians, and this <em>calculus of finite differences</em> directly inspired calculus.</p>
+
+<p>The main identity is the fundamental theorem of derived sequences--- the sum of the derived sequence is found from the original sequence. For example, $3+5+7+9+11 = 37 - 2$ (because adding the differences steps up the sequence). Convince yourself that it is true (or prove it by induction). So that</p>
+
+<p>$$\sum_{k=a}^{b} \Delta A_k = A_{b+1} - A_a $$</p>
+
+<p>This is a remarkable formula, because now you learn a summation formula from each difference formula above:</p>
+
+<p>$$\sum_{n=a}^b (2n+1) = (b+1)^2 - a^2 $$
+$$\sum_{n=a}^b (2n) = 2 \sum_{k=a}^b n = b(b+1) - a(a-1) $$
+$$\sum_{n=a}^b 2^n = 2^{b+1} - 2^a $$</p>
+
+<p>The second difference is defined as the difference of the difference:</p>
+
+<p>$$ \Delta^2 A_n = \Delta \Delta A_n = (A_{n+2} -2 A_{n+1} +A_n) $$</p>
+
+<p>So that</p>
+
+<p>$$ \Delta A_n + \Delta^2 A_n = \Delta A_{n+1}$$</p>
+
+<p>and this says</p>
+
+<p>$$ A_{n+2} = A_n + \Delta A_n + \Delta A_{n+1} = A_n + 2\Delta A_n + \Delta^2 A_n $$</p>
+
+<p>and so on for third differences etc. You can prove that if two sequences have all of</p>
+
+<p>$$ A_0, \Delta A_0, \Delta^2A_0, \Delta^3 A_0 , ... $$</p>
+
+<p>equal, then the two sequences are equal, since the only way for the $n$-th differences to agree is if the first $n$ terms are equal.</p>
+
+<p>There is a nice quantity you can define:</p>
+
+<p>$$ n^{(k)} = n(n-1)(n-2)...(n-k+1) $$</p>
+
+<p>and for completeness, $n^{(0)}=1$. The factorial $n!=n^{(n)}$ by definition. This alternate definition of raising to a power has the property that</p>
+
+<p>$$ \Delta n^{(k)} = k n^{(k-1)} $$</p>
+
+<p>And in terms of this quantity, there is a formal expression for the $n$-th term of any sequence</p>
+
+<p>$$ A_n = A_0 + \Delta A_0 n + \Delta^2 A_0 {n^{(2)}\over 2!} + \Delta^3 A_0 {n^{(4)}\over 4!} + ...$$
+</p>
+
+<p>and this gives an explicit polynomial expression whose first n differences at $0$$ coincide with those of the sequence $A$. This allow you to fit a polynomial to any evenly spaced points easily.</p>
+
+<p>The above looks like an infinite sum, but on an integer position, only finitely many terms are nonzero. If it is convergent as an infinite series, you might expect it to interpolate good non-integer values for a reasonably well behaved sequence.</p>
+
+<p>This is called the Gregory series, and it was developed by Gregory in the early half of the 17th century. Gregory used this to give infinite polynomial series expansions for common trigonometric functions, including the arc-tangent. This stuff seems like a bag of formal tricks that is not particularly more insightful than what you can see just by piddling around with intuition. Still, it allows you to quickly prove all the annoying sum identities you learn in high-school.</p>
+
+<h3>Infinitesimal Calculus</h3>
+
+<p>Consider now a sequence defined not at the points $1,2,3,...,$ but on a very fine grid of points spaced $\epsilon$ apart, so that the $n$-th point is at position $n\epsilon$. All the ideas of the previous section transfer to this situation, since all you have to do is rescale everything to make the unit of length $\epsilon$, and the points lie on top of the integers.</p>
+
+<p>In this case, the sequence $A(n)$ turns into a function $A(x)$ defined on all $x$'s on the lattice. The derived sequence is</p>
+
+<p>$$ \Delta_\epsilon A = A(x+\epsilon) - A(x) $$</p>
+
+<p>And you can see that as $\epsilon$ goes to zero, it goes to zero. For a typical function, like multiplication or raising $2$ to a power, we can ask, how does it go to zero?</p>
+
+<p>$$ \Delta x^2 = (x+\epsilon)^2 - x^2 = 2x \epsilon + \epsilon^2 $$</p>
+
+<p>This is just the rescaled version of the first difference of $n^2$ (you can work it out directly, and it is good if you do). The lesson is that the thing tends to vanish <em>linearly</em>, meaning that if $\epsilon$ is small, and it is made twice as small, your derived sequence is generally made about twice as small.</p>
+
+<p>So you can take out this scaling and define the <em>derivative</em> of $f$</p>
+
+<p>$$ {df\over dx} = {\Delta f \over \epsilon} = {\Delta f\over \Delta x} $$</p>
+
+<p>Where the idea here is that you define the derivative for each $\epsilon$, and let $\epsilon$ become so miniscule that the derivative stops changing. This never happens for any finite nonzero positive value of $\epsilon$, so it is formally useful to introduce the concept of an <em>infinitesimal</em> $\epsilon$.</p>
+
+<p>An infinitesimal $\epsilon$ is an $\epsilon$ that is so small, that it behaves as if it were zero for the purpose of order of magnitude comparison, but it is not yet zero. It can be formally defined as a procedure: given any quantity you can calculate with $\epsilon$, the quantity for infinitesimal $\epsilon$ is defined as the limiting value as $\epsilon$ gets smaller of the finite quantity.</p>
+
+<p>I will call the limiting infinitesimal $dx$, as in "the difference between successive allowed values of $x$". It is important not to read this as "$d$ times $x$", but as a rounder version of $\Delta A$, which is not $\Delta$ times $A$, but $\Delta$ of $A$. Then the derivative can be calculated from the finite differences:</p>
+
+<p>$$ { d x^2 \over dx}  = 2x + dx = 2x $$</p>
+
+<p>Where I have thrown away the infinitesimal term. Likewise the analog of $x^{(k)}$ is
+$$ x^(k) = x(x-dx)(x-2dx)...(x-ndx) = x^k $$</p>
+
+<p>So that</p>
+
+<p>$$ {d\over dx} x^k = k x^{k-1} $$</p>
+
+<p>Further, </p>
+
+<p>$$ {d\over dx} {1\over x} = - {1\over x^2}$$</p>
+
+<p>Since the small lattice analog of ${1\over x(x+1)}$ is $1\over x(x+dx)$.</p>
+
+<p>The derivative of a function $f$ is also called $f'$. There is a notion of a second derivative, derived from the second difference--- it is the derivative of the derivative. On a lattice:</p>
+
+<p>$$f''(x) = { f(x+\epsilon) - 2f(x) + f(x-\epsilon)\over \epsilon^2}$$</p>
+
+<p>In the limit as $\epsilon$ goes to zero. This is the formula for the second difference, but now divided by $\epsilon^2$ as required from the typical way the second difference vanishes. The difference vanishes as the first power of $\epsilon$, and if you were to divide out by $\epsilon$, you would get something constant, and the difference of this thing vanishes as $\epsilon$. So the second difference goes to zero as the second power of $\epsilon$.</p>
+
+<p>You can define third derivatives, and so on. A physicist generally has to be familiar with these discrete forms of the second derivative, since there are many cases, like atomic lattices in a solid, where there is a real, actual $\epsilon$, and you are only dealing with an approximate continuum. It is likely that <em>every notion</em> of spatial continuum is related to a limiting quantity which in our universe is large, but finite.</p>
+
+<p>The properties of calculus of finite differences translate to derivatives very simply:</p>
+
+
+$${d\over dx}(f+g) = f' + g'$$
+$${d\over dx} (fg) = f'g + fg'$$
+
+
+<p>Anyway, going to infinitesimal calculus gives you a few new things:
+1. The formulas simplify somewhat, since you are only interested in asymptotics.
+2. The derivative gives a meaning to the notion of "how far do you go in an infinitesimal amount of time", and this defines the notion of <em>velocity</em> at a given time.
+3. The derivative obeys the chain rule.</p>
+
+<p>The chain rule is a rule for composite functions, $f(g(x))$. In the discrete case, you couldn't do anything regarding this, because there is no relation between $f(g(n+1))$ and $f(g(n))$ that is simple regarding $f$ and $g$, since the steps $g$ takes might be large. You can write this as</p>
+
+<p>$$ f(g(n+1)) = f(g(n) + \Delta g) $$</p>
+
+<p>but now you are stuck, since $\Delta g$ is not necessarily an integer.</p>
+
+<p>But for infinitesimal lattices, $\Delta g$ is still infinitesimal, and this problem vanishes. We know that $\Delta g$ is small, so</p>
+
+<p>$$f(g(x+\epsilon)) = f(g(x) + g'(x)\epsilon) = f(g(x)) + f'(g(x))g'(x)\epsilon$$,</p>
+
+<p>so you learn the derivative of composite functions. From this, you learn</p>
+
+<p>$$ {1\over x^n} = - {1\over (x^n)^2} n x^{n-1} = -{n\over x^{n+1}}$$</p>
+
+<p>This derivative fits the same pattern as positive powers, except plugging in a negative number in the exponent. From the chain rule, you have the following theorem. If $f(x)$ and $g(x)$ are inverse functions, then:</p>
+
+<p>$$ f(g(x)) = x$$</p>
+
+<p>Differentiating both sides:</p>
+
+<p>$$ f'(g(x))g'(x) =1 $$</p>
+
+<p>so the derivative of the inverse function $g$ is determined by the derivative of $f$ at the location of $g$:</p>
+
+<p>$$ g'(x) = {1\over f'(g(x))}$$</p>
+
+<p>Using this formula for $f(x) = x^2$, you learn that</p>
+
+<p>$$ {d\over dx} \sqrt{x} = {1\over 2\sqrt{x}}$$</p>
+
+<p>again, the same pattern $k x^{k-1}$, except now with half-integer powers! You can now prove this in general by using inverse functions for $1\over n$ and continuity.</p>
+
+<p>The summation theorem becomes more breathtaking:</p>
+
+<p>$$ \int_a^b f'(x) dx = f(b) - f(a) $$</p>
+
+<p>Where the integral simply means the sum of all values of $f$ on the lattice, multiplied by the lattice spacing.</p>
+
+<p>$$ \int f(x) dx = \sum_x f(x) \epsilon $$</p>
+
+<p>Where the sum is over $x$ in the interval $a,b$ in steps of $\epsilon$ beginning at $a$. This has the interpretation on the graph of $f$ as the area under the curve of $f$.</p>
+
+<p>Further, for a general function, you expect that if</p>
+
+<p>$$f(0) = g(0)$$
+$$f'(0) = g'(0)$$
+$$f''(0)=g''(0)$$</p>
+
+<p>and so on, you will have $f(x)=g(x)$. This is <em>not</em> true, but it is true for a class of functions of high importance, which are called "analytic functions". The analytic functions obey the analog of the Gregory series:</p>
+
+<p>$$ f(x) = f(0) + f'(0)x + f''(0) {x^2\over 2} + f'''(0) { x^3\over 3!} ... $$</p>
+
+<p>Which is usually called a Taylor series, but was already known to Newton and contemporaries (who were familiar with Gregory series already).</p>
+
+<p>So you see that the calculus is simply a method of defining a limiting calculation method for finite differences where all the arbitrariness and ugliness of the finite differences go away. It is essential for motion, because it tells you what "velocity" means at any one time. It is essential for physics, because it describes how quantities change continuously, the same way that the finite difference business describes how quantities change discretely.</p>
+
+<p>For a good book, I would recommend Lang's calculus, although it is good to learn everything that appears in every book (there isn't that much).</p>
+    </div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
