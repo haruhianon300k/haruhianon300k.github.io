@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculus isn't intuitive to me. Am I alone or do other people have this problem as well?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Calculus isn't intuitive to me. Am I alone or do other people have this problem as well?</h3>
+
+	<div>
+
+		<p>The way to fix this is to understand two different rigorous constructions, the epsilon-delta definition of limits, and the rigorous infinitesimals of Abraham Robinson.</p>
+	
+		<p>The first thing just sidesteps the issue of what "$dx$" and "$dy$" mean, it just takes their ratio, and defines it as the limit as $dx$ becomes small of $\frac{dy}{dx}$. The limit definition with $\epsilon$ and $\delta$ uses finite quantities.</p>
+		<p>It says that the limit of $\frac{dx}{dy}$ is $M$ if for any $\epsilon$ (how close you want to get to $M$) there is a $\delta$ (how small $dx$ has to be) such that whenever $dx$ is finite and smaller than $\delta$, $\frac{dy}{dx}$ is closer to $M$ than $\epsilon$.</p>
+		
+		<p>This definition has a quantifier alternation (forall $\epsilon$ there-exists a $\delta$), so it is a little tough to internalize. The original idea of infinitesimals was to consider the $dx$ as already having a limit attached, that it has already gone infinitesimally small. This idea is harder to make precise than $\epsilon$ and $\delta$, but you can do it using the idea of logical models of the real numbers.</p>
+		
+		<p>Models of the real numbers are collections of symbols that represent real numbers. One example of a model is digit sequences, like you learned in grade school. But you can also consider computer programs that define digit sequences to define the computable reals, or logical predicates that define digit sequences to define a more complete model of the reals (not all reals whose digit sequence can be defined logically are computable, for example, the real number whose $n$-th digit is $1$ if the $n$-th computer program halts).</p>
+		
+		<p>In any logical model of the reals, you can adjoin the infinite list of axioms "I have a real number $\epsilon$, it is less than $1$, it is less than $\frac{1}{2}$, it is less than $\frac{1}{3}$....". There is no contradiction from any finite number of these axioms, so there cannot be a contradiction from the whole collection.</p>
+		
+		<p>This number $\epsilon$ is a formal infinitesimal, and adjoining it, you get a different model of the reals, where you can do all sorts of operations on $\epsilon$, the same as you can do for a real number. But $\epsilon$ is not a digit sequence, it is defined in a different extended model.</p>
+		
+		<p>Then the ordinary real numbers, the digit sequences, are a submodel of the extended model, they don't mention $\epsilon$. Looking outside the models, you can define a projection from a certain subset of the extended numbers, the finite ones, to the nearest standard number.</p> 
+		<p>The derivative is then the standard projection of ${\frac{f(x+\small \epsilon)-f(x)}{\epsilon}}$. This point of view requires that you are comfortable with the idea that the same logical axioms can have different models.</p>
+		
+		<p>There are lots of other ways to construct the non-standard reals, what I described is Abraham Robinson's way. The intuitive advantage is that there is no quantifier alternation in the definition of derivative, although formally, the theorems you can prove are the same in both approaches. So it is good to learn both ideas.</p>
+	
+	</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

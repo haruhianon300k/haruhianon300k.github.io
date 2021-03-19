@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Does calculus have a point?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Does calculus have a point?</h3>
+
+	<div>
+		<p>It has many points.</p>
+
+		<p>The main point is a little buried in a modern treatment. The point is that it is consistent to imagine little itty-bitty numbers, infinitesimals, adjoined to your conception of the real numbers, and these infinitesimals contain the idea of limit and asymptotics. So for example:</p>
+		
+		<p>$$(3 + dx)^2 = 9 + 6dx$$</p>
+		
+		<p>where $dx$ is an infinitesimal, so I dropped the $dx^2$, because the square of an infinitesimal is twice more infinitesimal than the infinitesimal and can be ignored. By definition, then, $6$ is the derivative of squaring at $3$. That means that</p>
+		
+		<p>$$3.001^2 = 9.006$$</p>
+
+		<p>up to certain negligible corrections. You can use this for party tricks:</p>
+
+		<p>$$(1 + dx)^n = 1 + n dx$$</p>
+
+		<p>so that</p>
+
+		<p>$$\sqrt{1.01} = 1.005$$</p>
+
+		<p>You can use this to do arithmetic well, after you internalize the idea. You can also do calculations with trigonometry. Once you know enough, you see that</p>
+		
+		<p>$$\sin{dx} = dx$$</p>
+
+		<p>for infinitesimal $dx$ (in radians) so that</p>
+
+		<p>$$\sin{10^{\circ}} = 10 * \frac{2\pi}{360}$$</p>
+
+		<p>to a good approximation, because $10^{\circ}$ is small. It allows you to approximate quickly.</p>
+		
+		<p>This infinitesimal idea is due to Cavalieri, it was developed by Leibnitz (Newton always thought in terms of limits), and it was given it's permanent final form inside modern mathematical logic by Abraham Robinson, after a century of suppression. It's a very exciting idea, it really is one of the greatest ideas humanity ever had.</p>
+		
+		<p>The next idea is that these infintesimals capture the notion of velocity. So that</p>
+
+		<p>$$x(t +dt) = x(t) + v(t) dt$$</p>
+		
+		<p>The velocity of the velocity is the acceleration:</p>
+		
+		<p>$$v(t+dt) = v(t) + a(t) dt$$</p>
+
+		<p>When dt is infinitesimal, that's calculus. When $dt$ is $.001$, that's what you do on your computer to simulate physics. You can do it, because $a(t)$ is known from Newton's law $a = \frac{F}{m}$ and $F$ is given as a function of the position. That means, knowing $x$ and $v$, you can calculate $a$, and then update $x$ and $v$ at the next $dt$.</p>
+		
+		<p>This "closes" the system of equations, it allows you to simulate the motion. This was understood already by Newton, but the clear statement everyone remembers is by Lagrange.</p>
+		
+		<p>The next idea is that infinite power-series converge in series to a class of functions of high importance, so that you have infinite series of successive corrections when $dt$ is not infinitesimal.</p>
+
+		<p>$$x(t+dt) = x(t) + v(t) dt + \frac{1}{2} a(t) dt^2 +...$$</p>
+		
+		<p>when $dt$ is not infinitesimal, there are all these orders. It allows you to indentify certain functions as infinite polynomials, and treat them as polynomials. This idea is due to Newton, it was greatly developed by Euler, and it was made stick by Cauchy and others in the 19th century, in the development of complex analysis and analytic function theory.</p>
+		
+		<p>The next idea is that areas and derivatives are related. If you look at the area under a curve from $0$ to $x:$ $A(x)$, then $A(x + dx) = A(x) + f(x) dx$ (you can see this by drawing rectangles), and therefore $f(x)$ is the derivative of $A(x)$. This allows you to give a systematic calculus for areas. This theorem is due to Isaac Barrow, Newton's advisor. It was what led Newton and Leibnitz both to run with the idea.</p>
+		
+		<p>The next idea is that of differential equations: you can express algorithms with steps which are infinitesimals as equations. For example, if you write down:</p>
+		
+		<p>$$df = f(x) dx$$</p>
+		
+		<p>Where $df$ means $f(x+dx) - f(x)$, then you can compute $f$ given an initial value. This allows you to speak about algorithms--- a differential equation plue a little stepsize defines an algorithm to compute $f$, and if you iterate it, you do physics. This idea was developed by Newton, Euler, a million people each focusing on a different differential equation, and today there is an industry for understanding these equations.</p>
+		
+		<p>The next idea is of partial derivatives, that if you have a function of several variables:</p>
+
+		<p>$$F(x + dx,y +dy) = F(x,y) + F_x dx + F_y dy$$</p>
+		
+		<p>One set of ideas here are the Legendre transform, swapping out $y$ for $F_y$, which is ultimately explained by statistics and Gaussian integrals.</p>
+		
+		<p>Then there is the idea of vector spaces, and linear tangent spaces, and differential geometry, which leads to General Relativity.</p>
+		
+		<p>In another generalization, these linear spaces extend to infinite linear spaces, the Taylor polynomial series can be swapped out for better behaved Fourier series and other polynomial series, like those of Tschebycheff, the function classes expand to include random walks, and non-smooth monsters that are convergent in the 19th century, the notion of integration becomes universal in the 20th century due to Lebesgue Cohen and Solovay. And you are in the modern world.</p>
+		
+		<p>Each of these topics I mentioned above deserves at least a month or two of serious study, and they all intelectually begin either with Newton doing differential equations and power series, or with Leibnitz doing infinitesimals. This is what gave birth to modern mathematics. The development can be seen as the point of calculus.</p>
+		
+		<p>There are extensions of the idea that were worked out recently. Ito calculus describes the motion of random walks, and it is related to the Feynman path integral, which describes integration over spaces of paths. The main idea here is renormalization, which is the taking of infinitesimal limits inside Feynman path integrals--- these ideas are being worked out today, they were worked out internally to physics in the 1970s, but they need to turn into rigorous mathematics very badly.</p>
+		
+		<p>For a deeper overview of how to motivate calculus, you need to learn a little bit of the previous calculus that is it's namesake, the calculus of finite-differences. This motivates the elementary development, and I reviewed it quickly in my answer to this question in stackexchange: <a href="How-can_does-calculus-describe.html">How can/does calculus describe the movement of a particle?</a></p>
+
+	</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
