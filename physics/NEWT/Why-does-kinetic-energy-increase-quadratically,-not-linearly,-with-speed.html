@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width">
+      <title>Why does kinetic energy increase quadratically, not linearly, with speed?</title>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="load-mathjax.js" defer></script>
+    </head>
 
     <!-- Write your comments here -->
 
     <body>
         <h3>Why does kinetic energy increase quadratically, not linearly, with speed?</h3>
-        <div class="s-prose js-post-body" itemprop="text">
+        <div>
             <p>The previous answers all restate the problem as "Work is force dot/times distance". But this is not really satisfying, because you could then ask "Why is work force dot distance?" and the mystery is the same.</p>
 
             <p>
@@ -15,125 +22,61 @@
             </p>
 
             <p>
-                First, you need to define kinetic energy. I will define it as follows: the kinetic energy
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(m,v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(m,v)" title="\small E(m,v)" />
-                </a>
-
-                of a ball of clay of mass
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;m" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;m" title="\small m" />
-                </a>
+                First, you need to define kinetic energy. I will define it as follows: the kinetic energy 
+                $E(m,v)$ of a ball of clay of mass
+                $m$
 
                 moving with velocity
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" title="\small v" />
-                </a>
+                $v$
 
                 is the amount of calories of heat that it makes when it smacks into a wall. This definition does not make reference to any mechanical quantity, and it can be determined using thermometers. I will show that, assuming Galilean
                 invariance,
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(v)" title="\small E(v)" />
-                </a>
+                $E(m,v)$
 
                 must be the square of the velocity.
             </p>
 
             <p>
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(m,v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E(m,v)" title="\small E(m,v)" />
-                </a>
-
-                , if it is invariant, must be proportional to the mass, because you can smack two clay balls side by side and get twice the heating, so
+                $E(m,v)$, if it is invariant, must be proportional to the mass, because you can smack two clay balls side by side and get twice the heating, so
             </p>
-            <p><span class="MathJax_Preview" style="color: inherit;"></span></p>
-            <div class="MathJax_Display" style="text-align: center;">
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&amp;space;\small&amp;space;E(m,v)&amp;space;=&amp;space;m&amp;space;E(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\small&amp;space;E(m,v)&amp;space;=&amp;space;m&amp;space;E(v)" title="\small E(m,v) = m E(v)" />
-                </a>
-            </div>
+            $$E(m,v) = m E(v)$$
 
             <p>
                 Further, if you smack two identical clay balls of mass
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;m" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;m" title="\small m" />
-                </a>
+                $m$
 
                 moving with velocity
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" title="\small v" />
-                </a>
+                $v$
 
                 head-on into each other, both balls stop, by symmetry. The result is that each acts as a wall for the other, and you must get an amount of heating equal to
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2m&amp;space;E(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2m&amp;space;E(v)" title="\small 2m E(v)" />
-                </a>
-
-                .
+                $v$.
             </p>
 
             <p>
                 But now look at this in a train which is moving along with one of the balls before the collision. In this frame of reference, the first ball starts out stopped, the second ball hits it at
 
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2v" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2v" title="\small 2v" />
-                </a>
-
-                , and the two-ball stuck system ends up moving with velocity
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;v" title="\small v" />
-                </a>
-
-                .
+                $2v$, and the two-ball stuck system ends up moving with velocity $v$.
             </p>
 
             <p>
                 The kinetic energy of the second ball is
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;mE(2v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;mE(2v)" title="\small mE(2v)" />
-                </a>
+                $mE(2v)$
 
                 at the start, and after the collision, you have
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" title="\small 2mE(v)" />
-                </a>
+                $2mE(v)$
 
                 kinetic energy stored in the combined ball. But the heating generated by the collision is the same as in the earlier case. So there are now two
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" title="\small 2mE(v)" />
-                </a>
-
-                terms to consider: one representing the heat generated by the collision, which we saw earlier was
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" title="\small 2mE(v)" />
-                </a>
-
-                , and the other representing the energy stored in the moving, double-mass ball, which is also
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;2mE(v)" title="\small 2mE(v)" />
-                </a>
-
-                . Due to conservation of energy, those two terms need to add up to the kinetic energy of the second ball before the collision:
+                $2mE(v)$ terms to consider: one representing the heat generated by the collision, which we saw earlier was
+                $2mE(v)$, and the other representing the energy stored in the moving, double-mass ball, which is also
+                $2mE(v)$. Due to conservation of energy, those two terms need to add up to the kinetic energy of the second ball before the collision:
             </p>
 
-            <p><span class="MathJax_Preview" style="color: inherit;"></span></p>
-            <div class="MathJax_Display" style="text-align: center;">
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&amp;space;\small&amp;space;mE(2v)&amp;space;=&amp;space;2mE(v)&amp;space;+&amp;space;2mE(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\small&amp;space;mE(2v)&amp;space;=&amp;space;2mE(v)&amp;space;+&amp;space;2mE(v)" title="\small mE(2v) = 2mE(v) + 2mE(v)" />
-                </a>
-            </div>
-            <p></p>
-            <div class="MathJax_Display" style="text-align: center;">
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&amp;space;\small&amp;space;E(2v)&amp;space;=&amp;space;4&amp;space;E(v)" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\small&amp;space;E(2v)&amp;space;=&amp;space;4&amp;space;E(v)" title="\small E(2v) = 4 E(v)" />
-                </a>
-            </div>
+            $$mE(2v) = 2mE(v) + 2mE(v)$$
+            $$E(2v) = 4 E(v)$$
 
             <p>
                 which implies that
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\inline&amp;space;\dpi{120}&amp;space;\small&amp;space;E" title="\small E" />
-                </a>
+                $E$
 
                 is quadratic.
             </p>
@@ -187,13 +130,11 @@
                 uniform motions up and down with a steady velocity. Once you know that motion in constant gravity is constant acceleration, you know that
             </p>
 
-            <p><span class="MathJax_Preview" style="color: inherit;"></span></p>
-            <div class="MathJax_Display" style="text-align: center;">
-                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&amp;space;\small&amp;space;mv^2/2&amp;space;+&amp;space;mgh&amp;space;=&amp;space;C" target="_blank">
-                    <img src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\small&amp;space;mv^2/2&amp;space;+&amp;space;mgh&amp;space;=&amp;space;C" title="\small mv^2/2 + mgh = C" />
-                </a>
-            </div>
+            $$\frac{{mv}^{2}}{2} + mgh = C$$
             <p>so that Huygens dynamical quantity which is additively conserved along with Archimedes mass times height is the velocity squared.</p>
         </div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </body>
 </html>
