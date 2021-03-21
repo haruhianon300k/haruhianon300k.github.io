@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US" class="js">
-<head></head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
 <body>
+
 <div>
     <h3>What is infinity in mathematics?</h3>
     <p>
@@ -18,8 +27,8 @@
     </p>
     <p>
             This construction produces the countable ordinals, and you can understand it as the partial sums of a sequence, the sequence which is the length of the steps. Cantor identified these infinite ordinal structures as important, and
-            founded set theory to study them. He understood that ordinals allow induction--- if a property holds for the ordinal "0" and it is true that the property for ordinal a implies the property for a+1, and also that the property for
-            all ordinals limiting to ordinal b implies the property holds at b, then the property holds for all ordinals. This is the transfinite induction which gives set theory power over arithmetic.
+            founded set theory to study them. He understood that ordinals allow induction--- if a property holds for the ordinal "$0$" and it is true that the property for ordinal $a$ implies the property for $a+1$, and also that the property for
+            all ordinals limiting to ordinal $b$ implies the property holds at $b$, then the property holds for all ordinals. This is the transfinite induction which gives set theory power over arithmetic.
     </p>
     <p>
             He also identified the notion of set cardinality, and used it to argue that the real numbers are uncountable. But he was so in love with the ordinal structure, that he was sure that the real numbers too could be given an ordinal
@@ -30,8 +39,8 @@
             deeper you can iterate certain constructions.
     </p>
     <p>
-            The most important of this is Godel's construction. If S is an axiomatic system, then S cannot prove it is consistent. Adding "S is consistent" as an axiom, you go to S+1 (in a manner of speaking), and then adding "S+1 is
-            consistent" you go to S+2. If you have an increasing such tower of consistent systems, you can take the union of all the statements proved in these systems and produce the system corresponding to the limit. You can iterate this
+            The most important of this is Godel's construction. If $S$ is an axiomatic system, then $S$ cannot prove it is consistent. Adding "$S$ is consistent" as an axiom, you go to $S+1$ (in a manner of speaking), and then adding "$S+1$ is
+            consistent" you go to $S+2$. If you have an increasing such tower of consistent systems, you can take the union of all the statements proved in these systems and produce the system corresponding to the limit. You can iterate this
             over all countable computable ordinals, the ones you can produce by a computer program spitting out points on a line.
     </p>
     <p>
