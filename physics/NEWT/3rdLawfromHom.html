@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Deriving Newton's Third Law from homogeneity of Space</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- https://physics.stackexchange.com/questions/12122/deriving-newtons-third-law-from-homogeneity-of-space -->
+
+<body>
+
+
+	<h3>Deriving Newton's Third Law from homogeneity of Space</h3>
+
+	<p>The derivation in Landau and Lifschitz is making some additional implicit assumptions. They assume that all forces come from pair-interactions, and that the pair forces are rotationally invariant. With these two assumptions, the potential function in the Lagrangian is
+
+	$$V(x_1,\ldots,x_n) = \sum_{\langle i,j\rangle} V(|x_i - x_j|)$$
+
+	And then it is easy to prove Newton's third law, because the derivative of the distance function is equal and opposite for each pair of particles.</p>
+
+	<p>This type of derivation is reasonable from a physical point of view for macroscopic objects, but it is not mathematically ok, because it omits important examples.</p>
+
+	<h3>No rotational invariance, no third law</h3>
+
+	<p>Dropping the assumption of rotational invariance, but keeping the assumption of pair-wise interaction, one gets the following counterexample in $2$ dimensions, with two particles $(A,B)$ with position vectors $(A_x,A_y)$ $(B_x,B_y)$ respectively:
+
+	$$V(A_x,A_y,B_x,B_y) = f(A_x-B_x) + f(A_y - B_y) $$
+
+	where $f$ is any function other than $f(x)=x^2$. This pair potential leads to equal and opposite forces, but not collinear ones. Linear momentum and energy are conserved, but angular momentum is not, except when both particles are on the lines $y=\pm x$ relative to each other. The potential is un-physical of course, in the absence of a medium like a lattice that breaks rotational invariance.</p>
+
+	<h3>Many-body direct interactions, no reflection symmetry, no third law</h3>
+
+	<p>There is another class of counterexamples which is much more interesting, because they do not break angular momentum or center of mass conservation laws, and so they are physically possible interactions in vacuum, but they do break Newton's third law. This is the chiral three-body interaction.</p>
+
+	<p>Consider $3$ particles $A,B,C$ in two dimensions whose potential function is equal to the signed area of the triangle formed by the points $A,B,C$.
+
+	$$V(A,B,C) = B_x C_y - A_x C_y -B_x A_y - C_x B_y + C_x A_y + A_x B_y$$
+
+	If all $3$ particles are collinear, the forces for this $3$-body potential are perpendicular to the common line they lie on. The derivative of the area is maximum by moving the points away from the common line. So you obviously cannot write the force as any sum of pairwise interactions along the line of separation, equal and opposite or not. The forces and torques still add up to zero, since this potential is translationally and rotationally invariant.</p>
+
+	<h3>Many body direct interaction, spatial reflection symmetry, crappy third law</h3>
+
+	<p>If the force on $k$ particles is reflection invariant, it never gets out of the subspace spanned by their mutual separation. This is because if they lie in a lower dimensional subspace, the system is invariant with respect to reflections perpendicular to that subspace, so the forces must be as well.
+
+	<p>This means that you can always cook up equal and opposite forces between the particles that add up to the total force, and pretend that these forces are physically meaningful. This allows you to salvage Newton's third law, in a way. But it gives nonsense forces.
+
+	<p>To see that this is nonsense, consider the three-particle triangle area potential from before, but this time take the absolute value. The result is reflection invariant, but contains a discontinuity in the derivative when the particles become collinear. Near collinearity, the forces perpendicular have a finite limit. But in order to write these finite forces as a sum of equal and opposite contributions from the three-particles, you need the forces between the particles to diverge at collinearity.</p>
+
+	<h3>Three body interactions are natural</h3>
+
+	<p>There is natural physics that gives such a three-body interaction. You can imagine the three bodies are connected by rigid frictionless struts that are free to expand and contract like collapsible antennas, and a very high-quality massless soap bubble is stretched between the struts. The soap bubble prefers to have less area according to its nonzero surface tension. If the dynamics of the soap bubble and the struts are fast compared to the particles, you can integrate out the soap bubble degrees of freedom and you will get just such a three-body interaction.</p>
+
+	<p>Then the reason the bodies snap together near collinearity with a finite transverse force is clear--- the soap bubble wants to collapse to zero area, so it pulls them in. It is then obvious that there is no sense in which they have any diverging pairwise forces, or any pairwise forces at all.</p>
+
+	<p>Other cases where you get three body interactions directly is when you have a non-linear field between the three objects, and the field dynamics are fast. Consider a cubically self-interacting massive scalar field (with cubic coupling $\lambda$) sourced by classical stationary delta-function sources of strength $g$. The leading non-linear contribution to the classical potential is a tree-level, classical, three-body interaction of the form
+
+	$$V(x,y,z) \propto g^3 \lambda \int \,\mathrm d^3k_1\mathrm  d^3k_2 { e^{i(k_1\cdot (x-z) + k_2\cdot(y-z))} \over (k_1^2 + m^2) (k_2^2 + m^2)((k_1+k_2)^2 + m^2)}$$
+
+	which heuristically goes something like $\displaystyle {e^{-mr_{123}}r_{123}\over r_{12}r_{23}r_{13}}$ where the $r$'s are the side lengths of the triangle and $r_{123}$ is the perimeter (this is just a scaling estimate). For nucleons, many body potentials are significant.</p>
+
+	<h3>The forces from the crappy third law are not integrable</h3>
+
+	<p>If you still insist on a Newton's third law description of three-body interactions like the soap bubble particles, and you give a pairwise force for each pair of particles which adds up to the full many-body interaction, these pairwise forces cannot be thought of as coming from a potential function. They are not integrable.</p>
+
+	<p>The example of the soap-bubble force makes it clear--- if $A,B,C$ are nearly collinear with $B$ between $A$ and $C$, closer to $A$, you can slide $B$ away from $A$ towards $C$ very very close to collinearity, and bring it back less close to collinear. The $A-B$ force is along the line of separation, and it diverges at collinearity, so the integral of the force along this loop cannot be zero.</p>
+
+	<p>The force is still conservative of course, it comes from a three-body potential after all. This means that the two-body $A-B$ force plus the two-body $B-C$ force is integrable. It's just that the $A-C$ two body force is not. So the separation is completely silly.</p>
+
+	<h3>Absence of multi-body interactions for macroscopic objects in empty space</h3>
+
+	<p>The interactions of macroscopic objects are through contact forces, which are necessarily pairwise since all other contacts are far away, and electromagnetic and gravitational fields, which are very close to linear at these scales. The electromagnetic and gravitational forces end up being linearly additive between pairs, and the result is a potential of the form Landau and Lifschitz consider--- pairwise interactions which are individually rotationally invariant.</p>
+
+	<p>But for close packed atoms in a crystal, there is no reason to ignore $3$-body potentials. It is certainly true that in the nucleus three-body and four-body potentials are necessary, but in both cases you are dealing with quantum systems.</p>
+
+	<p>So I don't think the third law is particularly fundamental. As a philosophical thing, that nothing can act without being acted upon, it's as valid as any other general principle. But as a mathematical statement of the nature of interactions between particles, it is completely dated. The fundamental things are the conservation of linear momentum, angular momentum, and center of mass, which are independent laws, derived from translation invariance, rotational invariance, and Galilean invariance respectively. The pair-wise forces acting along the separation direction are just an accident.</p>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
