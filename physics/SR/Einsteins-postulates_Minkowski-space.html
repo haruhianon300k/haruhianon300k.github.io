@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
 
     <!-- Write your comments here -->
 
-    <body>
+<body>
+        
         <h3>Einstein's postulates ↔ Minkowski space for a Layman</h3>
-        <div class="s-prose js-post-body" itemprop="text">
+        <div>
             <p>
-                First, set the units so that the speed of light is equal to one, so that the path of light rays in space-time are at 45 euclidean degrees. Note that a moving observer has a space-time path which is tilted relative to the
-                t-axis, and the t-axis describes the path of a stationary observer (what I really mean is, get comfortable with space-time pictures). Then restrict yourself to two dimensions, one space, one time.
+                First, set the units so that the speed of light is equal to one, so that the path of light rays in space-time are at $45$ euclidean degrees. Note that a moving observer has a space-time path which is tilted relative to the
+                $t$-axis, and the $t$-axis describes the path of a stationary observer (what I really mean is, get comfortable with space-time pictures). Then restrict yourself to two dimensions, one space, one time.
             </p>
 
             <p>
-                A moving observer's t-axis is, by the principle of relativity, his world line. He has a bunch of friends moving along at the same speed, at different positions, and their worldlines are parallel to the first (they are
+                A moving observer's $t$-axis is, by the principle of relativity, his world line. He has a bunch of friends moving along at the same speed, at different positions, and their worldlines are parallel to the first (they are
                 relatively stationary by the principle of relativity, so their worldlines never meet). They also have ticks-points corresponding to their clocks.
             </p>
 
-            <p>The first nontrivial question is "what does the moving observer's x-axis look like?" This is also the first thing Einstein adresses in his relativity paper.</p>
+            <p>The first nontrivial question is "what does the moving observer's $x$-axis look like?" This is also the first thing Einstein adresses in his relativity paper.</p>
 
             <p>
-                The x-axis is defined in the stationary frame as "all events simultaneous with the origin". Another way of saying this, is that the events at position x and y are simultaneous if the light ray starting at the event at x and
-                the light rays starting at the event from y reach the point (x+y)/2 at the same time.
+                The $x$-axis is defined in the stationary frame as "all events simultaneous with the origin". Another way of saying this, is that the events at position $x$ and $y$ are simultaneous if the light ray starting at the event at $x$ and
+                the light rays starting at the event from $y$ reach the point $\frac{x+y}{2}$ at the same time.
             </p>
 
-            <p>
+            <p style="text-align: center">
                 <a href="https://i.stack.imgur.com/k1fal.png" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/k1fal.png" alt="alt text" /></a>
             </p>
 
             <p>
-                So, by the principle of relativity, if two comoving observers want to synchronize their clocks, the friend at x and the friend at y send a light signal at what they think is the same clock-tick to the friend at (x+y)/2. If
-                (x+y)/2 gets the signal from both at the same time, he tells them "ok--- you're synchronous". This can be seen on a space-time diagram
+                So, by the principle of relativity, if two comoving observers want to synchronize their clocks, the friend at $x$ and the friend at $y$ send a light signal at what they think is the same clock-tick to the friend at $\frac{x+y}{2}$. If
+                $\frac{x+y}{2}$ gets the signal from both at the same time, he tells them "ok--- you're synchronous". This can be seen on a space-time diagram
             </p>
 
-            <p>
+            <p style="text-align: center">
                 <a href="https://i.stack.imgur.com/qns3w.png" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/qns3w.png" alt="alt text" /></a>
             </p>
 
             <p>
-                It is important to convince yourself of the following: the x-axis of the moving observer is tilted up by the same amount that the t-axis of the moving observer is tilted right, so that the light signal from e and the light
-                signal from f both reach g on the parallel line halfway inbetween. The reason is that the light-rays are still on 45 degrees for the moving observer, which is Einstein's principle of the constancy of the speed of light.
+                It is important to convince yourself of the following: the $x$-axis of the moving observer is tilted up by the same amount that the $t$-axis of the moving observer is tilted right, so that the light signal from e and the light
+                signal from $f$ both reach $g$ on the parallel line halfway inbetween. The reason is that the light-rays are still on $45$ degrees for the moving observer, which is Einstein's principle of the constancy of the speed of light.
             </p>
 
             <p>
-                Two lines are relativistically-perpendicular if one is the x-axis for the other's t-axis. Convince yourself that two lines are perpendicular when they have the same tilt relative to the 45-degree lines corresponding to paths
+                Two lines are relativistically-perpendicular if one is the $x$-axis for the other's $t$-axis. Convince yourself that two lines are perpendicular when they have the same tilt relative to the $45$-degree lines corresponding to paths
                 of light rays.
             </p>
 
@@ -51,252 +59,34 @@
 
             <h3>Chinese Minkowski Pythagorean theorem</h3>
 
-            <p>
+            <p style="text-align: center">
                 <a href="https://i.stack.imgur.com/UmRWH.png" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/UmRWH.png" alt="alt text" /></a>
             </p>
 
-            <p>The middle space-time shape that looks like a diamond is really a square in relativity--- you must remember what perpendicularity means: same tilt relative to the 45-degree line. By adding areas:</p>
+            <p>The middle space-time shape that looks like a diamond is really a square in relativity--- you must remember what perpendicularity means: same tilt relative to the $45$-degree line. By adding areas:</p>
 
-            <p>
-                <a target="_blank" href="https://www.codecogs.com/eqnedit.php?latex=(a+b)^2&amp;space;=&amp;space;c^2&amp;space;+&amp;space;2ab&amp;space;+&amp;space;2b^2">
-                    <img title="(a+b)^2 = c^2 + 2ab + 2b^2" src="https://latex.codecogs.com/gif.latex?(a+b)^2&amp;space;=&amp;space;c^2&amp;space;+&amp;space;2ab&amp;space;+&amp;space;2b^2" />
-                </a>
-            </p>
-            <p>
-                <a target="_blank" href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&amp;space;\small&amp;space;c^2&amp;space;=&amp;space;a^2&amp;space;-&amp;space;b^2">
-                    <img title="\small c^2 = a^2 - b^2" src="https://latex.codecogs.com/gif.latex?\dpi{120}&amp;space;\small&amp;space;c^2&amp;space;=&amp;space;a^2&amp;space;-&amp;space;b^2" />
-                </a>
-            </p>
+            $$(a+b)^2 = c^2 + 2ab + 2b^2$$
+            $$c^2 = a^2 - b^2$$
+
+            <p>This is the Minkowski version of the Chinese proof of the Pythagorean theorem.</p>
+
         </div>
-        <hr />
-        <ul class="comments-list js-comments-list" data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
-            <li id="comment-32779" class="comment js-comment" data-comment-id="32779">
-                <div class="js-comment-actions comment-actions">
-                    <div class="comment-score js-comment-edit-hide">
-                        <span title="number of 'useful comment' votes received" class="warm"></span>
-                    </div>
-                </div>
-                <div class="comment-text js-comment-text-and-form">
-                    <div class="comment-body js-comment-edit-hide">
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-49-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-231" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-232"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-49">
-                                \begingroup
-                            </script>
-                        </span>
-                        <span class="comment-copy">This is the Minkowski version of the Chinese proof of the Pythagorean theorem.</span>
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-50-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-233" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-234"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-50">
-                                \endgroup
-                            </script>
-                        </span>
-                        –&nbsp;<a href="/users/4864/ron-maimon" title="1 reputation" class="comment-user">Ron Maimon</a>
-                    </div>
-                </div>
-            </li>
 
-            <li id="comment-245581" class="comment js-comment" data-comment-id="245581">
-                <div class="js-comment-actions comment-actions">
-                    <div class="comment-score js-comment-edit-hide"></div>
-                </div>
-                <div class="comment-text js-comment-text-and-form">
-                    <div class="comment-body js-comment-edit-hide">
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-53-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-239" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-240"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-53">
-                                \begingroup
-                            </script>
-                        </span>
-                        <span class="comment-copy">
-                            Can you give a more mathematical reason why the area of the parallelogram is <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span
-                                class="MathJax"
-                                id="MathJax-Element-54-Frame"
-                                tabindex="0"
-                                data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>c</mi><mn>2</mn></msup></math>'
-                                role="presentation"
-                                style="position: relative;"
-                            >
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-241" style="width: 1.043em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0.904em; height: 0px; font-size: 111%;">
-                                            <span style="position: absolute; clip: rect(1.182em, 1000.9em, 2.429em, -999.997em); top: -2.214em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-242">
-                                                    <span class="msubsup" id="MathJax-Span-243">
-                                                        <span style="display: inline-block; position: relative; width: 0.835em; height: 0px;">
-                                                            <span style="position: absolute; clip: rect(3.399em, 1000.42em, 4.231em, -999.997em); top: -4.016em; left: 0em;">
-                                                                <span class="mi" id="MathJax-Span-244" style="font-family: MathJax_Math-italic;">c</span><span style="display: inline-block; width: 0px; height: 4.023em;"></span>
-                                                            </span>
-                                                            <span style="position: absolute; top: -4.362em; left: 0.419em;">
-                                                                <span class="mn" id="MathJax-Span-245" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.023em;"></span>
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                                <span style="display: inline-block; width: 0px; height: 2.221em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 1.081em;"></span>
-                                    </span>
-                                </nobr>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-54">
-                                c^2
-                            </script>
-                            Dose it corresponds to the minus sign in the Pythagoras's Theorem?
-                        </span>
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-55-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-246" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-247"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-55">
-                                \endgroup
-                            </script>
-                        </span>
-                        –&nbsp;<a href="/users/16941/self-made-man" title="1,631 reputation" class="comment-user">Self-Made Man</a>
-                    </div>
-                </div>
-            </li>
-            <li id="comment-299264" class="comment js-comment" data-comment-id="299264">
-                <div class="js-comment-actions comment-actions">
-                    <div class="comment-score js-comment-edit-hide">
-                        <span title="number of 'useful comment' votes received" class="cool"></span>
-                    </div>
-                </div>
-                <div class="comment-text js-comment-text-and-form">
-                    <div class="comment-body js-comment-edit-hide">
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-56-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-248" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-249"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-56">
-                                \begingroup
-                            </script>
-                        </span>
-                        <span class="comment-copy">
-                            I invented this proof to teach relativity, it's not difficult at all though. The proof is interesting because it applies Euclidean techniques in a case where we have zero intuition, so that all the implicit
-                            assumptions hidden in traditional Euclid style proofs are revealed. The middle parallelogram square has side length c, so it's area is <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span
-                                class="MathJax"
-                                id="MathJax-Element-57-Frame"
-                                tabindex="0"
-                                data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>c</mi><mn>2</mn></msup></math>'
-                                role="presentation"
-                                style="position: relative;"
-                            >
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-250" style="width: 1.043em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0.904em; height: 0px; font-size: 111%;">
-                                            <span style="position: absolute; clip: rect(1.182em, 1000.9em, 2.429em, -999.997em); top: -2.214em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-251">
-                                                    <span class="msubsup" id="MathJax-Span-252">
-                                                        <span style="display: inline-block; position: relative; width: 0.835em; height: 0px;">
-                                                            <span style="position: absolute; clip: rect(3.399em, 1000.42em, 4.231em, -999.997em); top: -4.016em; left: 0em;">
-                                                                <span class="mi" id="MathJax-Span-253" style="font-family: MathJax_Math-italic;">c</span><span style="display: inline-block; width: 0px; height: 4.023em;"></span>
-                                                            </span>
-                                                            <span style="position: absolute; top: -4.362em; left: 0.419em;">
-                                                                <span class="mn" id="MathJax-Span-254" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.023em;"></span>
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                                <span style="display: inline-block; width: 0px; height: 2.221em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 1.081em;"></span>
-                                    </span>
-                                </nobr>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-57">
-                                c^2
-                            </script>
-                            . The implicit assumption is that area in space-time is invariant under the transformation to a moving frame, an equivalent implicit assumption appears in Euclidean proofs of the pythagorean theorem.
-                        </span>
-                        <span class="d-none">
-                            <span class="MathJax_Preview" style="color: inherit;"></span>
-                            <span class="MathJax" id="MathJax-Element-58-Frame" tabindex="0" data-mathml='<math xmlns="http://www.w3.org/1998/Math/MathML" />' role="presentation" style="position: relative;">
-                                <nobr aria-hidden="true">
-                                    <span class="math" id="MathJax-Span-255" style="width: 0em; display: inline-block;">
-                                        <span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 120%;">
-                                            <span style="position: absolute; clip: rect(3.785em, 1000em, 4.17em, -999.997em); top: -3.971em; left: 0em;">
-                                                <span class="mrow" id="MathJax-Span-256"></span><span style="display: inline-block; width: 0px; height: 3.978em;"></span>
-                                            </span>
-                                        </span>
-                                        <span style="display: inline-block; overflow: hidden; vertical-align: -0.073em; border-left: 0px solid; width: 0px; height: 0.158em;"></span>
-                                    </span>
-                                </nobr>
-                                <span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span>
-                            </span>
-                            <script type="math/tex" id="MathJax-Element-58">
-                                \endgroup
-                            </script>
-                        </span>
-                        –&nbsp;<a href="/users/4864/ron-maimon" title="1 reputation" class="comment-user">Ron Maimon</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </body>
+
+        <hr>
+
+        <div>
+            
+            <blockquote>
+                <em><p>Can you give a more mathematical reason why the area of the parallelogram is $c^2$ Dose it corresponds to the minus sign in the Pythagoras's Theorem?</p></em>
+                <blockquote>
+                    <p>I invented this proof to teach relativity, it's not difficult at all though. The proof is interesting because it applies Euclidean techniques in a case where we have zero intuition, so that all the implicit assumptions hidden in traditional Euclid style proofs are revealed. The middle parallelogram square has side length $c$, so it's area is $c^2$. The implicit assumption is that area in space-time is invariant under the transformation to a moving frame, an equivalent implicit assumption appears in Euclidean proofs of the pythagorean theorem.</p>
+                </blockquote>
+            </blockquote>
+        </div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
 </html>
