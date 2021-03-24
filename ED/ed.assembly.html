@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Assembly</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Assembly</h1>
+	<!-- start content -->
+	
+	<div class="mw-parser-output"><p>Assembly is <s>probably</s> definitely one of the most <a href="/index.php/Boring" class="mw-redirect" title="Boring">tedious</a> languages out there. <a href="/index.php/Bullshit" title="Bullshit">It's not that it's hard</a>, but while the average language (<a href="/index.php/C" title="C">C</a>, C++, <a href="/index.php/Java" title="Java">Java</a>, etc.) takes around a month or two to learn, Assembly will probably take you <a href="/index.php/At_least_100" title="At least 100">more than a year</a> to use proficiently. This is because unlike most languages which have a syntax similar to written English (for, if, etc.), Assembly is a low level language in which you write the instructions telling the processor what to do. The abstraction used in <a href="/index.php/Over_9000" title="Over 9000">high level</a> languages hides the complexity of the processor.
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Who_uses_Assembly.3F"><span class="tocnumber">1</span> <span class="toctext">Who uses Assembly?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Example"><span class="tocnumber">2</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Inline_Assembly"><span class="tocnumber">3</span> <span class="toctext">Inline Assembly</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Optimizing_Programs"><span class="tocnumber">3.1</span> <span class="toctext">Optimizing Programs</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#.22Optimizing_Programs.22"><span class="tocnumber">3.2</span> <span class="toctext">"Optimizing Programs"</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Assemblers"><span class="tocnumber">4</span> <span class="toctext">Assemblers</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_Links"><span class="tocnumber">5</span> <span class="toctext">External Links</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Who_uses_Assembly?"></span><span class="mw-headline" id="Who_uses_Assembly.3F">Who uses Assembly?</span></h2>
+<ul><li>Fat nerds who think the more obtuse a <a href="/index.php/Programming_language" title="Programming language">programming language</a> is, the better it must be.</li>
+<li>Jackasses who like to <a href="/index.php/Role-playing" title="Role-playing">pretend</a> they are "going old school".</li>
+<li>Those who <i>really</i> enjoy reinventing the wheel.</li>
+<li>People optimizing compilers, but because they die like flies and the public is used to feature-stale software not running faster even after 10 years (see <a href="/index.php?title=Microsoft_Office&amp;action=edit&amp;redlink=1" class="new" title="Microsoft Office (page does not exist)">Microsoft Office</a>), the industry rather buys faster hardware.</li>
+<li><a href="/index.php/Cracker" title="Cracker">Crackergroups</a> who circumvent copy protection of uncreative american games for money to enable eastern street dealers to sell them (instead of bread).</li>
+<li>People who like making the closest to the metal code they can, <s>not realizing that you can compile code to ASM then assemble.</s>No its still faster.</li>
+<li>Not even <a href="/index.php/Grandma" class="mw-redirect" title="Grandma">Grandma</a>.</li></ul>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<p><b>PROTIP: These examples apply ONLY to x86 (and in some cases amd64) assembly programming.</b>
+</p><p>This is "Hello, World!" example for MASM (note the includes, this is specific to MASM and Win32):
+</p>
+<pre>
+ .386
+
+ .model flat, stdcall 
+ option casemap :none 
+
+ include \MASM32\INCLUDE\windows.inc
+ include \MASM32\INCLUDE\masm32.inc
+ include \MASM32\INCLUDE\user32.inc
+ includelib \MASM32\LIB\user32.lib
+
+ .data
+ message db "i herd u liek mudkipz?",0
+ mestitle db "lol, win32!",0
+
+ .code
+ start:
+ invoke MessageBox,0,ADDR message,ADDR mestitle,MB_OK
+ ret
+ end start
+</pre>
+<p>If you're using FASM and you think invoke is for pussies:
+</p>
+<pre>
+ format PE GUI 4.0
+ include 'win32a.inc'
+ entry start
+ 
+ section '.c0de' code data readable writeable executable
+ 
+ data import
+   library user32,"user32.dll"
+   import user32,MessageBox,"MessageBoxA"
+ end data
+ 
+ message db 'i herd u liek mudkipz?',0
+ title db 'lol, win32!',0
+ 
+ align 0x10
+ 
+ start:
+   pop edx
+   push 0
+   push title
+   push message
+   push 0
+   push edx
+   jmp [MessageBox]
+
+ data fixups
+ end data
+</pre>
+<p>Or, if you prefer penguins (GAS)...:
+</p>
+<pre>
+.section .data
+output:
+    .ascii "Goodbye, cruel world!"
+.section .text
+.globl _main
+_main:
+    movl $output, %ecx
+    movl $4, %eax
+    movl $1, %ebx
+    movl $21, %edx
+    int $0x80
+    movl $1, %eax
+    movl $0, %ebx
+    int $0x80
+</pre>
+<p>Simple, right?
+</p>
+<h2><span class="mw-headline" id="Inline_Assembly">Inline Assembly</span></h2>
+<p>Because assembly usually operates faster than high level code (C, BASIC, etc.) a lot of compilers for high level languages have support for inline assembly which is basically putting assembly code in your high level code.
+</p><p>This has the advantages of:
+</p>
+<ul><li>Optimizing speed critical algorithms</li>
+<li><s>Direct hardware access</s> Unless you're writing your own OS anyway, this is a myth.</li></ul>
+<p>But a big disadvantage is that the inline assembly may not work on other architectures.
+</p><p><a rel="nofollow" class="external text" href="https://anonym.to/http://www.codeproject.com/KB/cpp/edujini_inline_asm.aspx">Here</a> is a tutorial for inline assembly with the gcc compiler.
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="Optimizing_Programs">Optimizing Programs</span></h3>
+<p><a href="/index.php/Shit_nobody_cares_about" class="mw-redirect" title="Shit nobody cares about">Here's a short thing about some of the things that you can optimize by using assembly in your programs along with some things you cannot.
+
+Firstly, you can greatly optimize all of the operations inside of your DO and DO..WHILE loops these are very easy to replace in assembly, although you should note that if these calculations aren't very big then obviously interfacing it will cause your program to go slower. This is because every time the program calls this separate assembly module, it needs to save certain registers in the stack and then restore them. Which is OK for some programs but it could in theory be a pain in the ass for big programs that call the function several times, but that is again if the calculations aren't very big.
+
+IF.. Else's on the other hand aren't very easy to optimize, not that you can't optimize them, but really all of the optimizations you can do to them are very minor and kerxish.
+
+Basic math operations are very easy to optimize in assembly especially chunks of code that are repeated a lot. Regular integer stuff is easy to put into assembly but floating point operations are different, although this is not to imply that they are very much more difficult. They are different because all floating point operations are handled by the FPU registers, all of which commands have the letter F added to the front of them, I will elaborate more eventually on FPU.
+
+SIMD, which stands for Single Instruction, Multiple Data can be used to optimize vectors. SIMD can be used to optimize multimedia, bullshit like games, etc. The two extensions I know about are MMX and SSE (also I just googled for it, but since I learned assembly there is now SSE2, SSSE3, and an SSSSE4? lol so I'd suggest you look into them instead). It gets even worse if you include 3DNow!.
+</a> <a href="/index.php/Tl;dr" class="mw-redirect" title="Tl;dr">tl;dr</a> <a href="/index.php/Amirite%3F" class="mw-redirect" title="Amirite?">amirite?</a> 
+</p>
+<h3><span id="&quot;Optimizing_Programs&quot;"></span><span class="mw-headline" id=".22Optimizing_Programs.22">"Optimizing Programs"</span></h3>
+<p><a href="/index.php/Lie" class="mw-redirect" title="Lie">Assembly is the only language you have to work with when cracking programs.</a> (What kinda noob wrote this?) Imagine the pain groups like Razor1911 have to go through--- <a href="/index.php/HAHA_DISREGARD_THAT_I_SUCK_COCKS" class="mw-redirect" title="HAHA DISREGARD THAT I SUCK COCKS">HAHA DISREGARD THAT I SUCK COCKS</a>
+</p>
+<h2><span class="mw-headline" id="Assemblers">Assemblers</span></h2>
+<p>To turn your assembly code into binary you need to assemble it (compile), here's a list of a few of the most popular ones.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://anonym.to/http://www.nasm.us/">NASM (The Netwide Assembler)</a> - Cross platform and released under the LGPL.</li>
+<li><a rel="nofollow" class="external text" href="https://anonym.to/http://www.tortall.net/projects/yasm/">Yasm</a> - Complete rewrite of NASM.</li>
+<li><a rel="nofollow" class="external text" href="https://anonym.to/http://www.masm32.com/">MASM32</a> - 32 bit Microsoft assembler (what the code above is).</li>
+<li><a rel="nofollow" class="external text" href="https://anonym.to/http://www.gnu.org/software/binutils/">GAS (GNU Assembler)</a> - Cross platform released by the GNU under the GPL.</li>
+<li><a rel="nofollow" class="external text" href="https://anonym.to/http://webster.cs.ucr.edu/AsmTools/index.html">HLA (High Level Assembler)</a> - Assembler for High Level Assembly.</li>
+<li><a rel="nofollow" class="external text" href="https://anonym.to/http://flatassembler.net/">FASM (Flat Assembler)</a></li></ul>
+<h2><span class="mw-headline" id="External_Links">External Links</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://anonym.to/http://courses.ece.illinois.edu/ece390/books/artofasm/ArtofAsm.html">Art Of Assembly</a> - Assembly tutorial.</li>
+<li><a rel="nofollow" class="external text" href="http://anonmy.to/http://faydoc.tripod.com/cpu/">x86 CPU Instructions</a> - Reference for Intel x86 Assembly Instructions.</li></ul>
+
+
+
+<!-- 
+NewPP limit report
+Cached time: 20210323063725
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.217 seconds
+Real time usage: 0.233 seconds
+Preprocessor visited node count: 85/1000000
+Preprocessor generated node count: 0/1000000
+Post‐expand include size: 3174/15360000000 bytes
+Template argument size: 64/15360000000 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1050/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   31.910      1 -total
+ 52.56%   16.773      1 Template:Softwarez
+ 46.10%   14.710      1 Template:Programming
+ 27.14%    8.659      1 Template:Portal
+-->
+
+<!-- Saved in parser cache with key ed_wiki:pcache:idhash:6555-0!canonical and timestamp 20210323063725 and revision id 117098
+ -->
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>HTTP</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">HTTP</h1>
+	<!-- start content -->
+	
+	<div class="mw-parser-output">
+  <p><b>HTTP</b> is an acronym for 'HyperText Transfer Protocol', which by default works on <a href="/index.php/WhatPort80" title="WhatPort80">port 80</a>. Invented by some <a href="/index.php/Dutch" class="mw-redirect" title="Dutch">Dutchfag</a> named <a href="/index.php/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a>, it is what makes your viewing and sharing of <a href="/index.php/Lolcats" class="mw-redirect" title="Lolcats">lolcats</a> on the World Wide Web possible.
+  </p>
+  <div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+  <ul>
+  <li class="toclevel-1 tocsection-1"><a href="#HTTP_Requests"><span class="tocnumber">1</span> <span class="toctext">HTTP Requests</span></a></li>
+  <li class="toclevel-1 tocsection-2"><a href="#Responses"><span class="tocnumber">2</span> <span class="toctext">Responses</span></a></li>
+  <li class="toclevel-1 tocsection-3"><a href="#Messing_With_HTTP"><span class="tocnumber">3</span> <span class="toctext">Messing With HTTP</span></a>
+  <ul>
+  <li class="toclevel-2 tocsection-4"><a href="#cUrl"><span class="tocnumber">3.1</span> <span class="toctext">cUrl</span></a>
+  <ul>
+  <li class="toclevel-3 tocsection-5"><a href="#How_To"><span class="tocnumber">3.1.1</span> <span class="toctext">How To</span></a></li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  <li class="toclevel-1 tocsection-6"><a href="#See_Also"><span class="tocnumber">4</span> <span class="toctext">See Also</span></a></li>
+  </ul>
+  </div>
+
+  <h2><span class="mw-headline" id="HTTP_Requests">HTTP Requests</span></h2>
+  <p>This is what it looks like when you get <a href="/index.php/Last_Measure" title="Last Measure">NIMP'ed</a>.
+  </p>
+  <table class="wikitable sortable jquery-tablesorter" style="width: 80%; clear:right;">
+  <thead><tr>
+  <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Header
+  </th>
+  <th class="unsortable">Description
+  </th>
+  <th class="unsortable">Example
+  </th></tr></thead><tbody>
+  <tr>
+  <td>Accept</td>
+  <td>Content-Types that are acceptable</td>
+  <td><code>Accept: text/plain</code>
+  </td></tr>
+  <tr>
+  <td>Accept-Charset</td>
+  <td>Character sets that are acceptable</td>
+  <td><code>Accept-Charset: iso-8859-5</code>
+  </td></tr>
+  <tr>
+  <td>Accept-Encoding</td>
+  <td>Acceptable encodings</td>
+  <td><code>Accept-Encoding: compress, gzip</code>
+  </td></tr>
+  <tr>
+  <td>Accept-Language</td>
+  <td>Acceptable languages for response</td>
+  <td><code>Accept-Language: de</code>
+  </td></tr>
+  <tr>
+  <td>Accept-Ranges</td>
+  <td>Allows the server to indicate its acceptance of range requests for a resource</td>
+  <td><code> Accept-Ranges: bytes </code>
+  </td></tr>
+  <tr>
+  <td>Authorization</td>
+  <td>Authentication credentials for HTTP authentication</td>
+  <td><code>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>
+  </td></tr>
+  <tr>
+  <td>Cache-Control</td>
+  <td>Used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain</td>
+  <td><code>Cache-Control: no-cache</code>
+  </td></tr>
+  <tr>
+  <td>Connection</td>
+  <td>What type of connection the <a href="/index.php?title=User_Agents&amp;action=edit&amp;redlink=1" class="new" title="User Agents (page does not exist)">user-agent</a> would prefer</td>
+  <td><code>Connection: close</code>
+  </td></tr>
+  <tr>
+  <td>Cookie</td>
+  <td>an HTTP cookie previously sent by the server with <tt>Set-Cookie</tt> (below)</td>
+  <td><code>Cookie: $Version=1; UserId=BLACKJAMES</code>
+  </td></tr>
+  <tr>
+  <td>Content-Type</td>
+  <td>The mime-type of the body of the request (used with POST and PUT requests)</td>
+  <td><code>Content-Type: application/x-www-form-urlencoded</code>
+  </td></tr>
+  <tr>
+  <td>Date</td>
+  <td>The date and time that the message was sent</td>
+  <td><code>Date: Tue, 5 Nov 1337 01:33:70 GMT</code>
+  </td></tr>
+  <tr>
+  <td>Expect</td>
+  <td>Indicates that particular server behaviors are required by the client</td>
+  <td><code>Expect: 100-continue</code>
+  </td></tr>
+
+
+  <tr>
+  <td>Host</td>
+  <td>The domain name of the server (for virtual hosting), mandatory since HTTP/1.1</td>
+  <td><code>Host: wiki.on.nimp.org</code>
+  </td></tr>
+  <tr>
+  <td>If-Match</td>
+  <td>Only perform the action if the client supplied entity matches the same entity on the server. This is mainly for methods like PUT to only update a resource if it has not been modified since the user last updated it.</td>
+  <td><code>If-Match: "737060cd8c284d8af7ad3082f209582d"</code>
+  </td></tr>
+  <tr>
+  <td>If-Modified-Since</td>
+  <td>Allows a <i>304 Not Modified</i> to be returned if content is unchanged</td>
+  <td><code>If-Modified-Since: Cat, 01 Oct 2000 00:00:00 GMT</code>
+  </td></tr>
+  <tr>
+  <td>If-None-Match</td>
+  <td>Allows a <i>304 Not Modified</i> to be returned if content is unchanged, see HTTP ETag</td>
+  <td><code>If-None-Match: "737060cd8c284d8af7ad3082f209582d"</code>
+  </td></tr>
+  <tr>
+  <td>If-Range</td>
+  <td>If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity</td>
+  <td><code>If-Range: "737060cd8c284d8af7ad3082f209582d"</code>
+  </td></tr>
+  <tr>
+  <td>If-Unmodified-Since</td>
+  <td>Only send the response if the entity has not been modified since a specific time.</td>
+  <td><code>If-Unmodified-Since: Mon, 29 Dec 1894 11:11:11 GMT</code>
+  </td></tr>
+  <tr>
+  <td>Max-Forwards</td>
+  <td>Limit the number of times the message can be forwarded through proxies or gateways.</td>
+  <td><code>Max-Forwards: 10</code>
+  </td></tr>
+  <tr>
+  <td>Pragma</td>
+  <td>Implementation-specific headers that may have various effects anywhere along the request-response chain.</td>
+  <td><code>Pragma: no-cache</code>
+  </td></tr>
+  <tr>
+  <td><a href="/index.php/Proxies" class="mw-redirect" title="Proxies">Proxy-Authorization</a></td>
+  <td>Authorization credentials for connecting to a proxy.</td>
+  <td><code>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>
+  </td></tr>
+  <tr>
+  <td>Range</td>
+  <td>Request only part of an entity.</td>
+  <td><code>Range: bytes=500-999</code>
+  </td></tr>
+  <tr>
+  <td><a rel="nofollow" class="external text" href="https://anonym.to/http://cyrus.phurl.us/wiki/File:Referrers.png">Referrer</a></td>
+  <td>This is the address of the previous web page from which a link to the currently requested page was followed.</td>
+  <td><code>Referer: http://anonym.to/http://meatspin.com/</code>
+  </td></tr>
+  <tr>
+  <td>TE</td>
+  <td>The transfer encodings the user is willing to accept.</td>
+  <td><code>TE: trailers, deflate;q=0.5</code>
+  </td></tr>
+  <tr>
+  <td>Upgrade</td>
+  <td>Ask the server to upgrade to another protocol.</td>
+  <td><code>Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</code>
+  </td></tr>
+  <tr>
+  <td><a href="/index.php?title=User_Agents&amp;action=edit&amp;redlink=1" class="new" title="User Agents (page does not exist)">User-Agent</a></td>
+  <td>The user agent string of the user agent</td>
+  <td><code>User-Agent: Mozilla/5.0 (Linux; X11; UTF-8)</code>
+  </td></tr>
+  <tr>
+  <td>Via</td>
+  <td>Informs the server of proxies through which the request was sent.</td>
+  <td><code>Via: 1.0 fred, 1.1 lemonparty.org (Apache/1.1)</code>
+  </td></tr>
+  <tr>
+  <td>Warn</td>
+  <td>A general warning about possible problems with the entity body.</td>
+  <td><code>Warn: 199 Miscellaneous warning</code>
+  </td></tr></tbody><tfoot></tfoot></table>
+  <h2><span class="mw-headline" id="Responses">Responses</span></h2>
+  <table class="wikitable sortable jquery-tablesorter" style="width: 100%">
+  <thead><tr>
+  <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Header
+  </th>
+  <th class="unsortable">Description
+  </th>
+  <th class="unsortable">Example
+  </th></tr></thead><tbody>
+  <tr>
+  <td>Accept-Ranges</td>
+  <td>What partial content range types this server supports</td>
+  <td><code>Accept-Ranges: bytes</code>
+  </td></tr>
+  <tr>
+  <td>Age</td>
+  <td>The age the object has been in a proxy cache in seconds</td>
+  <td><code>Age: 12</code>
+  </td></tr>
+  <tr>
+  <td>Allow</td>
+  <td>Valid actions for a specified resource. To be used for a <i>405 Method not allowed</i></td>
+  <td><code>Allow: GET, HEAD</code>
+  </td></tr>
+  <tr>
+  <td>Cache-Control</td>
+  <td>Tells all caching mechanisms from server to client whether they may cache this object</td>
+  <td><code>Cache-Control: no-cache</code>
+  </td></tr>
+  <tr>
+  <td>Content-Encoding</td>
+  <td>The type of encoding used on the data</td>
+  <td><code>Content-Encoding: gzip</code>
+  </td></tr>
+  <tr>
+  <td>Content-Language</td>
+  <td>The language the content is in</td>
+  <td><code>Content-Language: de</code>
+  </td></tr>
+  <tr>
+  <td>Content-Length</td>
+  <td>The length of the response body in 8-bit bytes</td>
+  <td><code>Content-Length: 348</code>
+  </td></tr>
+  <tr>
+  <td>Content-Location</td>
+  <td>An alternate location for the returned data</td>
+  <td><code>Content-Location: /aids.html</code>
+  </td></tr>
+  <tr>
+  <td>Content-Disposition</td>
+  <td>An opportunity to raise a "File Download" dialogue box for a known MIME type</td>
+  <td><code>Content-Disposition: attachment; filename=hueg3.jpg</code>
+  </td></tr>
+  <tr>
+  <td>Content-MD5</td>
+  <td>An MD5 sum of the content of the response</td>
+  <td><code>Content-MD5: 3167b9c13ad2b6d36946493fc47976c8</code>
+  </td></tr>
+  <tr>
+  <td>Content-Range</td>
+  <td>Where in a full body message this partial message belongs</td>
+  <td><code>Content-Range: bytes 21010-47021/47022</code>
+  </td></tr>
+  <tr>
+  <td>Content-Type</td>
+  <td>The mime type of this content</td>
+  <td><code>Content-Type: text/html; charset=utf-8</code>
+  </td></tr>
+  <tr>
+  <td>Date</td>
+  <td>The date and time that the message was sent</td>
+  <td><code>Date: Tue, 1 Jan 2000 00:00:01 GMT</code>
+  </td></tr>
+  <tr>
+  <td>ETag</td>
+  <td>An identifier for a specific version of a resource, often a Message Digest, see ETag</td>
+  <td><code>ETag: 737060cd8c284d8af7ad3082f209582d</code>
+  </td></tr>
+  <tr>
+  <td>Expires</td>
+  <td>Gives the date/time after which the response is considered stale</td>
+  <td><code>Expires: Cat, 01 Dec 2994 16:00:00 GMT</code>
+  </td></tr>
+  <tr>
+  <td>Last-Modified</td>
+  <td>The last modified date for the requested object.</td>
+  <td><code>Last-Modified: Tue, 15 Feb 3994 12:45:26 GMT</code>
+  </td></tr>
+  <tr>
+  <td>Location</td>
+  <td>Used in redirection</td>
+  <td><code>Location: http://anonym.to/http://validator.w3.org/check?uri=www.gnaa.eu</code>
+  </td></tr>
+  <tr>
+  <td>Pragma</td>
+  <td>Implementation-specific headers that may have various effects anywhere along the request-response chain.</td>
+  <td><code>Pragma: no-cache</code>
+  </td></tr>
+  <tr>
+  <td><a href="/index.php/Proxies" class="mw-redirect" title="Proxies">Proxy-Authenticate</a></td>
+  <td>Request authentication to access the proxy.</td>
+  <td><code>Proxy-Authenticate: Basic"</code>
+  </td></tr>
+  <tr>
+  <td>Retry-After</td>
+  <td>If an entity is temporarily unavailable, this instructs the client to try again after a specified period of time.</td>
+  <td><code>Retry-After: 120</code>
+  </td></tr>
+  <tr>
+  <td>Server</td>
+  <td>A name for the server</td>
+  <td><code>Server: Apache/1.3.27 (Unix)  (Red-Hat/Linux)</code>
+  </td></tr>
+  <tr>
+  <td>Set-Cookie</td>
+  <td>an HTTP cookie</td>
+  <td><code>Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1</code>
+  </td></tr>
+  <tr>
+  <td>Trailer</td>
+  <td>The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding.</td>
+  <td><code>Trailer: Max-Forwards</code>
+  </td></tr>
+  <tr>
+  <td>Transfer-Encoding</td>
+  <td>The form of encoding used to safely transfer the entity to the user.</td>
+  <td><code>Transfer-Encoding: chunked</code>
+  </td></tr>
+  <tr>
+  <td>Vary</td>
+  <td>Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server.</td>
+  <td><code>Vary: *</code>
+  </td></tr>
+  <tr>
+  <td>Via</td>
+  <td>Informs the client of proxies through which the response was sent.</td>
+  <td><code>Via: 1.0 fred, 1.1 gnaa.us (Apache/1.1)</code>
+  </td></tr>
+  <tr>
+  <td>Warn</td>
+  <td>A general warning about possible problems with the entity body.</td>
+  <td><code>Warn: 199 Miscellaneous warning</code>
+  </td></tr>
+  <tr>
+  <td>WWW-Authenticate</td>
+  <td>Indicates the authentication scheme that should be used to access the requested entity.</td>
+  <td><code>WWW-Authenticate: Basic</code>
+  </td></tr></tbody><tfoot></tfoot></table>
+  <p><br>
+  </p>
+
+  <h2><span class="mw-headline" id="Messing_With_HTTP">Messing With HTTP</span></h2>
+  <p>If you want to fuck this shit up go here:
+  </p>
+  <ul><li>about:config</li>
+  <li><a href="/index.php/Firefox_Performance" title="Firefox Performance">Firefox Performance</a></li></ul>
+  <p><br>
+  </p>
+  <h3><span class="mw-headline" id="cUrl">cUrl</span></h3>
+
+  <p>cUrl is a command-line http client, similar to wget. It's designed for use <a href="/index.php/Faggotry" class="mw-redirect" title="Faggotry">only by gods</a>. When invoked with a URL, it downloads the file and prints it to standard out. It can be used as a simple download manager like so: 
+  </p>
+  <pre>
+  curl url_of_file_to_download &gt; filename.whatever
+  </pre>
+  <p>Unlike wget, curl cannot do recursion. However, it works better for submitting forms, which makes it perfect for <a href="/index.php/Lulz" title="Lulz">spamming forums and blogs</a>. 
+  </p>
+  <h4><span class="mw-headline" id="How_To">How To</span></h4>
+  <p>First, we must find the names of the fields to submit. We could examine the HTML source ourselves, and find the relevant FORM block. However, that can be pretty difficult. For example, /b/'s FORM has several Javascript functions embedded in it. An easier method is to use the formfind.pl script to do it for us. Formfind greps through the html to find any html forms. 
+  </p><p><br> 
+  </p>
+  <pre>
+       Example
+      $ curl -x localhost:3128 -A Mozilla/4.0 img.4chan.org/b/ |   formfind.pl | head -n 12
+    --- FORM report. Uses POST to URL "<a rel="nofollow" class="external free" href="https://anonym.to/http://dat.4chan.org/b/imgboard.php">http://anonym.to/http://dat.4chan.org/b/imgboard.php</a>"
+    --- type: multipart form upload [use -F]
+    Input: NAME="MAX_FILE_SIZE" VALUE="1572864" (HIDDEN)
+    Input: NAME="name" (HIDDEN)
+    Input: NAME="sub" (HIDDEN)
+    Input: NAME="email" (TEXT)
+    Button: "Submit" (SUBMIT)
+    Textarea: NAME="com"
+    Input: NAME="upfile" (FILE)
+    Input: NAME="pwd" (PASSWORD)
+    Input: NAME="mode" VALUE="regist" (HIDDEN)
+    --- end of FORM
+  </pre>
+  <p>-x tells curl to use the proxy localhost:3128 and -A specifies the user agent. We pipe it to formfind, and only view the top of the output. This tells us sever al things: It tells us the names of the fields. It tells us that this form uses multipart-encoded POST to submit the form. If it used GET instead, we would need to append ampersand delimited key/value pairs to the end of the URL. It tells us what URL to POST to. In this case, it is "<a rel="nofollow" class="external free" href="https://anonym.to/http://dat.4chan.org/b/imgboard.php">http://anonym.to/http://dat.4chan.org/b/imgboard.php</a>" 
+  </p><p>So, we run the following: 
+  </p>
+  <pre>
+  curl  -x localhost:3128 -A Mozilla/4.0 -F "email=noko" \
+  -F "com=testtesttest" 
+  -F "upfile=@.4chan/funny/1194718640468.png" \
+  -F "pwd=xx" 
+  -F "mode=regist" <a rel="nofollow" class="external free" href="https://anonym.to/http://dat.4chan.org/b/imgboard.php">http://anonym.to/http://dat.4chan.org/b/imgboard.php</a>
+
+  </pre>
+  <p>-F specifies a key/value pair to POST. We don't need to fill out the    empty hidden fields, but we do need to carry over the "mode" field.  The "at" symbol before ".4chan" specifies that curl should take  its input for that field from the filename following the "at". 
+  </p><p>One could then wrap this in a loop to get it to repeat. One could also launch several processes, for maximum raep. 
+  </p>
+  <h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+  <ul><li><a href="/index.php/Tim_Berners-Lee" title="Tim Berners-Lee">Tim Berners-Lee</a></li></ul>
+
+
+
+
+  <!-- 
+  NewPP limit report
+  Cached time: 20210324021805
+  Cache expiry: 86400
+  Dynamic content: false
+  Complications: []
+  CPU time usage: 0.355 seconds
+  Real time usage: 0.404 seconds
+  Preprocessor visited node count: 99/1000000
+  Preprocessor generated node count: 0/1000000
+  Post‐expand include size: 8519/15360000000 bytes
+  Template argument size: 45/15360000000 bytes
+  Highest expansion depth: 4/40
+  Expensive parser function count: 0/100
+  Unstrip recursion depth: 0/20
+  Unstrip post‐expand size: 108/5000000 bytes
+  -->
+  <!--
+  Transclusion expansion time report (%,ms,calls,template)
+  100.00%   42.616      1 -total
+   52.35%   22.308      1 Template:Acronyms
+   33.75%   14.383      1 Template:Programming
+   12.43%    5.297      2 Template:Roundybottom
+   12.12%    5.166      1 Template:Roundy
+   12.05%    5.136      1 Template:Lern
+   10.89%    4.643      2 Template:Roundytop
+  -->
+
+  <!-- Saved in parser cache with key ed_wiki:pcache:idhash:2819-0!canonical and timestamp 20210324021805 and revision id 55342
+   -->
+  </div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
