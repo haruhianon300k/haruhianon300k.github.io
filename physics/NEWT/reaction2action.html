@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Where does the reaction to action come from?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Where does the reaction to action come from?</h3>
+
+	<p>Third Newton's law, $F_{1->2} = -F_{2->1}$</p>
+
+	<p>So, how does a body react with the same force that it's receiving from the acting body? Is it the electric interactions at the subatomic level? When we sit on the chair, does that mean we are just bringing our electrons in contact with the electrons of the chair and getting a repulsive force?</p>
+
+	<p>Basically, how to think about it? I know I've tried many ways, but it kind of eludes me.</p>
+
+	<p>Much obliged!</p>
+
+	<hr>
+
+	<p>If you have charge on a ball in water, and current leaves the ball, then it is completely obvious that the exact same current enters the water. This is Newton's third law for charge--- the loss of charge for body $1$ is equal to the gain in change for body $2$. The reason this is always true is because charge is conserved.</p>
+
+	<p>Newton's third law is formulated for momentum, which is a different kind of conserved quantity--- it's a vector. This means that each component of momentum separately has a conservation law. If $x$ momentum leaves body $A$ going to body $B$, we say a force is acting from $A$ to $B$. But then, by conservation of momentum, an equal amount of negative momentum is leaving body $B$ going to body $A$. It's no more mysterious than conservation of charge.</p>
+
+	<p>This explains why forces are equal and opposite, but Newton's third law says more--- it says that forces between distant objects are also collinear--- that they point along the line of separation. This is a consequence of rotational invariance, or conservation of angular momentum.</p>
+
+	<p>If you have a two body force between distant objects, it is difficult to imagine how it could point any way other than their line of separation. If it pointed elsewhere, it would pick out a direction of space. From this, you can conclude that not only is momentum conserved, but angular momentum is too, and a general statement of Newton's third law should at least include both conservation laws.</p>
+
+	<p>This answers the question, but I think it is good to explain the modern formulation of Newton's third law too, because there the third law is replaced by general analysis of conservation laws, but a recognizable version of Newton's third law appears in a simple form in the end. I sort of went overboard here, in terms of length, but I hope you will be indulgent.
+
+	<h4>Currents for Momentum</h4>
+
+	<p>Charge conservation is usually expressed by giving the flow of charge through any infinitesimal surface, by the current density, whose components are $j_i$. The density of current and density of charge are related by the conservation law:</p>
+
+	<p>$$ \rho_{,0} + j_{i,i} = 0$$</p>
+
+	<p>Where the comma means differentiate, the zeroeth coordinate is time, and the index "$i$" appears twice, so you sum like the Einstein summation convention says. The conservation equation is a statement that the current leaving any infinitesimal box of space is equal to the decrease of charge in that box.</p>
+
+	<p>It is normal to join the charge and current into a four-vector $J_i$, so that the equation above reads:</p>
+
+	<p>$$J_{i,i}= 0$$</p>
+
+	<p>Where $i$ is now a space-time index, and I am suppressing a sign and a convention for the flat metric.</p>
+
+	<p>Analogously, for each component of momentum $p_i$, you have a momentum current $t_{ij}$, and these four quantities satisfy a conservation law:</p>
+
+	<p>$$ p_{i,0} + t_{ij,j} = 0$$</p>
+
+	<p>In other words, the flow of $x$-momentum out of any region is equal to the change of $x$ momentum contained in that region. This is a statement of the equal-and-opposite part of Newton's third law for adjacent objects, which transfer momentum at contact points, or inside an elastic material, where the momentum flow is local. It is not the statement of the collinear part of Newton's third law.</p>
+
+	<p>You also want to make this four-dimensional, by defining the $0$ component of the stress to be the momentum, and then the conservation law becomes:</p>
+
+	<p>$$T_{jk,k} = 0$$</p>
+
+	<p>The quantity $T_{ij}$ is the stress-energy tensor--- it's space components tell you the forces between two adjacent regions of space, or equivalently, the flow of momentum across any surface. A tensor like this is just a vector of vectors. The momentum is a vector, and its current is separately vectorial for each of the vector components individually.
+
+	<h4>Angular momentum conservation and improved stress-tensor</h4>
+
+	<p>The angular momentum of an object is best viewed as an antisymmetric two-index tensor, but in three dimensions, you can map antisymmetric two-index tensors to vectors using the $\epsilon$ tensor, which in mathematics is called "taking the Poincare dual". The tensor language is important for higher dimensions, and also for your own peace of mind, because each use of the $\epsilon$ tensor is a right hand rule, it distinguishes left from right.</p>
+
+	<p>So to represent angular momentum as a vector you need to use a right hand rule. This is annoying, because physics at ordinary scales is reflection invariant, so you shouldn't be breaking this symmetry with your notation. But people do this to avoid using tensors, because they have more intuition for vectors. But the angular momentum vector ends up pointing in counterintuitive directions, while the angular momentum tensor points in the natural planes you would expect it to, so I don't think this is a good trade-off.</p>
+
+	<p>The angular momentum tensor $L_{ij}=-L_{ji}$ in elementary treatments is usually <i>defined</i> by</p>
+
+	<p>$$ L_{ij} = x_i p_j - x_j p_i$$</p>
+
+	<p>The angular momentum density can be defined by using this formula in an infinitesimal region, but don't do that for the time being, because the angular momentum is really a separate conserved fundamental quantity--- you should be able to derive this relation to the momentum from general principles. So call the angular momentum density $l_{ij}$.</p>
+
+	<p>The conservation of angular momentum is by the angular momentum current $h_{ijk}=-h_{jik}$, obeying the same continuity equation with $l_{ij}$,</p>
+
+	<p>$$ l_{ij,0} + h_{ijk,k} = 0 $$</p>
+
+	<p>But there is a nontrivial relationship between rotations and translations--- a rotation is a translation by an amount that changes from point to point. At large distance from the center of rotation, you can't tell a rotation apart from a translation.</p>
+
+	<p>This means that if your center of rotation is at zero, and you look at x very far away from $0$, the conserved current of angular momentum must decompose in the following way:</p>
+
+	<p>$$ L_{ijk} = x_i T_{jk} - x_j T_{ik}$$</p>
+
+	<p>Which, if you look at the zero components, gives the textbook formula for angular momentum. The $T_{jk}$ are a conserved current associated with a translation, but they can differ from the canonical Noether currents for translation by a divergence. This decomposition, which right now is only valid at large $x$, implies by differentiation that conservation of angular momentum requires</p>
+
+	<p>$$ T_{jk} = T_{kj}$$</p>
+
+	<p>But now, you can use this symmetric $T$ tensor (which can be defined anywhere, just by moving the center of rotation far away) to define a new $L$ tensor by the formula above. This rearrangement of the $T$ tensor gives the symmetric Belinfante stress energy.
+
+	<h4>Center of Mass</h4>
+
+	<p>Newton's third law is used to establish a separate conservation law, it is used to show that the total motion of the center of mass is at a constant speed equal to the total momentum over the total mass. This law can be violated even when momentum and angular momentum are conserved, because it is derived from the Lagrangian symmetry under Galilean/Lorentz boosts, which doesn't hold when the equal and opposite forces depend on the absolute velocity.</p>
+
+	<p>To see it violated, consider a Lagrangian for two particles interacting with a rotationally invariant potential which keeps them together, and factorize it in the usual way into center of mass and relative coordinates:</p>
+
+	<p>$$ S = {m_1 \dot{x}^2 + m_2 \dot{y}^2 \over 2} + U(x-y) = {M\dot{X}^2\over 2} + {m\dot{r}^2\over 2} + U(r)$$</p>
+
+	<p>Where $r=x-y$ is the relative coordinate, $M=m_1 + m_2$ is the total mass, $m = {m_1m_2\over M}$ is the reduced mass, and $X={m_1 x + m_2 y\over M}$ is the center of mass position. </p>
+
+	<p>Now add an additional velocity-velocity interaction to the action:</p>
+
+	<p>$$ S = {m_1 \dot{x}^2\over 2} + {m_2 \dot{y}^2 \over 2} + \sqrt{m_1m_2}\dot{x}\cdot\dot{y} + U(x-y)$$</p>
+
+	<p>The action doesn't factorize in the usual center-of-mass/reduced-mass relative-coordinates way, but in a monstrous way:</p>
+
+	<p>$$ S = {(\sqrt{m_1} \dot{x} + \sqrt{m_2} \dot{y})^2\over 2} + {\epsilon\over 2}(\dot{x}-\dot{y})^2 + U(|x-y|)$$</p>
+
+	<p>Where I detuned the velocity-velocity force a little bit, to leave a small kinetic term for $x-y$, so that the oscillations of x-y become extremely fast. The quantity that is moving in a straight line at a constant velocity is $\sqrt{m_1}\dot{x} + \sqrt{m_2}\dot{y}$, so that the usual center of mass is oscillating wildly. This system is actually still Galilean invariant though, but with an unusual transformation law, this is why there is still a straight-line moving "center of mass", even though it is not the usual one.</p>
+
+	<p>Now imagine that both objects are falling in a field provided by a far away massive third object. The interaction is</p>
+
+	<p>$${m_1\dot{x}^2 + m_2\dot{y}^2 \over 2} + \phi(x_3)\sqrt{m_1m_2}\dot{x}\dot{y} + U(x-y) + g m_1 x_3 + g m_2 y_3$$</p>
+
+	<p>Where $\phi$ is a function which smoothly and slowly goes from $0$ at large values of $x_3$ to nearly $1$ at large negative $x_3$, adiabatically slowly. There is also a gravitational field which pulls the system down, and causes it to cross over from a region where the usual center of mass motion is constant to another region where the strange alternate center of mass is constant.</p>
+
+	<p>Such a system doesn't have a center of mass conservation law for the $x$ and $y$ direction, although it conserves $x$ and $y$ momentum and angular momentum. It doesn't fix things to include the distant object providing the gravitational field, because if it's center is far away, the reaction forces on it are purely in the $z$ direction. This is a failure of conservation law caused by forces which depend on the absolute velocity.</p>
+
+	<p>A real physical system which conserves momentum and angular momentum but does not conserve center of mass is given by the motion of slow particles in liquid Helium at low enough temperatures that the fluid is a superfluid empty of quasi-particle excitations. The particles have forces which are fully translational and rotational invariant, but they are dependent on the velocity relative to the rest-frame of the Helium. I did not use this as an example only because I have no idea what the velocity dependent effective particle Lagrangian is for this system.
+
+	<h4>Center of mass conservation in relativity</h4>
+
+	<p>In relativity, center of mass and angular momentum conservation laws are unified in the Belinfonte form of the angular momentum:</p>
+
+	<p>$$ L_{ijk} = x_i T_{jk} - x_j T_{ik} $$</p>
+
+	<p>If you consider the $i=0$ conservation law, the integral of the $k=0$ component of $L$, it is the Lorentz part of the angular momentum, the conservation law corresponding to boosts.</p>
+
+	<p>$$ \int d^3 L_{0j0} = t \int d^3x T_{j0} - \int d^3 x_j T_{00} = t P_j - M X_j $$</p>
+
+	<p>Where the first term can be seen to be the current time times the total momentum, while the second term is the center of mass position times the total mass. That this is constant is the content of the center of mass theorem.
+
+	<h4>Modern Statement of Newton's Third Law</h4>
+
+	<p>When there is translational, rotational, and Lorentz invariance, there is a conserved stress-energy-momentum tensor $T_{\mu\nu}$, so that the conserved angular-momentum/center-of-mass tensor is given by the simple expression:</p>
+
+	<p>$$L_{\alpha\mu\nu} = x_\alpha T_{\mu\nu} - x_\mu T_{\alpha\nu}$$</p>
+
+	<p>And the stress tensor is therefore symmetric $T_{\mu\nu} = T_{\nu\mu}$. The symmetry of $T$ is the modern statement of Newton's third law, it includes the statement that the transmitted forces are collinear.</p>
+
+	<p>The symmetry relation on the stress tensor says that the flow of the $j$ component of momentum in the $i$ direction is equal to the flow of the $i$ component in the $j$ direction. Suppose you have two objects separated in the $x$ direction. If one of them pushes the other in the $y$ direction, this is a flow of $y$-momentum in the $x$-direction. But this requires a flow of $x$-momentum in the $y$-direction, and the objects are not separated in the $y$-direction, so they cannot have such a flow of momentum between them. The only way to have such a force is to have an object separated in the $y$-direction, to receive this momentum. This requires $3$-body forces, and for these, Newton's third law doesn't work, but the stress is still symmetric.</p>
+
+
+	<hr>
+
+	       <div>
+	           
+	           <blockquote>
+	               <em><p>+10 for the incredible effort you've put in. If you're going to compare movement of mass and charge, then you need to be comparing conservation of charge and rest mass, not charge and momentum. In fact, I don't think you need to bring in charge at all because the answer is clear as it is just focusing on movement of mass and its conservation.</p></em>
+	               <blockquote>
+	                   <p>You haven't understood. Mass is like charge, and momentum is its current, but Momentum is also like charge, it is conserved, and stress is its current. This is very important! It's the key point in this answer and in leftroundabout's earlier answer as well.</p>
+	               </blockquote>
+	           </blockquote>
+	       </div>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
