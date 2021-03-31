@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Metric tensor of coordinate transformation</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Metric tensor of coordinate transformation</h3>
+	<p>How do you find a metric tensor given a coordinate transformation, $(t', x', y', z') \rightarrow (t, x, y, z)$?  Our textbook gives a somewhat vague example as it skips some steps making it difficult to understand. What's the general definition for a metric tensor of a given transformation? The closest I could find was <a href="http://en.wikipedia.org/wiki/Metric_tensor#Coordinate_transformations">http://en.wikipedia.org/wiki/Metric_tensor#Coordinate_transformations</a>, but I'm having trouble understanding that.</p>
+
+	<hr>
+
+	<p>You look at the distance between two infinitesimally different points. Let the two coordinate systems be $x$ and $y$, where $x$ is four numbers and $y$ is four numbers.  Consider an infinitesimal displacement from $y$ to $y+dy$. You know this distance in the $x$ coordinates, so you find the two endpoints of the displacement</p>
+
+	<p>$$x(y)$$</p>
+	<p>$$x^i(y + dy) = x^i(x') + {\partial x^i \over \partial y^j} dy^j $$ </p>
+
+	<p>This is using the Einstein summation convention--- repeated upper/lower indices are summed automatically, and an upper index in the denominator of a differential expression becomes a lower index, and vice-versa. The distance between these two infinitesimally separated points is:</p>
+
+	<p>$$ g_{ij}(x) {\partial x^i \over \partial y^k} {\partial x^j \over \partial y^l} dy^k dy^l $$</p>
+
+	<p>And from this, you read off the metric tensor coefficients--- since this is the quadratic expression for the distance between y and y+dy.</p>
+
+	<p>$$ g'_{kl}(y) = g_{ij}(x(y)) {\partial x^i \over \partial y^k} {\partial x^j \over \partial y^l}$$</p>
+	   
+	<p>This is a special case of the tensor transformation law--- every lower index transforms by getting contracted with a Jacobian inverse, and every upper index by getting contracted with a Jacobian.</p>
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

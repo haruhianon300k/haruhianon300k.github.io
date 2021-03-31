@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>What is a tensor?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>What is a tensor?</h3>
+
+	<p>A (rank 2 contravariant) tensor is a vector of vectors. If you have a vector, it's 3 numbers which point in a certain direction. What that means is that they rotate into each other when you do a rotation of coordinates. So that the 3 vector components $V^i$ transform into</p>
+
+	<p>$$V'^i = A^i_j V^j$$</p>
+
+	<p>under a linear transformation of coordinates.</p>
+
+	<p>A tensor is a vector of 3 vectors that rotate into each other under rotation (and also rotate as vectors--- the order of the two rotation operations is irrelevant). If a vector is $V^i$ where i runs from 1-3 (or 1-4, or from whatever to whatever), the tensor is $T^{ij}$, where the first index labels the vector, and the second index labels the vector component (or vice versa). When you rotate coordinates T transforms as</p>
+
+	<p>$$ T'^{ij} = A^i_k A^j_l T^{kl} = \sum_{kl} A^i_k A^j_l T^{kl} $$</p>
+
+	<p>Where I use the Einstein summation convention that a repeated index is summed over, so that the middle expression really means the sum on the far right.</p>
+
+	<p>A rank 3 tensor is a vector of rank 2 tensors, a rank four tensor is a vector of rank 3 tensors, so on to arbitrary rank. The notation is $T^{ijkl}$ and so on with as many upper indices as you have a rank. The transformation law is one A for each index, meaning each index transforms separately as a vector.</p>
+
+	<p>A covariant vector, or covector, is a linear function from vectors to numbers. This is described completely by the coefficients, $U_i$, and the linear function is </p>
+
+	<p>$$ U_i V^i = \sum_i U_i V^i = U_1 V^1 + U_2 V^2 + U_3 V^3 $$</p>
+
+	<p>where the Einstein convention is employed in the first expression, which just means that if the same index name occurs twice, once lower and once upper, you understand that you are supposed to sum over the index, and you say the index is contracted. The most general linear function is some linear combination of the three components with some coefficients, so this is the general covector.</p>
+
+	<p>The transformation law for a covector must be by the inverse matrix</p>
+
+	<p>$$ U'_i = \bar{A}_i^j U_j $$</p>
+
+	<p>Matrix multiplication is simple in the Einstein convention:</p>
+
+	<p>$$ M^i_j N^j_k = (MN)^i_k $$</p>
+
+	<p>And the definition of $\bar{A}$ (the inverse matrix) makes it that the inner product $U_i V^i$ stays the same under a coordinate transformation (you should check this).</p>
+
+	<p>A rank-2 covariant tensor is a covector of covectors, and so on to arbitrarily high rank.</p>
+
+	<p>You can also make a rank m,n tensor $T^{i_1 i_2 ... i_m}_{j_1j_2 ... j_n}$, with m upper and n lower indices. Each index transforms separately as a vector or covector according to whether it is up or down. Any lower index may be contracted with any upper index in a tensor product, since this is an invariant operation. This means that the rank m,n tensors can be viewed in many ways:</p>
+
+	<p><ul>
+		<li>As the most general linear function from m covectors and n vectors into numbers</li>
+		<li>As the most general linear function from a rank m covariant tensor into a rank n contravariant tensor</li>
+		<li>As the most general linear function from a rank n contravariant tensor into a rank m covariant tensor.</li>
+	</ul></p>
+
+
+	<p>And so on for a number of interpretations that grows exponentially with the rank. This is the mathemtician's preferred definition, which does not emphasize the transformation properties, rather it emphasizes the linear maps involved. The two definitions are identical, but I am happy I learned the physicist definition first.</p>
+
+	<p>In ordinary Euclidean space in rectangular coordinates, you don't need to distinguish between vectors and covectors, because rotation matrices have an inverse which is their transpose, which means that covectors and vectors transform the same under rotations. This means that you can have only up indices, or only down, it doesn't matter. You can replace an upper index with a lower index keeping the components unchanged.</p>
+
+	<p>In a more general situation, the map between vectors and covectors is called a metric tensor $g_{ij}$. This tensor takes a vector V and produces a covector (traditionally written with the same name but with a lower index)</p>
+
+	<p>$$ V_i = g_{ij} V^i$$</p>
+
+	<p>And this allows you to define a notion of length</p>
+
+	<p>$$ |V|^2 = V_i V^i = g_{ij}V^i V^j $$</p>
+
+	<p>this is also a notion of dot-product, which can be extracted from the notion of length as follows:</p>
+
+	<p>$$ 2 V\cdot U = |V+U|^2 - |V|^2 - |U|^2 = 2 g_{\mu\nu} V^\mu U^\nu $$</p>
+
+	<p>In Euclidean space, the metric tensor $g_{ij}= \delta_{ij}$ which is the Kronecker delta. It's like the identity matrix, except it's a tensor, not a matrix (a matrix takes vectors to vectors, so it has one upper and one lower index--- note that this means it automatically takes covectors to covectors, this is multiplication of the covector by the transpose matrix in matrix notation, but Einstein notation subsumes and extends matrix notation, so it is best to think of all matrix operations as shorthand for some index contractions).</p>
+
+	<p>The calculus of tensors is important, because many quantities are naturally vectors of vectors.</p>
+
+	<p><ul>
+		<li>The stress tensor: If you have a scalar conserved quantity, the current density of the charge is a vector. If you have a vector conserved quantity (like momentum), the current density of momentum is a tensor, called the stress tensor</li>
+		<li>The tensor of inertia: For rotational motion of rigid object, the angular velocity is a vector and the angular momentum is a vector which is a linear function of the angular velocity. The linear map between them is called the tensor of inertia. Only for highly symmetric bodies is the tensor proportional to $\delta^i_j$, so that the two always point in the same direction. This is omitted from elementary mechanics courses, because tensors are considered too abstract.</li>
+		<li>Axial vectors: every axial vector in a parity preserving theory can be thought of as a rank 2 antisymmetric tensor, by mapping with the tensor $\epsilon_{ijk}$</li>
+		<li>High spin represnetations: The theory of group representations is incomprehensible without tensors, and is relatively intuitive if you use them.</li>
+		<li>Curvature: the curvature of a manifold is the linear change in a vector when you take it around a closed loop formed by two vectors. It is a linear function of three vectors which produces a vector, and is naturally a rank 1,3 tensor.</li>
+		<li>metric tensor: this was discussed before. This is the main ingredient of general relativity</li>
+		<li>Differential forms: these are antisymmetric tensors of rank n, meaning tensors which have the property that $A_{ij} =-A_{ji}$ and the analogous thing for higher rank, where you get a minus sign for each transposition.</li>
+	</ul></p>
+
+	<p>In general, tensors are the founding tool for group representations, and you need them for all aspects of physics, since symmetry is so central to physics. </p>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

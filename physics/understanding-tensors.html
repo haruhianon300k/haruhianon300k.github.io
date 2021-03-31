@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Understanding Tensors</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Understanding Tensors</h3>
+
+	<p>I don't seem to be able to visualize <a href="http://en.wikipedia.org/wiki/Tensor">tensors</a>. I am reading The Morgan Kauffman <i>Game Physics Engine Development</i> and he uses tensors to represent aerodynamics but he doesn't explain them so I am not really able to visualize them. Please explain in very simple ways. I just want to understand the basics.</p>
+
+	<hr>
+
+	<p>From your context, I will restrict attention to tensors in 3 dimensions and in rectangular coordinates, where there is no distinction between up and down indices, no distinction between covectors and vectors.</p>
+
+	<p>The tensor visualization methods pretty much crap out at above 4 indices. At this point, I don't know how to visualize. I assume you are interested in low rank tensors.</p>
+
+	<p>First, review this answer: <a href="what-is-a-tensor.html">What is a tensor?</a>. A $2$-tensor is a vector of vectors, that is a vector each of whose components are vectors. A $3$-tensor is a vector of $2$-tensors, etc.</p>
+
+	<p>The way to visualize a $2$-tensor is in terms of its invariant parts, there's the antisymmetric part:</p>
+
+	<p>$$ {1\over 2} (T_{ab} - T_{ba})$$</p>
+
+	<p>and the symmetric part:</p>
+
+	<p>$$ {1\over 2} (T_{ab} + T_{ba})$$</p>
+
+	<p>The antisymmetric part is a vector, actually an axial vector, and you can rearrange it into a vector, and visualize it this way:</p>
+
+	<p>$$ V_i = \epsilon_{ijk} T_{jk}$$</p>
+
+	<p>So I will assume your $2$-tensors are symmetric. The symmetric part is further decomposable into a trace part, and a traceless part:</p>
+
+	<p>$$ T = T_{aa} $$</p>
+	<p>$$ T_{ab} - {1\over 3} T $$</p>
+
+	<p>One way to visualize these tensors is in terms of three orthogonal vectors $A,B,C$ which have the property that:</p>
+
+	<p>$$ A_i A_j + B_i B_j + C_i C_j = T_{ij}$$</p>
+
+	<p>The directions $A,B,C$ are called the principal axes, and the tensor is entirely defined by their direction, and the magnitude of $A,B,C$. The trace part is the sum of the magnitude of $A,B,C$. The transformation to the principal axes is diagonalizing a $3$ by $3$ matrix by a rotation</p>
+
+	<p>Examples of two tensors are the stress tensor, the moment of inertia, and the coefficients of a quadratic potential. The stress tensor is not so great to visualize with principal axes, the other two are.</p>
+
+	<p>The way to visualize the stress tensor is just to look at it as three vectors side by side in a matrix, each of which is a separate current. These are the currents of the $x,y,z$ momentum as it flows around.</p>
+
+	<p>For rank $3$ tensors, there are decompositions, but they aren't as useful for visualization. If two of the indices are antisymmetric, you can turn them into a single index, but this wrecks parity. For these, you can use one example, which will guide you--- the connection.</p>
+
+	<p>A three tensor $T_{abc}$ has the property that when acting on a vector, it is a two tensor, or a map from vectors to vectors. So this associates a linear map with each direction. You can visualize a three tensor as giving you an infinitesimal linear transformation for each direction, in a way that depends linearly on the direction. This visualization is probably good for any $3$-$tensor you will encounter.</p>
+
+	<p>For rank 4 tensors, there are two examples to guide your intuition:</p>
+
+	<p><ul>
+		<li>The elastic tensor, which tells you the stress tensor in terms of the strain tensor.</li>
+		<li>The curvature tensor, which tells you the linear map associated with an infinitesimal closed curve (pair of directions).</li>
+	</ul></p>
+
+	<p>A rank $4$ tensor takes rank $2$ tensors to rank $2$ tensors. The stress is a rank two tensor, and so is the strain ( the partial derivative of the new position of a solid $X_i$ with respect to the old position $x_j$). The way to view rank $4$ tensors is as these type of linear relations between two-tensors, usually symmetric.</p>
+
+	<p>The best interpretation is always to find the right linear map to visualize. This is why mathematicians define tensors by the linear map properties, even though every tensor has a lot of different linear maps. You should take it on a case by case basis.</p>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
