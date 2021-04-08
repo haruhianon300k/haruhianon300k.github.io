@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Is infinity ∞ the measure of human ignorance?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Is infinity $\infty$ the measure of human ignorance?</h3>
+
+	<p>Yes, this is true in a precise and exact sense. The theory of this is called "ordinal analysis", and it was essentially started in 1936 by Gerhard Gentzen, building on earlier work in logic which culminated with Godel's completeness and incompleteness theorems.</p>
+
+	<p>The theory was developed in Germany right before WWII, and the only people who were good at it back then were Gentzen and Hilbert. Hilbert died (of old age) in 1941, while Gentzen was resettled to Eastern Europe along with other Germans during the war, and was starved to death in an internment camp by the Russians in 1945. With the death of the founder, and the unfortunate political association with German positivism (which also took a beating) The field was neglected until the 1980s, when it begins to be investigated again. There is a good book describing the modern field by Rathjen at Leeds.</p>
+
+	<p>The modern theory of infinity begins with Gerog Cantor, and this is where it stops in most descriptions, because the later developments are really a retrenchment of Cantor's more mystical ideas. Cantor was investigating mathematical analysis, he was looking to understand why concepts like "The real numbers" and "the complex numbers" allow you to prove theorems about arithmetic, like the prime number theorem more easily than pure arithmetic methods. He isolated the structure of certain collections of real numbers, which he called infinite ordinals.</p>
+
+	<p>The modern construction of the infinite ordinals is within the modern elaboration of Cantor's set theory, but I'll describe Cantor's original way first: you consider points on a real number line which have the property that they are discrete to the right, meaning, given any point, there is a finite size gap until the next point to the right.</p>
+
+	<p>Such a collection has the property that if you consider the points as ordered from left to right, if you go down, you always reach the lowest point in a finite number of steps.</p>
+
+	<p>This means that if you prove a property is true for the first point, and you prove the property is inductively true, which in this case, means that when it is true for all points to the left of a given point $x$, then it is true for $x$ as well, then you know it is true for all the points in the collection. This is called "transfinite induction", and it was the first generalization of the notion of mathematical induction to the correct modern general form. The idea is that any theorem should be proved by transfinite induction using a large enough ordinal, and ordinal analysis makes this more precise.</p>
+
+	<p>The simplest infinite ordinal is the collection of numbers $1-\frac{1}{n}$ for all integers $n$. This produces the ordinal "$\omega$", it is equivalent in order to all the natural numbers in order. You can consider the ordinal $.5 - \frac{1}{n}$ and $.5$ too, this is the ordinal "$\omega + 1$". Cantor defined addition of ordinals by placing ordinals end to end, and multiplication of ordinals by expanding each point of one ordinal into a little copy of the other ordinal. Then exponentiation of ordinals, by iterating multiplication an ordinal number of times (the ordinals describe how you can iterate operations).</p>
+
+	<p>These operations produce ordinals from ordinals, and allowed him to define the "Cantor Normal Form", which gives an explicit combinatorial description of all ordinals up to $\epsilon_0$ (this is described on Wikipedia), an ordinal which plays an important role for Gentzen and in metamathematics.</p>
+
+	<p>The theory of ordinals immediately subsumed all previous notions of infinity, because they were a precise way to describe any collection which allows inductive proofs. These collections include the integers, but also these larger infinite structures, these branching hierarchical fractal-type ordinals. The structure was incredibly rich at the large end, you could make more and more complicated ordinal structures, and proofs by induction using the more complicated ordinals would produce combinatorial theorems that were difficult to imagine could be proved by ordinary arithmetic induction. These combinatorial theorems were heavily studied in the 20th century, and imply things like the Goodstein theorem, a result which requires for it's proof, in addition to Peano Arithmetic (the theory of induction on the integers) the statement of the consistency of Peano Arithmetic, and so for sure can't be proved using only the Peano Axioms. In addition, you need to assume the consistency of these axioms, but I am getting ahead of the story.</p>
+
+	<p>This intuition, that ordinal structures and transfinite induction prove more and more powerful theorems, led Cantor to mystically identify the large ordinals with the theological notion of God, and to try and push the structure of the ordinals as far as it could logically be pushed. Since the ordinals for him defined the limits of mathematical reasoning, he felt that all mathematical objects should have an ordinal description.</p>
+
+	<p>In order to do this, he investigated set theory. Within set theory, his next great idea was to consider the real numbers as a set. He then proved an important theorem--- the real numbers are uncountable, meaning that they are not matched one to one to the integers, like the rational numbers can, or the algebraic numbers, or any other collection defined by a list of text strings (like all real numbers you can precisely name, for example). This result was an infinitary leap beyond the ordinals he was describing earlier, because the ordinals he could draw on a real number line are all countable (the gap to the right means that the lengths have to add up in an infinite series to $1$, and a convergent infinite series of positive numbers is always countable).</p>
+
+	<p>But now that Cantor had an uncountable set, he could construct an uncountable ordinal, by proving that there is no "set of all ordinals", so that if you consider all possible well-orderings of subsets of the real numbers (all possible ways to embed ordinals into the real numbers, not necessarily in left-to-right order, but in arbitrary order, without using the same point twice), then it is impossible to embed all ordinals, so there must be an uncountable ordinal. This proof is non-constructive, the existence of an uncountable ordinal, is equivalent to the existence of an uncountable set, and this is given to you by the axiom that the real numbers are a set, which is one of the axioms of modern set theory.</p>
+
+	<p>Cantor also had the intuition now that the real numbers should be well ordered, because you can consider the limit of all maps of ordinals into the reals, and the limit of the embeddings must exhaust the reals, to prevent the set of all ordinals from "fitting into" the set of all reals, which it can't, because the ordinals are not a set. This intuition was turned into a rigorous proof by Zermelo around 1910, who also formulated Cantor's set theory as a rigorous system for the first time in order to make this proof precise. This idea, that the real numbers can be well-ordered, was resisted by many mathematicians, including Poincare and Dedekind, who accepted countable manipulations, but were wary of manipulations using the set of all real numbers. This led to a schism in mathematics, the foundations war, which never really healed, it was just forgotten. It has a resolution today, and this is ordinal analysis. I'll get to it.</p>
+
+	<p>In order to place set theory on a logical foundation, to give what amounts to a precise countable description of set theory using symbols, Hilbert and others decided to make a theory of meta-mathematics and logic which would allow people to prove axiom systems are consistent. This program formulated modern logic, which had been stagnant due to the horrific influence of the pseudo-logic of Aristotle, which falsely claimed to solve the problem of logic using syllogisms. In addition to syllogisms, it was necessary to introduce variables, quantifiers, and precise rules of deduction on quantifiers and variables, which were codified by Frege, Russell, Whitehead, Hilbert, Godel and many others in the 1910s-1920s, making true modern systems of logic that actually could work for mechanical theorem proving, unlike Aristotle's vapid nonsense. In 1931, Godel proved that the resulting system of logic, now called "first order logic" for unimportant reasons, was complete, meaning it was able to prove the full consequences of any axioms.</p>
+
+	<p>The notion of completeness of logic was extended to the notion of computers and computation by Turing, and the first result Turing proved was that there is an uncomputable real number, simply because the real numbers are uncountable, and computer programs are countable. Turing's method clarified the role of first-order logic. First order logic is like an instruction set for a computer to do deduction from axioms, and it is complete, in the sense that given a collection of symbols describing an axiom system, it can produce all the consequences of these, which include the result of all computations.</p>
+
+	<p>But now there is a simple consequence: given any axiomatic system, there is a deduction algorithm. So given any axiomatic system $S$, strong enough to follow a computer, you can always write a computer program SPITE that does the following:</p>
+
+	<p>
+		<ol>
+			<li>Prints its code into a variable $R$</li>
+			<li>Deduces all the consequences of $S$</li>
+			<li>if it finds the statement "$R$ does not stop" in the consequences, it stops.</li>
+		</ol>
+	</p>
+
+	<p>The statement that this program doesn't stop is unprovable by $S$ and constitutes a new axiom that allows you to extend $S$. This is Godel's incompleteness theorem. It is easy to show that "SPITE does not stop" is equivalent logically to "$S$ is consistent", since if $S$ is inconsistent it will prove everything after the inconsistency, including "$R$ does not stop", and if $S$ is consistent, $R$ cannot stop, because that would be an inconsistency (since $S$ is strong enough follow $R$ or any other finite computation).</p>
+
+	<p>Godel's theorem was interpreted by many people' as killing Hilbert's program, because set theory could prove the consistency of Peano Arithmetic, and Peano Arithmetic could prove the consistency of simpler systems, so it was considered that it was hopeless to prove the consistency of set theory from computational arithmetic ideas.</p>
+
+	<p>This interpretation became popular right before the war, and the war meant that Hilbert and Gentzen, who didn't accept this interpretation and in fact, disproved it explicitly, were marginalized.</p>
+
+	<p>In 1936, Gentzen, Godel's theorem be damned, proved the consistency of Peano Arithmetic in a way that was completely satisfactory to Hilbert. What Gentzen did was show that any deduction path in Peano Arithmetic that ended in a contradiction, once all the lemmas are expanded (cut elimination) would imply a smaller contradiction, in a way ordered by an ordinal $\epsilon_0$. So the fact that $\epsilon_0$ is an ordinal is equivalent to the consistency of Peano Arithmetic, and this ordinal is precisely equivalent to the complexity of Peano Arithmetic.</p>
+
+	<p>To define $\epsilon_0$ does not require any of the controversial parts of set theory--- it only requires the axiom of infinity, not the axiom of powerset. $\epsilon_0$ is also a completely combinatorial object, which can be represented on a computer, it's not even difficult--- the obvious order on Cantor normal forms are exactly such a representation. So here was a complete satisfying combinatorial proof of the consistency of Peano Arithmetic.</p>
+
+	<p>In analyzing Gentzen's proof, in a display of terrible intellectual dishonesty, Godel declared it was "infinitary", and from this point on, $\epsilon_0$ was declared to be an infinitary object, unfairly and stupidly, by all subsequent generations of mathematicians. This is idiotic, $\epsilon_0$ is completely and explicitly representable on a computer, and so is finitary, no ifs ands or buts.</p>
+
+	<p>So I will ignore Godel from this point on, although he went on to complete an important thread of Hilbert's program afterwards. Hilbert had already had an idea for reconstructing all of set theory from the ordinals alone, he had an inductive idea of building up the universe algorithmically using the ordinals and logical operations on simpler sets iterated an ordinal number of times. Hilbert just didn't know which ordinals to admit, so they waited to clarify the ordinal structure before expanding it out to the full universe.</p>
+
+	<p>Godel had no such compunctions, and just produced this construction in set theory, using the mystical ordinals of his vague intuition. This produced Godel's universe "$L$", which is the universe produced from starting with the empty set and iterating the objects produced by set theory an ordinal number of times, where the ordinal idea is from some surrounding mystical set theory that you accept without question. This procedure would have boiled Hilbert's blood, had he been alive, since it was just his program for set theory, except removing the most important unsolved problem--- namely which ordinals you need to explicity introduce in order to reconstruct the structure of the complicated set theory.</p>
+
+	<p>Anyway, that's where set theory was stuck for 20 years, because Godel slammed the door on further investigation of Hilbert's program. The program was revitalized by a young New Yorker named Paul Cohen, working completely independently. What Cohen did was construct alternate models of set theory. This is far afield, so I won't describe it, but Cohen's reviving of all the old ideas was extremely depressing to the older Godel, who thought he had done a very good thing in killing them, and Godel was broken man. He died in a form of mathematical grief, after realizing the majority of his entire career was a backward step. This was all caused by his sell-out of taking the Hilbert school methods and results and applying them in traditional set theory, without clarifying the notion of ordinal properly first.</p>
+
+	<p>Anyway, just like arithmetic has $\epsilon_0$, it is certain in the every sense but proof (we haven't proved this yet, but people are working on it), that EVERY theory has a countable computable ordinal that describes it's strength, and you can describe these ordinals in a more or less explicit way, without ever using the real numbers, or uncountable sets, or uncountable ordinals, except as useful figures of speech. Kripke and Platek made a constructive set theory without powerset (no set of real numbers) which could be described this way, and Rathjen extended this to larger set theories, and we might soon describe ZFC minus powerset in this way.</p>
+
+	<p>Once this is done, the powerset axiom will take the undescribed countable ordinal $X$ of countable ZFC, and sort of fractally replace each point of $X$ with an image of $X$, to produce an even more enormous ordinal for ZFC plus powerset. This is the system of traditional mathematics.</p>
+
+	<p>Describing larger and larger countable computable ordinals, you go on to describe stronger systems that were constructed in the 1940s-1980s, and there is no limit to this, it is describing more and more sophisticated computational structures.</p>
+
+	<p>Such a program completes Hilbert's vision, and the roadblocks thrown in the path of this precise vision of God, suggested by Cantor, and clarified by Hilbert, roadblocks thrown by such great minds as Godel are a picture of the Devil himself. I am borrowing this religious imagery from Cantor, but I think it is appropriate.</p>
+
+	</div>
+
+	<hr>
+
+	<div>
+		<blockquote>
+			<em><p>insane and amusing in equal parts</p>
+			</em>
+			<blockquote>
+				<p>Insane in what way? This is a precise and accurate description of the history of ordinal analysis, except without proofs (most of which are on Wikipedia), and CORRECTING the nonsense most mathematicians would say about it, which is why I am writing it.</p>
+
+			</blockquote>
+		</blockquote>
+		<br>
+		<blockquote>
+			<em><p>Alright. But pleases justify infinity is a "measure of human ignorance". I can't see the precise relation of your first sentence with the rest of the answer.</p>
+			</em>
+			<blockquote>
+				<p>The measure of human ignorance is the theorems we can't prove. Going up the (countable computable) ordinals reduces human ignorance, by providing new stronger systesm of mathematics, so the largest ordinal we can name sort of defines the limit of human ignorance As we get new methods of constructing ordinals, we reduce the ignorance, but there is always an infinite amount of structure left undescribed, before the Church-Kleene ordinal, which is "infinity" in a more precise sense.</p>
+
+				<p>The notion of infinity that is relevant for describing how we can do logical deduction is the ordinals, and this is an exact and precise mathematical statement of the inuition that "infinity is the measure of human ignorance". The statement is "human ignorance is reduced by logical deduction, but this is trivial, because the deduction is incomplete. It is reduced in a nontrivial way by going up the tower of ordinals."</p>
+
+				<blockquote>
+					<em><p>Wouldn't it be more appropriate if we say the difference between the largest countable computable ordinal we can name and Church-Kleene ordinal is our measure of ignorance?</p>
+					</em>
+					<blockquote>
+						<p>Sort of, but ordinals don't have a difference in this way. The difference is just equal to the Church Kleene ordinal formally.</p>
+
+					</blockquote>
+				</blockquote>
+			</blockquote>
+		</blockquote>
+	</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
