@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>How many kilometers would be the span of sky you could see between horizons, assuming a plain terrain?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>How many kilometers would be the span of sky you could see between horizons, assuming a plain terrain?</h3>
+
+	<p>Your visibility radius is the square-root of twice your height times the radius of the Earth, it comes out to about $5~ \mathrm{km}$ for a $2~ \mathrm{m}$ person (square root of $2$ times $6000~ \mathrm{km}$ times $2~ \mathrm{m}$).</p>
+	<p>This handy formula shows you that if you have a crow's nest which is $20$ $\mathrm{meters}$ above the ground, you can see $3.16$ times further, the square root of $10$, about $15~ \mathrm{km}$. If you want to see $50~ \mathrm{km}$, you need to be $200$ $\mathrm{meters}$ up, so forget about it. When you are $10~ \mathrm{km}$ above the ground, you can see $240~ \mathrm{km}$ out, this is an airplane's cruising height.</p>
+	<p>The formula comes from the law of a sphere, a sphere looks like a parabola near the top,</p>
+	<p>$$R - \sqrt{R^2- x^2} = \frac{x^2}{2R}$$</p>
+	<p>This is true for small $x$, it's the leading Taylor expansion of square-root. You can see as far as when the slope from your eye is tangent to the parabola. Extrapolating the tangent of a parabola from position $x$, the slope is $\frac{x}{R}$, this is the derivative, and it's a distance $x$, so it's $\frac{x^2}{R}$ in height for the line, but you are starting $\frac{x^2}{2R}$ below ground level, so the extra height for the tangent is $\frac{x^2}{2R}$</p>
+	<p>$$\frac{x^2}{2R} = h$$</p>
+	<p>Where h is how far up your vantage point is.</p>
+	<p>$$x = \sqrt{2Rh}$$</p>
+	<p>The leading order parabola approximation is very useful.</p>
+
+	<hr>
+
+	<div>
+		<blockquote>
+			<em><p>You can also just use the power of a point theorem.</p></em>
+			<blockquote>
+				<p>I know the exact answer, but the method of approximations is more general and less intimidating.</p>
+				<blockquote>
+					<em><p>You're right that Taylor approximation is more general, but I like using high school geometry when possible. The power of a point theorem is great here because it directly implies that the length of the tangent segment is $\sqrt{2Rh}$.</p></em>
+						<blockquote>
+							<p>This is not the exact answer--- the exact distance in line-of-sight-through-air to the horizon is $\sqrt{2Rh+h^2}$, as you can see from the fact that there is a right-triangle formed by the radius to the meeting point of tangent and circle, the line of sight, and the radius extended through your body.</p>
+					</blockquote>
+				</blockquote>
+			</blockquote>
+		</blockquote>
+	</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
