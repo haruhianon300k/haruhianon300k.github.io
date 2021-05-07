@@ -24,9 +24,9 @@
 			<blockquote>
 				<p>It is not. You are just quoting the suboptimal presentation on Wikipedia. The ideal gas law has nothing to do with it.</p>
 				<blockquote>
-					<em><p>It starts with PV^(Cp/Cv) = constant, which is a pretty fundemental gas law and then considering a small change in volume.</p></em>
+					<em><p>It starts with $PV^{\frac{Cp}{Cv}} = constant$, which is a pretty fundemental gas law and then considering a small change in volume.</p></em>
 					<blockquote>
-						<p> Except it works in more generality than ideal gasses-- it works in any material where there is a $dP/d\rho$, and this is what OP is asking.</p>
+						<p> Except it works in more generality than ideal gasses-- it works in any material where there is a $\frac{dP}{d\rho}$, and this is what OP is asking.</p>
 					</blockquote>
 				</blockquote>
 			</blockquote>
@@ -40,25 +40,25 @@
 
 	<p>$$ \partial_t \rho + \partial_i J^i = 0 $$</p>
 
-	<p>Where the repeated i index is summed (Einstein convention). This is clearest in space-time, where the density $\rho$ becomes the time component of a 4-vector, but it is just as true in Galilean Newtonian mechanics.</p>
+	<p>Where the repeated $i$ index is summed (Einstein convention). This is clearest in space-time, where the density $\rho$ becomes the time component of a 4-vector, but it is just as true in Galilean Newtonian mechanics.</p>
 
 	<p>For momentum, you have three separate conserved momentum densities $p^i$ which obey a conservation law:</p>
 
 	<p>$$ \partial_t p^j + \partial_i T^{ij} = 0 $$</p>
 
-	<p>Where the interpretation of $T^{ij}$ is that it is the flow of the i'th component of p in the j direction. There are three equations, since there are three separate conserved quantities--- the x,y,z momentum.</p>
+	<p>Where the interpretation of $T^{ij}$ is that it is the flow of the $i$'th component of $p$ in the $j$ direction. There are three equations, since there are three separate conserved quantities--- the $x,y,z$ momentum.</p>
 
-	<p>If you compress a region of air, you get a little bit more pressure. The form of pressure is a diagonal stress density, by rotational symmetry (it is also intuitive--- pressure pushed out--- so x-momentum goes in the x direction, y-momentum goes in the y-direction and so on).</p>
+	<p>If you compress a region of air, you get a little bit more pressure. The form of pressure is a diagonal stress density, by rotational symmetry (it is also intuitive--- pressure pushed out--- so $x$-momentum goes in the $x$ direction, $y$-momentum goes in the $y$-direction and so on).</p>
 
-	<p>The stress T for a pressure is therefore</p>
+	<p>The stress $T$ for a pressure is therefore</p>
 
 	<p>$$ T^{ij} = P(\rho) \delta^{ij} $$</p>
 
-	<p>If the material starts out at position x (at each x there is a different infinitesimal volume of material) and the material which would be at x when everything is still is moved at time t to x+\delta X(x,t), then the momentum density is</p>
+	<p>If the material starts out at position $x$ (at each $x$ there is a different infinitesimal volume of material) and the material which would be at $x$ when everything is still is moved at time $t$ to $x+\delta X(x,t)$, then the momentum density is</p>
 
 	<p>$$ p^{i} = \rho {\partial_t X(x,t)}$$</p>
 
-	<p>Assuming $\rho = \rho_0(1 - \delta v)$ where the infinitesimal volume compression, which gives the change in the density, is given by the divergence of X (this is geometrically clear if you draw a picture, or just from the definition of divergence)</p>
+	<p>Assuming $\rho = \rho_0(1 - \delta v)$ where the infinitesimal volume compression, which gives the change in the density, is given by the divergence of $X$ (this is geometrically clear if you draw a picture, or just from the definition of divergence)</p>
 
 	<p>$$\delta v = \partial_j X^j $$</p>
 
@@ -68,19 +68,19 @@
 
 	<p>Where $ C= {dP\over d\rho}$</p>
 
-	<p>Now, for mathematical convenience (I do not want to deal with transverse sound), consider reducing to one dimension. In this case X(x) is just a one-dimensional function that tells you the displacement, and the stress is just $T^{11} = \rho_0 \partial_x X$ (the flow of x-momentum in the x-direction).</p>
+	<p>Now, for mathematical convenience (I do not want to deal with transverse sound), consider reducing to one dimension. In this case $X(x)$ is just a one-dimensional function that tells you the displacement, and the stress is just $T^{11} = \rho_0 \partial_x X$ (the flow of $x$-momentum in the $x$-direction).</p>
 
-	<p>The continuity equation in 1d gives you</p>
+	<p>The continuity equation in $1d$ gives you</p>
 
 	<p>$$ \rho_0 \partial^2_t X - \rho_0 C \partial^2_x X = 0 $$</p>
 
-	<p>And this is the wave equation with the speed of sound squared equal to C. You can repeat the 1d analysis with detailed forces, not using the slightly more abstract continuity equation, and this is what Newton did to find the speed of sound way back when.</p>
+	<p>And this is the wave equation with the speed of sound squared equal to $C$. You can repeat the $1d$ analysis with detailed forces, not using the slightly more abstract continuity equation, and this is what Newton did to find the speed of sound way back when.</p>
 
-	<p>To see that the one dimensional equation above describes waves moving with a speed $\pm \sqrt{C}$, consider the functional form of such a wave moving with velocity c:</p>
+	<p>To see that the one dimensional equation above describes waves moving with a speed $\pm \sqrt{C}$, consider the functional form of such a wave moving with velocity $c$:</p>
 
 	<p>$$ \phi(x,t) = f(x-ct) $$</p>
 
-	<p>where f is a function of one dependent variable. Differentiate twice in time</p>
+	<p>where $f$ is a function of one dependent variable. Differentiate twice in time</p>
 
 	<p>$$ \partial^2_t \phi = c^2 f'' $$</p>
 
@@ -92,12 +92,12 @@
 
 	<p>$$ \partial^2_t \phi - c^2 \partial^2_x \phi = 0 $$</p>
 
-	<p>The general solution to the 1d equation can be expressesed as the sum of a left-moving and a right-moving wave. This can be used to match any initial conditions of $\phi$ and $\partial_t\phi$, and is therefore the general form. You can derive the general solution from a systematic general theory using Fourier transforms, by considering plane waves.</p>
+	<p>The general solution to the $1d$ equation can be expressesed as the sum of a left-moving and a right-moving wave. This can be used to match any initial conditions of $\phi$ and $\partial_t\phi$, and is therefore the general form. You can derive the general solution from a systematic general theory using Fourier transforms, by considering plane waves.</p>
 
 	<hr>
 		<div>
 			<blockquote>
-				<em><p>Elegant enough, Ron, +1. Maybe one should also explain why the wave equation at the end implies the right speed, e.g. by taking the solutions $\cos(kx-\omega t)$ and showing that $\omega/k=v$ has to agree with the coefficient obtained from $C$ for the equation to hold. <i>– Luboš Motl</i></p></em>
+				<em><p>Elegant enough, Ron, +1. Maybe one should also explain why the wave equation at the end implies the right speed, e.g. by taking the solutions $\cos(kx-\omega t)$ and showing that $\frac{\omega}{k}=v$ has to agree with the coefficient obtained from $C$ for the equation to hold. <i>– Luboš Motl</i></p></em>
 				<blockquote>
 					<p>Ok, I'll do it, if you think its necessary</p>
 				</blockquote>
