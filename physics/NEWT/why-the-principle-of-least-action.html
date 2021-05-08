@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Why the Principle of Least Action?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>Why the Principle of Least Action?</h3>
+
+		<p>I'll be generous and say it might be reasonable to assume that nature would tend to minimize, or maybe even maximize, the integral over time of $T-V$.  Okay, fine.  You write down the action functional, require that it be a minimum (or maximum), and arrive at the Euler-Lagrange equations.  Great.  But now you want these Euler-Lagrange equations to not just be derivable from the Principle of Least Action, but you want it to be <i>equivalent</i> to the Principle of Least Action.  After thinking about it for awhile, you realize that this implies that the Principle of Least Action isn't really the Principle of Least Action at all:  it's the "Principle of Stationary Action".  Maybe this is just me, but as generous as I may be, I will not grant you that it is "natural" to assume that nature tends to choose the path that is stationary point of the action functional.  Not to mention, it isn't even obvious that there is such a path, or if there is one, that it is unique.</p>
+
+		<p>But the problems don't stop there.  Even if you grant the "Principle of Stationary Action" as fundamentally and universally true, you realize that not all the equations of motions that you would like to have are derivable from this if you restrict yourself to a Lagrangian of the form $T-V$.  As far as I can tell, from here it's a matter of playing around until you get a Lagrangian that produces the equations of motion you want.</p>
+
+		<p>From my (perhaps naive point of view), there is nothing at all particularly natural (although I will admit, it is quite useful) about the formulation of classical mechanics this way.  Of course, this wouldn't be such a big deal if these classical ideas stayed with the classical physics, but these ideas are absolutely fundamental to how we think about things as modern as quantum field theory.</p>
+
+		<p>Could someone please convince me that there is something natural about the choice of the Lagrangian formulation of classical mechanics (I don't mean in comparison with the Hamiltonian formulation; I mean <i>period</i>), and in fact, that it is so natural that we would not even dare abandon these ideas?</p>
+
+		<hr>
+
+	<p>The intuition for the Lagrangian principle comes specific applications of Newton's laws, especially reversible systems with constraints, like nonspherical particles rolling along complicated surfaces. Newton's formulation of Newton's laws was not the end of the story, because there was more structure in the solutions of these types of problems than that which Newton made obvious.</p>
+
+	<p>One thing left unsaid by Newton is conservation of energy. Elastic processes are more fundamental than inelastic ones. But energy conservation is only part of the story. Suppose you have a bunch of masses connected by springs, and one of them is attached to a double-pendulum. You could theoretically have energy conservation in such a system by having all the energy leak out of the masses on the springs and go into the double pendulum. Perhaps every <i>frictionless</i> motion of the springs eventually settles all the energy into a single mode.</p>
+
+
+	<p>Your intuition is probably rebelling, telling you "that's infinitely unlikely! How could the pendulum move around and not set the springs vibrating!" But there is nothing in Newton's laws by themselves, even with the principle of conservation of energy, that prevents this sort of concentration of energy. But the solutions do not exhibit such phenomena, and there must be a reason why.</p>
+
+	<p>This intuition tells you that a perfect frictionless mechanical system is more than energy-conserving, it must conserve some notion of "motion-volume", so that if you alter the initial state by a certain amount, the final state should alter the same way. It can't concentrate all motion into one mode. This principle is the principle of conservation of phase-space volume, or the conservation of information. If all the motion got concentrated into one mode, the information about where everything was would have to get absurdly compressed into a tiny region of the phase space, the space of all possible motions.</p>
+
+	<p>The conservation of information is just about as fundamental as Newton's laws of motion--- it is revealing new facts about nature which are essential for the description of statistical and quantum systems. But it is nowhere to be found in Newton's formulation, because it does not follow from Newton's laws alone, even with the principle of conservation of energy added.</p>
+
+	<p>So you need to understand what type of law <i>will</i> give a law of conservation of information. There are two paths to go down, and both lead to the same structure, but from two different points of view, local in time and global in time.</p>
+
+	<p>One path is Hamiltonian: you consider formulating the law of motion as a set of symplectic equations for the position and momentum. This formulation clearly separates between reversible and irreversible dynamics, because it only works for reversible. It also explains the fundamental mathematical <i>structure</i> behind reversible classical mechanics, the symplectic geometry. The volume of symplectic geometry gives the precise law of information conservation, and further, the geometrical structure of systems with multiperiodic solutions, the integrable systems, is made clear.</p>
+
+	<p>But this point of view is centered on a time-slicing--- it describes things going from one instant of time to another. This is not playing very nice with relativity. So you also want to think about the solution globally, and consider the space of all solutions as the phase space. The initial position and velocities are good coordinates, and intuitive ones, because they determine the future. But if you want a global picture, you want coordinates which are symmetric between the final and initial state, since the dynamics are reversible. An explicit revesible description should treat the initial time and final time symmetrically. So you can use the initial positions and final positions, which also, generically, away from certain bad choices, determine the motion.</p>
+
+	<p>For these types of coordinates on phase space, you give the dynamical law as a condition on the trajectory between the intial and final positions. The condition should not be stated as a differential equation, because such a description is unnatural for boundary conditions of this sort. But when you have an action principle, you determine the trajectory by extremizing the action between the end points, you automatically have a notion of phase space volume, which is intuitive--- the phase space volume is defined by the change in the action of extremal trajectories with respect to changes in the initial velocities. This volume is the same as for the changes of the extremal trajectories with respect to changes in the final velocities. This is a straightforward consequence of the equivalence of Lagrangian and Hamiltonian formulation.</p>
+
+	<p>The full justification for both principles comes only with quantum mechanics. There you learn that the least action principle is a geometric optics Fermat principle for matter waves, and it is saying that the trajectories are perpendicular to constant-phase lines. But historically, the Lagrangian formulation was recognized to be more fundamental a century before Hamilton conjectured that classical mechanics was a wave mechanics, and this was many decades before Schrodinger. Still, with our modern point of view, it does not hurt to learn the quantum version of these formulations first, and it certainly provides a more solid motivation than the heuristic considerations I gave above.</p>
+
+	<hr>
+
+	       <div>
+	           
+	           <blockquote>
+	               <em><p>What do you mean by conservation of information?</p></em>
+	               <blockquote>
+	                   <p>When you don't know the initial conditions, you place a probability distribution ρ on these, then you evolve ρ by evolving the initial conditions according to Newton's laws. Then the information missing in the encoded ignorance of the probability distribution ρ, which up to an infinite log-divergent constant (depending on the phase space discretization), ∫ρlogρdxdp over phase space, is constant. This is the 19th century law of conservation of entropy in classical reversible mechanics, basically uncovered by Boltzmann/Lorschmidt, Liouville's theorem.</p>
+	               </blockquote>
+
+	           </blockquote>
+	       </div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
