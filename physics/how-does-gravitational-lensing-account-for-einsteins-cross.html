@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>How does gravitational lensing account for Einstein's Cross?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>How does gravitational lensing account for Einstein's Cross?</h3>
+
+	<p><a href="http://en.wikipedia.org/wiki/Einstein_Cross" rel="noreferrer">Einstein's Cross</a> has been attributed to <a href="http://en.wikipedia.org/wiki/Gravitational_lens" rel="noreferrer">gravitational lensing</a>. However, most examples of gravitational lensing are crescents known as <a href="http://en.wikipedia.org/wiki/Einstein_ring" rel="noreferrer">Einstein's rings</a>. I can easily understand the rings and crescents, but I struggle to comprehend the explanation that gravitational lensing accounts for Einstein's cross. I found <a href="http://www.astronomyforum.net/physics-forum/112626-mathematical-explanation-einsteins-cross.html" rel="noreferrer">this explanation</a>, but it was not satisfactory. </p>
+
+	<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Einstein_cross.jpg/300px-Einstein_cross.jpg"  style="max-width: 650px"> </p>
+	<p><img src="https://i.stack.imgur.com/zAESk.png" alt="enter image description here"> </p>
+
+	<hr>
+
+	<p>The middle galaxy in Einstein's cross has an elliptical mass distribution which is wider in the direction of the _short_ leg of the cross (originally, this said long leg), with a center of mass where you see the galaxy. The object is slightly to the right of the center of the ellipse, in the direction of the long leg of the cross (the original answer had the direction reversed). This type of lensing is acheivable in such a configuration, when the lensing object is relatively close to us, so that the rays pass the central region, where the quadrupole moment asymmetry of the gravitational field is apparent.
+
+	<h4>Lensing map</h4>
+
+	<p>Given a light source, call the line between us and the source the z axis, and parametrize outgoing light rays by the x-y coordinates of their intesection with an x-y plane one unit distance away from the source in our direction. This is a good parametrization for the tiny angles one is dealing with. The light rays are parametrized by a two dimensional vector v.
+
+	<p>These light rays then go through a lensing region, and come out going in another direction. Call their intersection point with the x-y plane going through our position v'. The lensing problem is completely determined once you know v' as a function of v.
+
+	<p>We can only see those rays that come to us, that is, those rays where v'(v) is zero. The number and type of images are entirely determined by the number and type of zeros of this vector field. This is why it is difficult to reconstruct the mass distribution from strong-lensing--- many different vector fields can have the same zeros.
+
+	<p>The only thing we can observe is the number of zeros, and the Jacobian of the vector field v' at the zero. The Jacobian tells you the linear map between the source and the observed image, the shear, magnification, inversion.
+
+	<p>The lensing map is always asymptotically linear, v'(v)= v for large v, because far away rays are not lensed, and the scale of v is adjusted to make this constant 1.
+
+	<h4>Generic strong lensing</h4>
+
+	<p>In a generic strong lensing problem, the vector field v has only simple zeros. The Jacobian is a diagonalizable matrix with nonzero eigenvalues. This means that each image is perfectly well defined, not arced or smeared. The image is arced only in the infinitely improbable case that you have a singular Jacobian.
+
+	<p>But we see gravitational arcs all the time! The reason for this is that for the special case of a spherically symmetric source, the Jacobian is always singular. The source, the center of symmetry, and us make a plane, and this plane includes the z-axis, and necessarily includes the direction of the image. The Jacobian at a zero of v' always has a zero eigenvalue in the direction perpendicular to this plane.
+
+	<p>This means that the spherically-symmetric far-field of any compact source will produce arcs, or smears. When the lensing object is very far, the rays that get to us are far away from the source, and we see far-field arcs and smears. When the lensing galaxy is close, the lensing field has no special symmetry, and we see points with no smearing.
+
+	<p>So despite the intuition from point sources and everyday lenses, Einstein's cross is the generic case for lensing, the arcs and smears are special cases. You can see this by holding a pen-light next to a funhouse-mirror. Generically, at any distance, you will see the pen light reflected at multiple images, but only near special points do you get smearing or arcing.
+
+	<h4>Topological considerations</h4>
+
+	<p>There is a simple topological theorem about this vector field v'. If you make a large circle in the v plane, and go around it counterclockwise, the value v'(v) along this circle makes a counterclockwise loop once around. This is the winding number of the loop.
+
+	<p>You can easily prove the following properties of the winding number:
+
+	<ul>
+		<li>Every loop has a winding number</li>
+		<li>if you divide a loop in two, the winding number of the two parts add up to the winding number of the loop.</li>
+		<li>the winding number of a small circle is always 0, unless the vector field is zero at inside the circle.</li>
+	</ul>
+
+	<p>Together they tell you what type of zeros can occur in a vector field based on its behavior at infinity.
+
+	<p>The winding number of the vector field in a small circle around a zero is called its index. The index is always +1 or -1 generically, because any other index happens only when these types of index zeros collide, so it is infinitely improbable. I will call the +1 zeros "sources" although they can be sources sinks or rotation/spiral points. The -1 zeros are called "saddles". The images at saddles are reflected. The images at sources are not.
+
+	<p>These observations prove the zero theorem: the number of sources plus the number of saddles is equal to the winding number of a very large circle. This means that there are always an odd number of images in a generic vector field, and always one more source than saddle.
+
+	<p>A quick search reveals that this theorem is known as the "odd number theorem" in the strong lensing community.
+
+	<h4>The odd number paradox</h4>
+
+	<p>This theorem is very strange, because it is exactly the opposite of what you always see! The generic images, like Einstein's cross, almost always have an even number of images. The only time you see an odd number of images is when you see exactly one image. What's the deal?
+
+	<p>The reason can be understood by going to one dimension less, and considering the one-dimensional vector field x'(x). In two dimensions, the light-ray map is defined by a zeros of a real valued function. These zeros also obey the odd-number theorem--- the asymptotic value of x'(x) is negative for negative x and positive for positive x, so there are an odd number of zero crossings.
+
+	<p>But if you place a point-source between you and the object, you generically see exactly two images! The ray above that is deflected down, and they ray below that is deflected up. You don't ever see an odd number. How does the theorem fail?
+
+	<p>The reason is that the point source has tremendously large deflections when you get close, so that the vector field is discontinuous there. Light rays that pass very close above the point are deflected very far down, and light rays that pass very close below are deflected far up. the discontinuity has a +1 index, and it fixes the theorem. If you smooth out the point source into a concentrated mass distribution, the vector field becomes continuous again, but one of the images is forced to be right behind the continuous mass distribution, with extremely small magnification.
+
+	<p>So the Einstein cross has five images: there are four visible images, and one invisible images right behind the foreground galaxy. This requires no fine tuning--- the fifth image occurs where the mass distribution is most concentrated, which is also where the galaxy is. Even if the galaxy were somehow transparent, the fifth image would be extremely dim, because it is where the gradient of the v field is biggest, and the smaller this gradien, the bigger the magnification.
+
+	<h4>Einstein's cross</h4>
+
+	<p>After analyzing the general case, it is straightforward to work out qualitatively what is happening in Einstein's cross. There is a central mass, as in all astrophysical lenses, so there is an invisible central singularity/image with index +1. the remaining images must have 2 sources and 2 saddles. The most likely configuration is that the two sources are the left and right points on the long leg of the cross, and the two saddles are the top and bottom points (in my original answer, I had the orientation backwards. To justify the orientation choice, see the quantitative analysis below)
+
+	<p>You can fill in the qualitative structure of the v'(v) vector field by drawing its flow lines. The image below is the result. It is only a qualitative picture, but you get to see which way the light is deflecting (I changed the image to reflect the correct physics):
+
+	<!--  ![alt text][1]  -->
+	<p>The flow lines start at the two sources, and get deflected around the two saddles, with some lines going off to infinity and some lines going into the central singularity/sink. There is a special box going around source-saddle-source-saddle which cuts the plane in two, and inside the box, all the source flows end on the central singularity/image and outside all the source flows end at infinity.
+
+	<p>The flow shows that the apparent fourfold symmetry is not there at all. The two sources are completely different from the two saddles. The direction of light deflection is downward towards the long axis of the cross, and inward toward the center. This is the expected deflection from a source which is elliptical oriented along the long-direction of the galaxy.
+
+	<h4>Model</h4>
+
+	<p>(The stuff in this section was wrong. The correct stuff is below)
+
+	<h4>General Astrophysical Lensing</h4>
+
+	<p>The general problem is easy to solve, and gives more insight into what you can extract from strong lensing observations. The first thing to note is that the deflection of a particle moving at the speed of light past a point mass in Newton's theory, when the deflection is small is given by the integral of the force over a straight line, divided by the nearly constant speed c, and this straightforward integral gives a deflection which is:
+
+	$$ \Delta\theta = -{R_s\over b}$$
+
+	<p>Where $R_s = {2GM\over c^2}$$ is the Schwartschild radius, b is the impact parameter, the distance of closest approach, and everything is determined by dimensional analysis except the prefactor, which is as I gave it. The General Relativity deflection is twice this, because the space-space metric components contribute an equal amount, as is easiest to see in Schwartschild coodinates in the large radius region, and this is a famous prediction of GR.
+
+	<p>When the deflections are small, and they always small fractions of a degree in the actual images, the total deflection is additive over the point masses that make up the lensing mass. Further, the path of the light ray from the distant light source is only near the lensing source for a very small fraction of the total transit, and this lensing region is much smaller than the distance to us, or the distance between the light source and the lensing mass. These two observations mean that you can squash all the material in the lensing mass into a single x-y plane, and get the same deflection, up to corrections which go as the ratio of the radius of a galaxy to the distance from us/source to the galaxy, both of which are safely infinitesimal. The radius of a galaxy and dark-matter cloud is a million light years, while the light source and us are a billion light years distant. 
+
+	<p>You convert $\Delta\theta$ to x-y plane coordinates I am using by multiplying by a unit distance. This gives the amount and direction of deflection from a given point mass. The total deflection of the light ray at distance B is given by the sum over all point masses in the galaxy and its associated dark-matter of this vector contribution, which is four time the mass (twice the Schwartschild radius) divided by the distance, pointing directly toward the mass. This sum is $\Delta v$.
+
+	<p>What is important to note is that this sum is equal to the solution to a completely different problem, namely the 2-d gravitational field of (four times) the squashed planar mass. In 2d, gravity goes like 1/r. The planar gravitational field of the planar mass distribution gives $\Delta v$, and it is most important to note that this means that $\Delta v$ is the gradient of the 2d gravitational potential:
+
+	$$ \Delta V= - \nabla \phi$$
+
+	<p>Where 
+
+	$$\phi(x) = \int \rho(u) \ln(|x-u|) d^2u$$
+
+	<p>where the two dimensional density $\rho(u)$ is the integral of the three dimensional density in the z direction (times $4G\over c^2$). This is important, because you can easily determine $\phi$ from the mass distribution by well known methods for solving Laplace's equation in 2d, and there are many exact solutions.
+
+	<p>The impact parameter B is equal to $vR_1$, the original direction the light ray goes times the distance from the light-source to the lensing object, and the position this light ray reaches when it gets to us is:
+
+	$$ v'(v) = v(R_1 + R_2) + \Delta v(vR_1) R_2$$
+
+	<p>Choosing a new normalization for v so that vR_1 is the new v, and choosing a normalization for v' so that v'(v) is v at large distances:
+
+	$$ v'(v) = v - {R_1\over R_1+R_2} \nabla \phi(v) $$
+
+	<p>This is important, because it means that the whole thing is a gradient, the gradient of:
+
+	$$ v'(v) = - \nabla(\phi'(v))$$
+	$$\phi'(v) = {R_1\over R_1+R_2} \phi(v) - {v^2\over 2} $$
+
+	<p>The resulting potential also has a 2d interpretation--- it is the gravitational potential of the planar squashed mass distribution in a Newton-Hooke background, where objects are pushed outward by a force proportional to their distance.
+
+	<p>The 2-d gravity potential is easy to calculate, often in closed form, and to find the lensing profile, you just look for the maxima, minima, and saddles of the 2-d potential plus a quadratically falling potential.
+
+	<p>This solves the problem for all practical astrophysical situations. I found it remarkable that the deflection field is integrable, but perhaps there is a simpler way of understanding this.
+
+	<h4>Point mass</h4>
+
+	<p>The 2d potential of a point mass is 
+
+	$$ \phi(v) = \ln(|v|)$$
+
+	<p>and for an object directly behind it, you get
+
+	$$ \phi'(v) = A \ln(|v|) - |v|^2$$ 
+
+	<p>This gives a central singularity (or if you spread out the mass in the center, a dim image right on top of the mass) plus a perfect ring where $r=\sqrt{A}$. This is the ring image.
+
+	<p>Moving the light source off center just shifts the relative position of the two potential centers. The new potential is:
+
+	$$ \phi'(v) = {A\over 2} \ln(x^2 + y^2) - {(x-a)^2 + y^2\over 2}$$
+
+	<p>Setting the x and y derivatives of the potential to zero, you find two critical points (not counting the singular behavior at x=y=0). The two points both have a singular Jacobian, so they give very large magnifications, and smears or arcs.
+
+	<p>The two images occur at $$y=0$$,
+
+	$$x= {a\over 2} \pm \sqrt{A^2 - {a\over 2}^2}$$
+
+	<p>So the smear to the side where the object is at is moved further, at large values of a, the second image is right on top of the lesing mass, and at small values of a, the two images are moved in the direction of the displacement by half the amount of displacement.
+
+	<h4>Quadrupole mass distribution</h4>
+
+	<p>Consider two masses of size {1\over 2} at position $\pm a$. This gives a potential which is a superposition of the two masses:
+
+	$$ \phi(x,y) = {1\over 4} \ln((x-a)^2 + y^2 ) + {1\over 4} \ln((x+a)^2 + y^2) = {1\over 2} \ln(r^2) + a^2 { x^2 - y^2\over 2r^2}$$
+
+	<p>The part in addition to the ordinary $M\ln(r)$ potential of a point source is a quadrupole. Lensing in a quadrupole has a simple algebraic solution. Differentiating, and subtracting the linear part gives
+
+	$$ {Ax\over r^2} ( 1 + {a^2\over r^4}(6y^2 - 2x^2) - {r^2\over A} ) =0$$
+	$$ {Ay\over r^2} ( 1 + {a^2\over r^4}(2y^2 - 6x^2) - {r^2\over A} ) =0$$
+
+	<p>The x=0,y=0 point is at the singular position. The real critical points are at the other simultaneous solutions:
+
+	$$ x=0, y= \pm\sqrt{A}\sqrt{{1\over 2} \pm \sqrt{{1\over 4} + {2a^2\over A}}}$$
+	$$ y=0, x= \pm\sqrt{A}\sqrt{{1\over 2} \pm \sqrt{{1\over 4} - {2a^2\over A}}}$$
+
+	<p>Of these eight points, two are imaginary (taking the minus sign inside the square root for y), and two are outside the domain of validity of the solution (taking the minus sign inside the square root for x--- the point is $\sqrt{2}a$), which is right by the point masses making the quadrupole). This leaves four points. But they are all local maxima, none of these are saddles. The saddles are found by solving the nontrivial equations in parentheses for x and y.
+
+	<p>Taking the difference of the two equations reveals that $x=\pm y$, which gives the four saddle solutions:
+
+	$$ \pm x=\pm y = \sqrt{A}$$
+
+	<p>There are _eight_ images for a near-center source lensed by a quadrupole mass. For small values of a, The two images along the line of the two masses are pulled nearer by a fractional change which is $a^2\over A$, the two images perpendicular to the line of the two masses are pulled apart by a fractional change of $a^2\over A$, while the four images on the diagonals are at the location of the point-source disk.
+
+	<p>For me, this was surprising, but it is obvious in hindsight. The quadrupole field and the Newton-Hooke fields both point along the lines y=x on the diagonal, and their goes from inpointing near the origin to outpointing far away, so it must have a zero. The zeros are topological and stable to small deformations, so if you believe that the field of the galaxy is spherical plus quadrupole, the Einstein cross light source has to be far enough off-center to change the topology of the critical points.
+
+	<h4>Quadrupole mass distribution/off-center source</h4>
+	 
+	<p>To analyze moving off center qualitatively, it helps to understand how saddles and sources respond to movement. If you move the light source, you move the Newton-Hooke center. The result is that the points that were previously sources and saddles now have a nonzero vector value.
+
+	<p>When the position of a source slowly gets a nonzero vector value, that means that the source is moving in the direction opposite this value. If a saddle gets a nonzero value, the saddle is moving in the direction of this value reflected in the attracting axis of the saddle.
+
+	<p>This means that if you start with a very asymmetric quadrupole, and you slide the source along the long-axis of the source-saddle-source-saddle-source-saddle-source-saddle ellipse towards one of the sources at the end of the long axis, one of the short axis sources and the short axis saddles approach each other. They annihilate when they touch, and they touch at a finite displacement, since the result must smoothly approach the spherically symmetric solution.
+
+	<p>Right after the sources and saddles annihilate, you get a cross, but it doesn't look too much like Einstein's cross--- the surviving two saddles and two sources are more asymmetric, and the narrow arm is much narrower than the wide arm.
+
+	<h4>Line source</h4>
+
+	<p>For the lensing from a line source, you write the 2-d potential for a line oriented along the y-axis (it's the same as a plane source in 3d, a point source in 1d, or a d-hyperplane source in d+1 dimensions--- a constant field pointing toward the object on either side):
+
+	$$ \phi(x) = B|x|$$
+
+	<p>And subtract off the Newton-Hooke source part, with a center at $x=a$.
+
+	$$\phi'(x) = B|x| - {1\over 2} ((x-a)^2 + y^2)$$
+
+	<p>The critical points are on the y-axis by symmetry, and they are very simple to find:
+
+	$$ y=0, x= B+a$$
+	$$ y=0, x= -B+a$$
+
+	<p>These are the two images from a long dark-matter filament, or any other linear extended source. Cosmic strings give the same sort of lensing, but the string-model of cosmic strings give ultra-relativistic sources which produce a conical deficit angle, and are technically not covered by the formalism here. But the result is the same--- doubled images.
+
+	<p>If you spread out the line source so that it is a uniform density between two lines parallel to the y-axis (this would come from squashing a square beam of uniform mass density into a plane), the lensing outside the two lines is unaffected, by the 2-d Gauss's Law. The interior is no longer singular, and you get a third image, as usual, at x=y=0.
+
+	<h4>Elongated density plus point source</h4>
+
+	<p>The next model I will consider is a string plus a point. This is to model an elongated mass density with a concentration of mass in the center. The far-field is quadrupolar, and this was analyzed previously, but now I am interested in the case where the mass-density is comparable in length to the lensed image, or even longer. Spreading out the string into a strip does nothing to the lensing outside the strip, and spreading out the point to a sphere also does nothing to the lensing outside the sphere, so this is a good model of many astrophysical situations, where there is an elongated dark matter cloud, perhaps a filament, with a galaxy concentrated somewhere in the middle of the filament.
+
+	<p>The 2-d potential, plus on-center Newton Hooke is
+
+	$$ \phi'(x) = {A\over 2} \ln(x^2 + y^2) + B|x| - {x^2 + y^2\over 2}$$
+
+	<p>The solution to the critical point equations give images at
+
+	$$ y=0, x= {B\over 2} + \sqrt{A + ({B\over 2})^2}$$.
+
+	$$ y=0, x= -{B\over 2} - \sqrt{A + ({B\over 2})^2}$$
+
+	<p>Where one of the two solutions of each quadratic equation is unphysical. This lensing is obvious--- it's the same as the string because the light-source is right behind the center mass.
+
+	<p>Looking along the string itself, there are two more critical points: the x-direction field becomes zero (it is singular for an infinitely narrow string, but ignore that), and the gradient of the potential is in the y direction, by symmetry, and for y near zero, it is inward pointing, and for large y it is outward pointing, so there is a critical point. The string potential has a minimum on the string, so in the x-direction you have a minimum, but the Newton Hooke potential is taking over from the point source potential at the critical point, so in the y-direction these two points are potential maxima. These are two critical points.
+
+	<p>The two critical points are at:
+
+	$$ x=0, y=\pm\sqrt{A}$$
+
+	<p>And this is very robust to thickening the string and the point into strips/spheres, or blobs, so long as the shape is about the same. This is a generic source-saddle-source-saddle cross. In the string case, the two saddles become infinitely dim, because the Jacobian blows up, but in the physical case where the thickness of the string is comparable to the lensing region, the Jacobian is of the same order for the sources and the sink.
+
+	<p>Moving the light-source off center towards positive x, perpendicular to the string orientation pushes the left source inwards, the right point outward, and the two saddles back and out. This is exactly the Einstein cross configuration.
+
+	<h4>Point/strip --- Best Fit</h4>
+
+	<p>Consider a strip of dark matter which is as wide or wider than the lensing configuration, with a point galaxy in the middle. This gives the lensing potential:
+
+	$$\phi'(x,y) = {A\over 2} \ln(x^2 + y^2 ) + {B\over 2} x^2 - {(x-a)^2 + y^2\over 2}$$
+
+	<p>valid inside the strip. Outside the strip, instead of quadratic growth, the potential grows linearly, like for the string. The strip is more useful, because it is simultaneously the simplest elongated model to solve for an off-center object, and also the most accurate Einstein cross.
+
+	The parameter a tells you how far to the right of center the light-source is. The equations for the critical points are:
+
+	$$ x({A\over r^2} - (1-B) ) + a = 0$$
+	$$ y({A\over r^2} - 1) =0$$
+
+	<p>There are two solutions when y=0, at 
+
+	$$ x= {a\over 2(1-B)} \pm \sqrt{ {(a/2)^2\over (1-B)^2} +A^2}$$
+
+	<p>These are the two sources, on the x axis, as in the string-point problem. There are two additional solutions when ${A\over r^2 -1}=0$, and these are at
+
+	$$ x= {-a\over B} ,  y = \pm \sqrt{A-{a^2\over B^2}}$$
+
+	<p>And these are the usual saddles of line-string lensing. For a small a, the two saddles move to the right of the symmetry line, and the long-arm of the cross moves to the right. This is a perfect fit to Einstein's cross.
+
+	<p>To see how good a fit it is, look at the following plot of the lensing produced by
+
+	$$ \phi' = \ln(x^2 + y^2) - {.9*(x-.04)^2 + y^2\over 2}$$
+
+	<!--   ![enter image description here][2]   -->
+
+	<img src="https://i.stack.imgur.com/Lqw4p.png" style="max-width: 650px">
+
+	<p>The black circle is the center of symmetry of the point/strip, the cross next to it is the true position of the quasar, and the four crosses are the locations of the critical points, while the contour-line density on the saddles/sources tell you the inverse brightness. This matches the data perfectly.
+
+	<h4>Summary</h4>
+
+	<p>The quadrupole lensing has a hard time reproducing Einstein's cross exactly, although it can get cross-like patterns. The reason is the eight images for an on-center light source. This means that to get a cross, two saddle-source pairs have to annihilate. Once they do, the remaining saddles and source are not in such a nice cross, they tend to be too close together, not spread out nicely like the image. The quadrupole crosses are already approaching the asymptotic spherical limit, where the saddles and sources become the degenerate spherical arcs. The brightness of the saddles and sources are not approximately the same, the brightness of the far image on the long-leg of the cross is not approximately the same as the brightness of the near image, it is not a good model.
+
+	<p>This means that we should consider dark-matter around the galaxy extending in an elongated ellipse, the elongation is along the short-leg of the cross. The light-source is slightly to the right of center. This reproduces Einstein's cross exactly. This is almost surely the orientation of the dark-mass distribution in the galaxy, but the details of the distribution are not revealed just from the critical points, which is all strong lensing provides.</p>
+
+
+	<!--  <p>[1]:http://i55.tinypic.com/de0n0l.png</p>   -->
+	<!--  <p>[2]: http://i.stack.imgur.com/Lqw4p.png</p>   -->
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
