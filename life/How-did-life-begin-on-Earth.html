@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>How did life on Earth begin?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<h3>How did life on Earth begin?</h3><div>
+
+		<p>There is a reasonable answer to this question, which is a synthesis and extension of some ideas of Stewart Kauffman (1969), Stephen Wolfram (1981), and other stuff that is not in the literature. These ideas are essentially updating the cybernetic approach due to Turing, Von-Neumann, and Wiener, which was marginalized and suppressed in biology once DNA was discovered.</p>
+
+		<p>The reason the computational ideas were put on the back burner is because DNA has an obvious replication mechanism, and the molecule gave people a picture of the origin of life immediately--- a nucleic acid formed, and began to replicate, and then evolution proceeded.</p>
+
+		<p>This idea is seductive, but I believe it is completely incorrect, and many others who thought about this, including Francis Crick, eventually came to the same conclusion--- self replicating nucleic acids are not the likeliest candidate for the origin of life. Crick was mystified, and proposed half-jokingly that it was pan-spermia. I don't think this is a reasonable answer either, since it just pushes the question to the origin of pan-sperm.</p>
+
+		<b>Computations in modern cells</b>
+
+		<p>The main characteristic that distinguishes living from nonliving systems is the ability to do Turing complete computation, in a finite approximation, with an essentially limitless memory capacity, and a processing quantity per unit volume. Each cell has an enormous store of stable memory, dwarfing the best solid-state memory chip in bit-density, and the processing speeds are on the molecular scale.</p>
+
+		<p>An RNA read and write can be done at thousands of bases per second, with error correction, and you can stuff millions of these things in a cell volume. So the potential RAM of a cell is 10s of gigabytes, and the processing speeds for this data is the rate at which the data can be copied and transformed, which can happen at rates of megabytes per second. These are comparable to a modern artificial home computer.</p>
+
+		<p>To see that modern life is potentially Turing complete is not very hard--- you can easily engineer a Turing complete system using bio-molecules, and it is easy to see that the storage capacity of DNA and RNA is sufficient for running software of the kind you have on a modern laptop. Further, we have a system capable of computing in biological systems for sure--- our brain. The computer itself was originally defined to abstract out the information processing done by the brain of a mathematician. So biological systems can compute, and do compute.</p>
+
+		<p>But the processes that biologists recognize as happening in a cell are not always sufficient to produce a full computation. at least not one of a significant size. If all that happens in a cell is the central dogma, then DNA produces RNA and the RNA produces proteins, and then only the proteins are computing anything. The proteins compute with a random access memory which is determined by their potential different chemical bonds to each other, and this is only a few kilobytes of RAM at the most. It's still computing, but it's a very small computation, compared to the amount of frozen data stored in the DNA.</p>
+
+		<p>It is unreasonable that a system that has gigabytes of ROM should only have kilobytes of RAM, especially that the DNA has to get written and proofread in the process of evolution. I will argue later that the proper computational ideas demand that there are exceedingly complex RNA networks active in modern cells, which compute at the gigabyte/teraflop rate.</p>
+
+		<p>This idea that RNA networks are required and appear in modern cells in a way that can do gigabyte computations is implicit in recent work of John Mattick. It is experimentally more and more certain every year, as new functions for RNA are discovered. I take this idea for granted, as it is the only way I can see to make sense of the computational capacity of modern cells.</p>
+
+		<b>Computations in non-living systems</b>
+
+		<p>If you start with a pre-biotic soup of molecules, it is very simple to make a naturally computing system. This became clear after Wolfram's work in 1981.</p>
+
+		<p>The basic idea of a cellular automaton is that it is a model for information transformation in a system which can store stable discrete data. An example is molecules, which store data in the pattern with which they are bound to one another. These molecular patterns are transformed by catalysis, using other molecules, and the result is that certain bit-patterns rewrite other bit patterns in a rule basd way.</p>
+
+		<p>Bit rewrite rules were studied by Von-Neumann, Coway, and Wolfram, and it was discovered in each of these cases that a relatively simple system will produce full Turing computation. Von-Neumann had a many-state one-dimensional automaton, with relatively complicated rules, but it was proved Turing complete relatively easily. Conway used a two-dimensional automaton with very simple rules, and this was proved Turing complete in the 1990s (although it was pretty clear that it should be Turing complete in the 1970s too). Wolfram found a very simple nearest neighbor automaton which was proved Turing complete around 2000 by Cook, a Wolfram employee. The proofs are relatively difficult, because they require building a computer from the information transformations in the cellular automata, but the general program makes it clear that as long as an automaton has "complex behavior", which means that the system doesn't die out to a stable pattern, doesn't devolve to a simple fractal pattern, and doesn't wash out to completely random noise, as long as there are identifiable structures that persist long enough to impress their data on other structures, then you have Turing completeness.</p>
+
+		<p>This is not a theorem, it is a principle, and the principle was called the "Principle of Computational Equivalence" by Wolfram. It generally says that whenever an automaton looks complex, when it isn't trivial, then it is going to be Turing complete. I will accept this, because it is true in simple examples, and it is difficult to construct something complex which is intermediate in Turing degree of complexity, Friedman and Muchnik needed to work hard, starting from something that is already a universal computer.</p>
+
+		<p>So in order to make a computer, all you need is a system with information stored in molecules, with rewrite-rules in the form of allowed catalysis. The peptides produces on the early earth from the atmosphere, together with primordial hydrocarbons from the Earth's formation, can produce polymers at the interface of the primordial oil and water which have these properties, simply by joining peptides into polypeptides. This is the computing soup. I believe that a sufficiently large and sufficiently fast computing soup is necessary and sufficient to explain the origin of life, there is nothing more and nothing less required.</p>
+
+		<b>Self and non-self</b>
+
+		<p>A computing soup is seeded random data, but the data doesn't stay random. It gets reworked depending on the local environment to acquire the characteristics of the molecules surrounding it. These characteristics build up progressively, because the system does not reach any sort of statistical steady state, and different regions of the large computation produce a different ecosystem of interacting molecules.</p>
+
+		<p>None of these molecules are self-replicating, but they are all self-replicating in a certain sense, in that they weed out and digest molecules which do not conform to the pattern that is compatible with the other molecules. This is a collective sort of replication.</p>
+
+		<p>Collective replication was proposed by Stuart Kauffman as an alternative to the self-replicating molecule idea, back in 1969. The idea was that a collection of independent molecules can each catalyze part of each other, so that together they autocatalyze the whole set. Kauffman argued that such an autocatalytic set is inevitable given a large enough diversity of molecular species.</p>
+
+		<p>This is probably true, to a certain extent, but one must keep in mind that this is also true in a computing soup, and without a computing soup. But a simple autocatalytic set suffers in general from the same problem as other replicators--- getting stuck in a rut.</p>
+
+		<p>In order for evolution to proceed, it is not enough to be replicating, you need to make sure there is a path for further evolution into ever more complex systems. The simplest replicators have the property that all they do is replicate themselves, and then the only evolution is a quick minimum-finding where they find the quickest and stablest replicator.</p>
+
+		<p>An example of such a parasitic replicator is fire, fire metabolizes and reproduces itself, but it is incapable of evolution. Similarly, small self-replicating computer programs with noise are capable of filling up the computer memory with copies of themselves, but they don't evolve past this point.</p>
+
+		<p>The systems that are capable of further evolution are those that are not precisely replicaitng, but that are precisely computing.</p>
+
+		<p>The recognition of self and non-self by computing automata means that if you divide an automaton in two, and wait, the two halves do not mix together well after a while, because they acquired different characteristics. The result is that if you allow the two halves to touch, they will compete, and the best one at spreading will take oer the computing volume.</p>
+
+		<p>This produces Darwinian competition long before any precise replication. The Darwinian competition allows for selection of traits that are favorable to spread throughout the computing soup.</p>
+
+		<b>Emergence of life</b>
+
+		<p>It is likely sufficient for life to have a computing soup of molecules, as these will then compete locally to make better and better synthesis systems, and eventually they will make compartments to localize the molecules into cells, long after developing nucleic acids, ribosomes, and all the other ideas we see in modern cells. The stable replicating DNA molecule, in this view, is the last to form. It evolves when there is a need to store RNA in a more permament fasion.</p>
+
+		<p>This idea is proteins and hydrocarbons first, RNA and genetic code second, DNA and cells last. It is hard to test the later stages, but early stages can be tested using cellular automata, which is something I did about a decade ago. It was hard to interpret what was going on in the cellular automata, even when they looked like they were computing, because the patterns are not obvious a-priori, but that was only because I did it half-heartedly, being more excited at the time about the computational patterns in modern cells.</p>
+
+		<b>Criticism of other ideas</b>
+
+		<p>The idea of RNA world assumes RNA can form. RNA has a sugar in it's backbone, and it has different bases, and it's much much too complicated to make RNA abiotically. By contrast, proteins are dead-simple to make, you can't avoid making amino acids from methane, carbon dioxide, and water. So it is obvious chemically that proteins are earlier than RNA.</p>
+
+		<p>Further, RNA can't self-replicate. That's really good, because if it could, it would kill the computation like a cancer, but this is what is assumed in RNA world--- some sort of self-replicating RNA.</p>
+
+		<p>The ideas of Dyson on cells-first suffer from the problem of no-computation. If you don't start with a computing automaton, you have no computing automaton inside the cells--- they are too small. They are unlikely to have a diverse enough collection of species to make a computation, and even if they did, it's potential for evolution is too small, becaue it is isolated, so it has a limited memory. These ideas are reasonable for the emergence of cells once the computing soup has evolve to a good enough point to package the machinary in isolated compartments.</p>
+
+		<p>The ideas of Thomas Gold on the importance of petrolium and deep-vents, archaea first if you like, I think are ok, but they are completely compatible with the view I am pushing here.
+
+
+	</div><hr><div>
+
+		<blockquote>
+			<em><p>That thing you refer "a decade ago" has to do with your 2005 paper in Arxiv? (By the way, Is there a continuation?)</p></em>
+			<blockquote>
+			<p>No, I never wrote up the origin of life stuff, there was too much, and it was too difficult to conclude, let alone write up, and I thought nobody would take it seriously anyway. I wrote some 8-bit cellular automata, with 256 values per site, in 2d, and zeroed out a region to see how it would be recolonized. You could identify the complex automata from this experiment. The problem was identifying the computational characteristics of the complex automata. 
+			<p>I decided it was hopeless (not in theory, but in practice), the information was too distributed in the 2d automaton, so I wanted do a full string simulation at each site. But computers were too slow a decade ago. I will do it now, it's trivial, and then you can see the information characteristics of the surviving chains.</p>
+			<p>There are two continuation to the formalism paper (they are in my computer), but I have no place to put it. Arxiv requires someone to vouch for you now, so I don't want to give it to them. the first continuation is a rapid algorithm for expanding the diagrams, and a simple abelian homology-style group theory to describe loops. The last one includes the verbs, the molecular transformations (this is kind of trivial) and the nontrivial parts is an analysis of memory in protein and RNA networks which shows that the RNA is the major computational component in modern cells. This last part was scooped by John Mattick, I was going to post it along with the first, but when I saw Mattick's paper, I was embarassed to.</p>
+				<blockquote>
+					<em><p>Too bad you don't publish that papers... I wish you *could* allow yourself a slight little bit of "ethical corruption" (to say so) in order to enter into the system, so that you could achieve a position from which you had power to do changes to the system itself, from the inside (e.g. by teaching generation after generation of students, or having research facilities...). The world would be a better place. Even Einstein, from a patents office, sent his papers for publication. Ok, ok, it is not my business...</p></em>
+					<blockquote>
+						<p>It's not like anyone would have accepted them--- they didn't even send the one I put up to referees, the editor of PLoS Computational Biology said it was "too technical" and that he wanted a high level summary, while I thought I had just written the best paper ever.</p>
+						<p>It's not so much ethical corruption--- it's more that I'm lazy and there's no reward in it--- no matter what you do, if you are doing honest innovative stuff, you will get punished. So I'll do it, eventually, but I can't feel the fire under my feet, because it's not like it's going to get recognized for another 20 years, people are basically stupid, and so I don't feel a burning urgency.</p>
+						<p>Unless you are offering me a job, I never expected to get into the system. I'm amazed I can bring in an income without selling out, it doesn't happen to many.</p>
+						<blockquote>
+							<em><p>Well, you bet I would offer you a Job if I were in the position to do so... But I am myself looking for a job these days... By the way, after reading your posts, very often it happens to me that would like to comment this or the other think with you (not offering jobs but perhaps sort of interesting things sometimes) but not in an open website. I would be glad if you sent me a mail to ngc6720_@_gmail_com (_ stands for .) so that I have some email address of yours, if you agree.</p></em>
+						</blockquote>
+					</blockquote>
+				</blockquote>
+			</blockquote>
+		</blockquote><br>
+		<blockquote>
+			<em><p>Your level of understanding and thinking in multiple disciplines is incredible. I'm speechless! One of the best introductions to new science that I've ever read.</em></p>
+			<blockquote>
+				<em><p><-- deleted --></p></em>
+				<blockquote>
+					<p>Oh, I didn't mean it like that, but since I am describing a personal intellectual story involving some original components, I am giving credit to people who were first when it's not original, which is most of the thing.</p>
+					<p>Read it like this: I thought it was completely incorrect in 2000 --- from reading Dyson's Origins of Life and seeing RNA world was wrong, but mostly from understanding the rest of the stuff in the post in sort of a flash of insight. But I wasn't the first, many others who thought about this eventually came to the same conclusion, and Francis Crick, who argued the opposite position for decades, eventually had to break down and admit the origins idea from DNA and RNA doesn't work.</p>
+				</blockquote>				
+			</blockquote>
+		</blockquote>
+
+    
+
+
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
