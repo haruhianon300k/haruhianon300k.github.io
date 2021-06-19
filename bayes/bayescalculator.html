@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <title>Bayesian Calculator</title>
+      <META NAME="description" CONTENT="Simple applet for experimenting with different Bayesian scenarios to learn how Bayes' Theorem works.">
+      <meta http-equiv="Content-Style-Type" content="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+      <style type="text/css">
+         <!--
+            A:link {color: blue;text-decoration: none}
+            A:hover {color: #800517;text-decoration: none}
+            A:active {color: red;text-decoration: none}
+            A:visited {color: blue;text-decoration: none}
+            A:visited:hover {color: #800517;text-decoration: none}
+            A.spec:link {color: blue;text-decoration: none}
+            A.spec:hover {color: #800517;text-decoration: none}
+            A.spec:active {color: red;text-decoration: none}
+            A.spec:visited {color: blue;text-decoration: none}
+            A.spec:visited:hover {color: #800517;text-decoration: none}
+            A.menu:link {color: #151B54;text-decoration: none}
+            A.menu:hover {color: red;text-decoration: none}
+            A.menu:active {color: blue;text-decoration: none}
+            A.menu:visited {color: #151B54;text-decoration: none}
+            A.menu:visited:hover {color: red;text-decoration: none}
+            -->
+      </style>
+      <script src="app.bayes.v1.2.js" charset="utf-8"></script>
+   </head>
+   <body bgcolor="white" text="black" leftmargin="100" rightmargin="100" topmargin="75">
+      <span style="font-family: tahoma, arial, sans-serif;">
+         <span style="font-size:115%;">
+            <H1 ALIGN="center">Bayesian Calculator</H1>
+         </span>
+      </span>
+      <table align="center" width="800" border="0" cellpadding="10">
+         <TR>
+            <TD>
+               <P ALIGN="left">You can use the following calculator to run any standard two-hypothesis Bayesian equation (up to a limit of 1 in 100 odds on any variable, and accurate to only two decimal places):<BR>&nbsp;</P>
+               <p>
+               <center>
+                  <div class="bayes-calc" data-config='{"type": "full", "equation": false}'></div>
+               </center>
+               </p>
+               <P ALIGN="justify">
+                  You can see the Bayesian equation itself later. But that equation only calculates the effect of these four probabilities; and below them is shown the outcome, which is the probability that a given hypothesis (H) is true, given the evidence (E) and all our background knowledge (b). All you have to do is enter values on those four sliders to get the result at the bottom, without having to do any of the math yourself. Use the sliders to enter values as probabilities in algebraic notation (e.g. for 60% move a slider until it reads .6: that's the percentage, 60, divided by 100). In this case everything is rounded to two decimal places. And you cannot enter values larger than 99% or lower than 1%. (To work with numbers outside that range you will simply have to go back to the equation and do the math; although for the possibility of working with four decimal places, see the next calculator below).
+         <TR><TD><P ALIGN="justify">All the calculators employed on this page were developed by <A HREF="https://camspiers.github.com/Bayes/"><B>Cam Spiers</B></A>, who offers a variety of others to work with as well.</P>
+         <P ALIGN="justify">For the present page, to understand the symbols, P means probability, and the upright bar represents conditional probability, such that P(H|E) means the probability of H <I>when E is true</I> (as opposed to the probability of H whether or not E is true). H is the hypothesis under test. E is the evidence that H is expected to explain. And "b" represents all your current background knowledge. You should always assume all four values are conditional on background knowledge, so this is shown in all the calculators here. But I will leave that out in the text, as simply being understood.</P>
+         <P ALIGN="justify">The first variable, P(H), is the <B>prior probability</B> that H is true. The second variable, P(~H), is the prior probability that H is false, which is always 1&nbsp;-&nbsp;P(H), so the calculator already figures this for you (hence as you move one of the first two sliders, the other automatically moves to match). The other two variables are the probability that the evidence would exist if H is true, which is P(E|H), and the probability that the evidence would exist if H is false, which is P(E|~H). These are called the two <B>consequent probabilities</B> (also known as the <I>conditional probabilities</I> or the <I>likelihoods</I>). Unlike the prior probabilities, they are independent of each other.</P>
+         <P ALIGN="justify">The result of combining all four probabilities is the probability that H is true given the evidence (and your background knowledge).</P>
+         <P ALIGN="justify">Here is the same calculator again, but this time showing the actual equation at the top (and in some browsers this version allows you to enter values out to four decimal places):</P>
+         <p>
+         <center>
+         <div class="bayes-calc" data-config='{"type": "full", "dp": 4}'></div>
+         </center>
+         </p>
+         <P ALIGN="justify">This is what you would use if you assume all alternative hypotheses fall under ~H. But if you want to you can also distinguish three or more different hypotheses. For example, you would use the following equation and calculator for three competing hypotheses (note that in this case P(H<SUB>1</SUB>), P(H<SUB>2</SUB>), and P(H<SUB>3</SUB>) must always sum to 1, and this calculator ensures that rule is obeyed):</P></TD></TR>
+         <TR>
+            <TD>
+               <table align="center" width="620" border="0">
+                  <TR>
+                     <TD>
+                        <P align="center">
+                        <div class="bayes-calc" data-config='{"type": "full", "num": 3}'></div>
+                        </P>
+                     </TD>
+                  </TR>
+               </table>
+            </TD>
+         </TR>
+         <TR>
+            <TD>
+               <P ALIGN="justify">Here the sliders provide the <B>prior probabilities</B> across the first line, the <B>consequent probabilities</B> across the second line, and the <B>posterior probabilities</B> across the bottom: the latter being simply the probability that each hypothesis is true. (Note that this calculator is only set to work with inputs up to two decimal places.)</P>
+            </TD>
+         </TR>
+         <TR>
+            <TD>
+               <P ALIGN="justify">To learn more about Bayes' Theorem see my book <A HREF="https://www.richardcarrier.info/BooksbyRichardCarrier.html#PH"><B><I>Proving History: Bayes's Theorem and the Quest for the Historical Jesus</I></B></A> (although total beginners might prefer to start with my Skepticon talk <A HREF="https://www.richardcarrier.info/archives/80"><B>Bayes' Theorem: Lust for Glory!</B></A>).</P>
+               <P ALIGN="justify">But in general there are six rules to apply:</P>
+            </TD>
+         </TR>
+         <TR>
+            <TD>
+               <table align="center" width="620" border="0">
+                  <TR>
+                     <TD>
+                        <P ALIGN="justify"><B>Rule 1:</B> Ask yourself (honestly) how frequently is the kind of hypothesis you're proposing true in other cases? That's the prior probability. Not exactly, but usually close enough. To be more exact, it will conform to Laplace's Law of Succession: because the present case is always as yet undecided, the prior probability will equal (<I>s</I>+1)/(<I>n</I>+2), where <I>s</I> is the number of times your kind of hypothesis has turned out to be true, and <I>n</I> is the number of prior cases altogether, so that given ten prior cases in which your hypothesis is never true, the prior would be (0+1)/(10+2) = 1/12 = 0.083 (or 8.3%), and given ten prior cases in which your hypothesis has always been true, the prior would be (10+1)/(10+2) = 11/12 = 0.917 (or 91.7%), etc., which in the calculators above will round to 0.08 and .92, respectively. Unless you can present decisive evidence that the value should differ from <A HREF="https://en.wikipedia.org/wiki/Rule_of_succession"><B>Laplace's Law of Succession</B></A>.</P>
+                        <P ALIGN="justify"><B>Rule 2:</B> Ask yourself (honestly) how likely is it that the evidence would look in any way different if H is true? That's P(~E|H) and P(E|H) = 1&nbsp;-&nbsp;P(~E|H).</P>
+                        <P ALIGN="justify"><B>Rule 3:</B> Ask yourself (honestly) how likely is it that the evidence would look in any way different if H is false? That's P(~E|~H) and P(E|~H) = 1&nbsp;-&nbsp;P(~E|~H).</P>
+                        <P ALIGN="justify"><B>Rule 4:</B> In answering the previous two questions, irrelevant differences should be ignored, e.g. H might predict that there will be a piece of fruit on your doorstep, in which case an apple on your doorstep confirms H, and yet there could have been a banana, etc., but the fact that the evidence could have been different in <I>that</I> way is irrelevant to H, and therefore P(E|H) is still in this case 100% if an apple is present, even though, strictly speaking, the probability that it would be an apple rather than some other fruit is not 100% (this is mathematically allowed because the contingency of what kind of fruit will be there has a probability independent of H that actually cancels out in the equation).</P>
+                        <P ALIGN="justify"><B>Rule 5:</B> Argue <A HREF="https://en.wikipedia.org/wiki/A_fortiori"><B><I>a fortiori</I></B></A>. You might not know what the exact probability is for any of the three variables, but you will usually know it can't possibly be higher than some value, nor lower than some value. If between those two values you use the value that goes the most <I>against</I> your hypothesis, then you can be sure the probability your hypothesis is true will be even higher than the result calculated (or certainly no lower). Conversely, if you use the value that goes the most <I>in favor</I> of your hypothesis, then you can be sure the probability your hypothesis is true <I>can't</I> be higher than the result calculated (and is probably lower). In other words, pick probabilities as far against your own beliefs as you can reasonably believe them to be.<BR>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following calculator allows you to do this, by assigning a minimum and maximum probability to each variable, rather than a single probability; and the result is then also a range, the minimum and maximum probability that H is true. For each variable, enter its lowest value on the left, and its highest on the right (that's the lowest and the highest you can reasonably believe each probability to be), using up to four decimal places (in some browsers):
+                        </P>
+                        <p>
+                        <center>
+                           <div class="bayes-calc" data-config='{"type": "full", "afortiori": true, "dp": 4}'></div>
+                        </center>
+                        </p>
+                        <P ALIGN="justify"><B>Rule 6:</B> The probability of the evidence E if the hypothesis H is false is <I>not</I> the probability of E in the absence of any causes whatever. That is, it is not the probability of E resulting from pure random chance. Rather, P(E|~H) is the probability that the evidence would exist if in fact caused by something else. When there is only one other cause with any significant prior probability, then P(E|~H) <SPAN STYLE="font-family: Courier;">&cong;</SPAN> P(E|H*), where H* is a specific hypothesis <I>other than</I> H (such that P(H*|H) = 0, because H and H* can never both be true). If there are many viable hypotheses, we need an expanded equation (like the three-hypothesis model above), unless P(E|H*) for every viable H* is approximately the same. Finally, of course, if the only viable alternative to H (the only alternative with a non-negligible prior probability) <I>is</I> purely random chance, then P(E|~H) <I>will</I> be the probability of E resulting from pure random chance. But usually there are plausible alternative causes of E.</P>
+                     </TD>
+                  </TR>
+               </table>
+            </TD>
+         </TR>
+         <TR>
+            <TD>
+               <P ALIGN="justify">As an example of applying Rule 1, if the evidence is that your wallet is missing, and you are asking how likely it is that your wallet was stolen, what is the frequency of "your wallet was stolen" the cause of "your wallet is missing"? If your wallet has often gone missing but every time you discovered you had just dropped it or misplaced it, then the frequency of "your wallet was stolen" being true is low, and so must its prior probability be. Unless the conditions are notably different (e.g. lots of things have been stolen around you lately or in that place in particular), in which case you take that into account, too. Analogously, if someone tells you their limbs grew back after having been chopped off, how frequently is "a human's arms grew back after being chopped off" actually the explanation of such evidence (that such a person, with arms and legs intact, would say something like this to you), as opposed to some other explanation being true instead (e.g. "they're crazy," "they're lying," "they're joking," etc.)? The same reasoning applies to asking how frequently a cause like H produces evidence like E (which is the probability that E given H, which is P(E|H)).</P>
+               <P ALIGN="justify">In answering questions like this you will often need to estimate hypothetical frequencies, e.g. if your wallet has never gone missing, or done so only once (or you never determined how it went missing) your actual database will be too sparse to estimate an actual frequency of causes, but you can use your background knowledge to hypothesize what a larger database would look like, relying on information about the frequency of you dropping or misplacing things, and of thefts occurring in the area, and the physical properties of your wallet and pocket and what you did that day (which can affect the likelihood of it falling out, etc.). Combining this with <I>a fortiori</I> reasoning will produce reliable results (the maximum or minimum probability of H, given all that you currently know), reflecting how you already think. Because Bayes' Theorem is just a mathematical model for all sound reasoning.</P>
+               <P align="center"><B>This page was composed in 2011 and revised in 2012 by Richard Carrier, Ph.D. It is intended as a helpful resource, and accordingly it will likely be revised, updated, or expanded in future.</B></P>
+            </TD>
+         </TR>
+      </table>
+      <span style="font-family: tahoma, arial, sans-serif; font-size:125%;">
+         <P ALIGN="center"><B><A HREF="contact.html">Contact</A>&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;<A HREF="https://www.richardcarrier.info/">Home</A>&nbsp;&nbsp;&nbsp;&#8226;&nbsp;&nbsp;&nbsp;<A HREF="support.html">Support</A></B></P>
+      </span>
+      <P>&nbsp;</P>
+      <P ALIGN="center"><FONT COLOR="grey" SIZE="-1">The Official Website of Richard Carrier, Ph.D.<BR>Copyright &copy; 2008-2016 All Rights Reserved</FONT></P>
+      <script type="text/javascript">
+         try {
+         var pageTracker = _gat._getTracker("UA-10991281-1");
+         pageTracker._trackPageview();
+         } catch(err) {}
+      </script>
+   </body>
+</html>
