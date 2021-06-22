@@ -4,21 +4,48 @@
 	<title>Full with equation</title>
 	<script data-main="scripts/main" src="scripts/require.js"></script>
 	<script src="app.bayes.v1.2.1.js" charset="utf-8"></script>
-
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="load-mathjax.js" defer></script>
 <!--<link rel="stylesheet" href="stylesheet.css">-->
 <!--<style type="text/css">
 		body{
 			font-family: tahoma, arial, sans-serif;
 		}
 	</style>-->
+	<style>
+		.bayes-calc {
+			padding-top: 20px;
+			margin-top: 20px;
+			margin-left: 200px;
+		}
+		#ugh {
+			font-size: 100%;
+			padding-top: 10px; padding-bottom: 20px;
+		}
+		#barrier {
+			border-bottom: 1px solid #dddddd; 
+			padding-top: 10px; padding-bottom: 20px;
+			width: 15%;
+		}
+	</style>
 </head>
 <body>
-	<h3>Full with equation</h3>
-<!--
-	<pre>
-&lt;div class="bayes-calc" data-config='{"type": "full"}'&gt;&lt;/div&gt;
-	</pre>
--->
-	<div class="bayes-calc" data-config='{"type": "full"}'></div>
+	<div align="center">
+		<h3>‎‎‏‏‎ ‎</h3>
+		
+		<div id="ugh">
+			$$\mathrm{P(H\mid E.b)=\frac{P(H\mid b) \cdot P(E\mid H.b)}{P(H\mid b) \cdot P(E\mid H.b)+P(\neg{H}\mid b) \cdot P(E\mid\neg{H}.b)}}$$
+		</div>
+
+		<hr size="1p" width="10%" color="#dddddd"><p>
+		
+		<div class="bayes-calc" data-config='{"type": "full",  "equation": false}'></div>
+
+	</div>
+	<!--
+		<pre>
+	&lt;div class="bayes-calc" data-config='{"type": "simple"}'&gt;&lt;/div&gt;
+		</pre>
+	-->
 </body>
 </html>
