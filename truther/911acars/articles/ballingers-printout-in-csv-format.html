@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width">
+	<title>Ballinger's printout in .CSV format</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="load-mathjax.js" defer></script>
+	<style type="text/css">
+		a:link {
+			text-decoration:none;
+		}
+
+		h6 {
+			width: 100%; 
+			text-align: center; 
+			border-bottom: 1px solid #dddddd; 
+			line-height: 0.1em;
+			margin: 10px 0 20px;
+		}
+		h6 span { 
+			background:#fff; 
+			padding:0 10px; 
+		}
+
+		.MyQuote {
+			/* font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+			background-color: rgb(255,255,204);
+			*/
+			background-color: #FDFDFD;
+			padding: 4px;
+			border: 1px  solid #dddddd; 
+		}
+	</style>
+</head>
+
+<!-- Write your comments here -->
+
+<body>
+
+	<!--<center><p>Mineta</p><pre>2007</pre></center><hr size="1p" width="10%" color="#dddddd">-->
+	<h4>Ballinger's printout in .CSV format</h4><i>Wednesday, February 15, 2012</i><p></p>
+	<!-- <br><br><p></p> --> <!--  <br><br><p></p>  -->
+
+	<div>
+		<div style="text-align: justify;">
+			This article is to announce the release of the Ballinger's ACARS Printout in .csv format. I merely hand copied the data from the original .pdf file <a href="http://www.911myths.com/images/1/1c/Team7_Box11_FBI302s_ACARS.pdf" target="_blank">Team7/Box13 - FBI 302s ACARS</a> into an OpenOffice spreadsheet, then saved it with a .CSV extension. From that, I also produced a tabular version of the same data to make things easier for 9/11 researchers. As a result, two files were created.
+		</div>
+		<div style="text-align: justify;">
+			<br />
+		</div>
+		<div style="text-align: justify;">
+			In the first one, <a href="https://www.box.net/shared/evmeu66vh9nclybttskj" target="_blank">Ballinger_TEXTUAL_CSV.csv</a>, I simply created a text version from the scanned version. In the second one, <a href="https://www.box.net/shared/m093y0j4j6le4pxbsmbh" target="_blank">Ballinger_LINEAR_CSV.csv</a>, I have reorganized the same data in a linear format to visually help the reader spotting similarities and differences between the various messages.
+		</div>
+		<div style="text-align: justify;">
+			<br />
+		</div>
+		<div style="text-align: justify;">
+			In the "Ballinger_LINEAR_CSV.csv" file, I have added 3 columns at the beginning of each data row: the first 2 are related to "scan" and "time" messages order. The third is for quick reference to "uplink/downlink direction" of communication. I didn't add any heading for data fields (except those for "neutral voices" such as Flag_01, Flag_02, and so on), because some are still under debate.
+		</div>
+		<div style="text-align: justify;">
+			<br />
+		</div>
+		<div style="text-align: justify;">
+			Note. The linear comparison allows to highlight some new interesting points, especially the values shown under the column "flag_31". This column shows that the messages uplinked to United 93 are marked by a value in front of the aircraft flight number [UA93], whereas such value can be [1], [2] or blank [ ] (example. 1UA93). 
+		</div>
+		<div style="text-align: justify;">
+			<br />
+		</div>
+		<div style="text-align: justify;">
+			These are other interesting points:
+		</div>
+		<div style="text-align: justify;"></div>
+		<ul>
+			<li style="text-align: justify;">messages with a "blank" [ ] value (time ordered list "2" 13:22; "11" 13:50; "12" 13:50; "13" 13:51; "14" 13:51) are all transmitted in "AGM mode" (to the printer). Note: The downlink (time ordered message: "1" 13:21) is also transmitted in "AGM mode"</li>
+			<li style="text-align: justify;">the value "1" values appear for all the uplinks sent in "CMD mode" (to the cockpit screen) </li>
+			<li style="text-align: justify;">the value "1" value appears to be related to messages positively received by UA93 (such as message time ordered "3" at 13:23 UTC)</li>
+			<li style="text-align: justify;">the value "2" value only appears once and is associated to the only message which was certainly received/undelivered( time ordered "18" 14:20 UTC). This uplink (#24 in Winter's list)is a CMD message (to the cockpit's screen).</li>
+			<li style="text-align: justify;">the uplink ordered as "18" was sent by "ROB" (ROBERT BRITTAIN), and contains RGS the indication "/GL DEC"</li>
+		</ul>
+		<div style="text-align: justify;"></div>
+		<br />
+		<div class="separator" style="clear: both; text-align: left;">
+			<!--http://2.bp.blogspot.com/-NSewbUtxhrY/TymNPKUG2EI/AAAAAAAAAEg/ALLZmHn4-Y8/s1600/UAL_LOG.jpg--><a href="IMG/UAL_LOG.jpg" imageanchor="1"><!--http://2.bp.blogspot.com/-NSewbUtxhrY/TymNPKUG2EI/AAAAAAAAAEg/ALLZmHn4-Y8/s640/UAL_LOG.jpg--><img border="0" height="425" src="IMG/UAL_LOG.jpg" width="640" /></a>
+		</div>
+		<br />
+		<br />
+		<div style="text-align: justify;">
+			Finally, I made a cross-reference to the data from the <a href="http://www.scribd.com/doc/76015964/5-AWA-898-Printout-of-ARINC-Messages" target="_blank">ARINC logs</a>. The results are shown in the table below:
+		</div>
+		<br />
+		<table border="1" style="width: 695px;">
+			<tbody>
+				<tr class="tableizer-firstrow">
+					<th width="72">FLoc</th>
+					<th width="129">BEPts</th>
+					<th width="100">Target Stn</th>
+					<th width="50">Stn</th>
+					<th width="122">Org TimeStamp</th>
+					<th width="63">Reason Code</th>
+					<th width="66">Block Type</th>
+					<th width="39">/GL</th>
+				</tr>
+				<tr class="tableizer-table">
+					<td>365464105</td>
+					<td>20010911 14:13:30</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							IADA6
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULBLK</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>365550345</td>
+					<td>20010911 14:13:40</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							IADA6
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULBLK</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>365612804</td>
+					<td>20010911 14:13:50</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							IADA6
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULBLK</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>365678382</td>
+					<td>20010911 14:14:00</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							311 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>365678701</td>
+					<td>20010911 14:14:00</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							231 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367059755</td>
+					<td>20010911 14:17:39</td>
+					<td>
+						<div align="center">
+							CMI&lt;00&gt;&lt;00&gt;
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							20010911 14:17:00
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULMSG</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367059889</td>
+					<td>20010911 14:17:39</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							231 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367187539</td>
+					<td>20010911 14:18:03</td>
+					<td>
+						<div align="center">
+							CMI&lt;00&gt;&lt;00&gt;
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							20010911 14:17:00
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULMSG</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367187673</td>
+					<td>20010911 14:18:03</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							231 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367542701</td>
+					<td>20010911 14:19:04</td>
+					<td>
+						<div align="center">
+							CMI&lt;00&gt;&lt;00&gt;
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							20010911 14:19:00
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULMSG</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>367542835</td>
+					<td>20010911 14:19:04</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							231 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>CMI</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>368197741</td>
+					<td>20010911 14:21:06</td>
+					<td>
+						<div align="center">
+							DEC&lt;00&gt;&lt;00&gt;
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							20010911 14:20:00
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>ULMSG</td>
+					<td>DEC</td>
+				</tr>
+				<tr class="tableizer-table">
+					<td>368197875</td>
+					<td>20010911 14:21:06</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							<br />
+						</div>
+					</td>
+					<td>
+						<div align="center">
+							231 
+						</div>
+					</td>
+					<td>ICPUL</td>
+					<td>DEC</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<br />
+		<div class="separator" style="clear: both; text-align: left;">
+			<!--http://3.bp.blogspot.com/-9UuXvM8KJFs/TymNYa4CK9I/AAAAAAAAAEs/PUguqP_9uE8/s1600/ARINC_log.jpg--><a href="IMG/ARINC_log.jpg" imageanchor="1"><!--http://3.bp.blogspot.com/-9UuXvM8KJFs/TymNYa4CK9I/AAAAAAAAAEs/PUguqP_9uE8/s640/ARINC_log.jpg--><img border="0" height="220" src="IMG/ARINC_log.jpg" width="640" /></a>
+		</div>
+		<br />
+		<div style="text-align: justify;">
+			<br />
+			<div style="text-align: justify;">
+				UAL communication marked as "TIME_ORDER_18" in my list above, which matches Message #24 in Winter's list and the ULMSG block "FLoc 368197741... BEPts 20010911 14:21:06 ICPUL... Reason Code 231" in the ARINC logs shows "/GL DEC" as target station and "ROB" (Robert Brittain) as dispatcher. If we look at column "Flag_31", we notice that this is the only message reporting the value "2".
+			</div>
+		</div>
+		<div style="text-align: justify;">
+			Unfortunately we have no clear indication from the ARINC specifications or any other official document what these values ("blank","1" and "2") are referred to. Therefore, we can only speculate trying to draw logical conclusions based on the available data:<br />
+			<br />
+		</div>
+		<div style="text-align: justify;"></div>
+		<ul style="text-align: justify;">
+			<li>Ballinger's printout, as printed at his UAL workstation, reflect the data as returned by ARINC to UAL after an uplink is sent [1] </li>
+			<li>Only one message from Ballinger's printout is surely unreceived/undelivered: this is the last message (marked as "TIME_ORDER_18" in my list and referred as Message #24 by Winter) and this shows the value "2", which is not a direct function of "CMD" or "AGM"</li>
+			<li>In the ARINC logs for United 93 there are five ICPUL blocks with Reason Code 231 ("No Station To")</li>
+			<li>Both in ARINC logs and in Ballinger's printout there are three ULMSG blocks showing "GL/CMI" as target RGS</li>
+			<li>Both in ARINC logs and in Ballinger's printout there is only one ULMSG block showing "GL/DEC" as target RGS</li>
+			<li>The last three ULMSG blocks showing "GL/CMI" as target station in the ARINC logs are also apparently followed by an ICPUL block with Reason Code 231 (see above)</li>
+			<li><b>The corresponding three messages in Ballinger's printout with target station "GL/CMI", however, show "1" as value, as shown in the column "FLAG_31" above</b></li>
+			<li>In the ARINC logs the last ULMSG block also shows "GL/DEC" as RGS and is also followed by an ICPUL block with Reason Code 231</li>
+		</ul>
+		<div style="text-align: justify;">
+			<br />
+		</div>
+		<div style="text-align: justify;"></div>
+		<div style="text-align: justify;"></div>
+		<div style="text-align: justify;">
+			[1] This appears clear from last uplink (asterisks, no second timestamp, no counter number)&nbsp; and from the statement by Steve Ledger, Director of AQP services, in MFR04020032:
+		</div>
+		<br />
+		<table align="left" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;">
+			<tbody>
+				<tr>
+					<td style="text-align: center;"><!--http://1.bp.blogspot.com/-emhOINWn2DE/TymNkjUbvUI/AAAAAAAAAE4/lf-UcS7TFUA/s1600/arinc_1.jpg--><a href="IMG/arinc_1.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><!--http://1.bp.blogspot.com/-emhOINWn2DE/TymNkjUbvUI/AAAAAAAAAE4/lf-UcS7TFUA/s640/arinc_1.jpg--><img border="0" height="291" src="IMG/arinc_1.jpg" width="640" /></a></td>
+				</tr>
+				<tr>
+					<td class="tr-caption" style="text-align: center;"><a href="http://media.nara.gov/9-11/MFR/t-0148-911MFR-00032.pdf" target="_blank">MFR 04020032, p. 2</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<br />
+		<div class="separator" style="clear: both; text-align: left;">
+			<!--http://2.bp.blogspot.com/-p3HD5PG9Bvo/TymNr-z7IhI/AAAAAAAAAFE/j2krAxSiojU/s1600/arinc_2.jpg--><a href="IMG/arinc_2.jpg" imageanchor="1"><!--http://2.bp.blogspot.com/-p3HD5PG9Bvo/TymNr-z7IhI/AAAAAAAAAFE/j2krAxSiojU/s640/arinc_2.jpg--><img border="0" height="140" src="IMG/arinc_2.jpg" width="640" /></a>
+		</div>
+		<br />
+		Original post (in Italian) <a href="http://info911insidejob.blogspot.com/2012/01/acars-ual-ballingers-logs-un-analisi.htm" target="_blank">here</a>.
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
