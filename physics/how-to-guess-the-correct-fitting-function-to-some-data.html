@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>How to guess the correct fitting function to some data?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+</head>
+
+<!--
+https://physics.stackexchange.com/questions/15469/how-to-guess-the-correct-fitting-function-to-some-data/15497#15497
+-->
+
+<body>
+
+	<h3>How to guess the correct fitting function to some data?</h3>
+
+	<p>Imagine we are plotting some date points $\left(x_i,f(x_i)\right)$ that we obtained experimentally, and that we want to know what $f(x)$ is. The way to do this is to use some software and try to fit the data to some guessed function. For example, if the behavior of the data points looks like exponential decay we then choose an exponential decaying function ..etc.</p>
+
+	<p>My question is: sometimes the data points are perfectly fitted to the exponential decaying trial function only on a certain region, but then the rest of the points show deviation away from the trial function.</p>
+
+	<ol>
+		<li>How to proceed in this case? is there a catalog (something like mathematical tables) for functions and their plots that one can use as a guide?</li>
+
+		<li>Is there a systematic way to get the best fit instead of that trial and error method?</li>
+	</ol>
+
+	<hr>
+
+	<p>The theoretical decay model should be derived before you fit, and then the probability of the fit is given by the Baysian modification of your prior distribution for the parameters of the model. In this, I agree with the other answers.</p>
+
+	<p>But there are decay models which are sufficiently general that they can be used to fit large classes of experimental data, without fitting everything. If your data falls of exponentially for a while, then crosses over to falling like a power law with a slowly decreasing power, finally like a reciprocal logarithm, then like log-log, and then like log-log-log, you aren't going to get a good fit from any of these blind methods. But this is extraordinarily rare when studying physical systems--- such a complex decay only occurs in contrived mathematical situations, or when a system is actively moved from one phase to another according to a complicated plan.</p>
+
+	<h4>Fitting by complete sets of functions</h4>
+
+	<p>The generic way in which you fit arbitrary data that you feel should be approximated by a smooth curve is to run a best-fit polynomial. The polynomials are dense in the continuous functions, so you can always approximate anything, but you must use a polynomial of lowest order which fits the structure you believe is there. Best-fit lines are most common.</p>
+
+	<p>The standard measure of quality of fit is the sum of the squares of the deviation from the fit. Minimizing this gives the least-squares line, and it is also easy to find least squares polynomials of arbitrary order, so long as the order is less than the number of data points.</p>
+
+	<p>But this type of fit is wrong for decaying data. In this case you have options:</p>
+
+	<ul>
+		<li>If the measurements are very accurate when the quantity is small, you can take the logarithm, and fit the log-linear plot with a polynomial. This will give you the exponential decay as a first approximation, with higher order terms correcting this. The problem with this approach is that you are going to infinite time, and a polynomial always blows up at infinite time very quickly, so that its exponential probably disappears asymptotically faster than a physical function.</li><p></p>
+
+		<li>You can try to use a Laplace transform. The Laplace transform of a pure decaying exponential is a delta function, and if you are using a Laplace transform for numerical data, you are just superposing exponentials to get a fit. You can start with a two-exponential fit of the form $f(t) = A e^{-at} + B e^{-bt}$, where you fit the four-constants by least squares (you can do this by steepest descent). This is also a complete expansion, because it is related to the Fourier transform by analytic continuation.</li><p></p>
+
+		<li>You can fit to a falling power, which you should do anyway, because this is a common non-exponential decay. For example, if you have a pendulum decaying by air friction, the profile falls off as $1\over A+ Bt$, and this is always badly approximated by decaying exponentials. This is not a complete expansion, but if you find that the result is asymptotically a power, you can write $f(t) = g(t)\over A+Bt$, and fit g by Pade approximations (polynomials over polynomials).</li>
+	</ul>
+
+	<p>There is no general absolute method, because each asymptotic limit is different, but once you know even just a little bit, you can extract the leading behavior and fit the rest using a complete expansion.</p>
+
+	       
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
