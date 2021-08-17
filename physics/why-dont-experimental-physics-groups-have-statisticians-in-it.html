@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>Why don't experimental physics groups have statisticians in it?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+
+  <style type="text/css">
+		a:link {
+			text-decoration:none;
+		}
+	</style>
+</head>
+
+<!--
+https://physics.stackexchange.com/questions/16466/why-dont-experimental-physics-groups-have-statisticians-in-it
+-->
+
+<body>
+
+	<h3>Why don't experimental physics groups have statisticians in it?</h3>
+
+	<p>Perhaps someone can clear up a bit a cognitive dissonance I am experiencing.  Pollsters are under constant scrutiny of statisticians for even the most mundane of survey topics.  With so much riding on the results of fundamental physics experiments, why don't we *need* statisticians to do the data analysis for us (or at least be looking over our shoulders)?</p>
+
+<hr>
+
+	<p>Because physicists learn the math and do it themselves. Why do you need a special expert class of people nowadays?</p>
+
+	<p><b>EDIT: Deconstructing statistics</b></p>
+
+	<p>In response to comments that "statisiticians go through years of study", I would like to say why I think all this studying is counterproductive. The theory of statistics (when it isn't about statistical mechanics or pure mathematical measure theoretic things) is usually concerned with the inference problem--- what is the likelyhood of a parameter to be x when a measured quantity correlated with the parameter is measured to be $y_1,y_2,...,y_n$ in a sequence of trials.</p>
+
+	<p>The complete solution to this problem is given by Bayes's theorem: the probability that the underlying parameter has value x is given by the probability that this value x will produce the experimental results $y_1,y_2,..,y_n$ conditioned by the prior knowledge which gives you some distribution on x to begin with.</p>
+
+	<p>Because Bayes's theorem solves the problem of inference so simply and naturally, the field of statistics is almost entirely built on rejecting it. Most of the field is based on the idea that one should not do Bayesian inference for one cockamamie reason or another, usually based on some silly philosphy which rejects priors or rejects the notion of a fundamental a-priori notion of probability. Because of this, physicists never learn Baysian inference from a class, they have to rediscover it for themselves (I certainly did, and most other people who do inference do too).</p>
+
+	<p>This means that if you hire a statistician, they will most often find lousy workarounds for Baysian methods, which will be useless to the experimental physicist. The issue is deeply ingrained--- many famous topics in statistics, like the sufficient statistics or the t-test, are born of the quest for a non-Baysian inference This quest is misguided, and will waste the experimental physicist's time. Within statistics, however, anti-Baysianism is a useful motivation for new results, so the field is dominated by anti-Bayesians.</p>
+
+	<p>It is also true in Biology. There, the Baysian method is (with difficulty) replacing statistician's pet inference methodologies. This diatribe is based on experience from about a decade ago, and might be out of date.</p>
+
+
+<hr>
+		<div>
+			<blockquote>
+				<em><p>But "the math" takes a statistician 5-6 years of Ph.D. study (plus 4 years of undergrad) to "learn". You need specialists because you can't put in 10 000 hours to become knowledgeable enough to employ some of the more sophisticated techniques required for some tasks -- and nowadays, indeed, more than ever!</p></em>
+				<blockquote>
+					<p>any good physicist should be able to learn any necessry statistics in a month at the longest. If not, they are not particulary competent to do the experiments. It would be foolish to rely on someone else to do your statistics--- how would you be sure of any of your results? The reason statisticians go to school for so long is because PhD programs are not efficient in transmitting information, they are just there to provide a barrier to entry into a field.</p>					
+					<blockquote>
+						<em><p>obligatory xkcd cartoon: <a href="http://xkcd.com/793/">xkcd.com/793</a></p></em>
+					</blockquote><br>
+					<blockquote>
+						<em><p>Since you find it so trivial, I'm sure the people studying open problems in statistics would love to talk to you. Here are 750 unanswered questions: <a href="http://stats.stackexchange.com/unanswered">stats.stackexchange.com/unanswered</a>. I appreciate your extended answer but perhaps your point would be better taken if you didn't begin by being so glib.</p></em>
+						<blockquote>
+							<p>I do not find statistics trivial, only the problem of inference. The statisticians are wrong on this problem, not the rest of the world. As for the xkcd crtoon, it is giving a brain-dead conservative politics, that implies that the physicist is wrong. Most academic fields consist of empty gibberish. Statistics is not empty, but the mathematics problems on the stats stackexchange are trivial, vague, or ill posed (I looked at a few). It is better to go to journals for open problems.</p>
+							<blockquote>
+								<em><p>Biostatistics is improving, Bayes-wise, out of necessity if nothing else. Computers are cheap compared to trial subjects. At the same time, I don't know about the "years of study" bit, but if you're trying to justify prior distributions, or justify MCMC methods with detailed balance, the math gets really interesting, really quick. (At least to me.)</p></em>
+							</blockquote>
+						</blockquote>
+					</blockquote>
+				</blockquote>
+				<br>
+				<blockquote>
+					<em><p>Not really; some math takes the statistician a relatively short amount of time to learn, and other math takes some years as a Ph.D. inventing. The statistical techniques physicists use are generally already established, and take a minimal amount of time to learn (remember that physicists don't have a fundamentally different undergraduate education and they do work in a technical field...)</p></em>
+				<blockquote>
+					<p>What is so complicated in statistics? Could somebody give an example of something that requires years of study? There is not a single thing in the whole of mathematics, let alone statistics. If you're a student, it takes you four months, if you're more advanced, it takes you four weeks.</p>
+					<blockquote>
+						<em><p>That's indeed what I said. My "Not really" was in response to Chris.</p></em>
+					</blockquote>
+				</blockquote>
+			</blockquote><br>
+			<blockquote>
+				<em><p>it's a shame that you think that most academic fields consist of empty gibberish. There are lots of very interesting findings in psychology, for example; I think that you might enjoy the works of Dunning & Kruger.</p></em>
+				<blockquote>
+					<em><p>I guess there's a spread. In my field (first engineering, then CS->AI) there were some incredibly smart people. At the same time, I see grads coming out with some incredibly dumb beliefs, gotten from the teachings of "experts". The real problem is they could be more open-minded.</p></em>
+				</blockquote><br>
+				<blockquote>
+					<p>Most academic fields <em>do</em> consist of empty gibberish. This is not an opinion ill-formed out of ignorance, but of patiently reading all the gibberish, slowly figuring out what it says, and becoming angry that I just wasted so much time.</p>
+					<blockquote>
+						<p><em>There's the old saw "If you can't blind them with brilliance, baffle them with BS." or "Fame is the ornament placed on the incompetent by the ignorant". Academic publishing runs in channels. Throw in a little graph theory, a little inscrutable math. Pat some folks on the back & puff up their citation count. Talk about "directions" or "toward" XYZ. I never did get the knack. That's why I dropped out of professorship (though I did enjoy the teaching).</em></p>
+					</blockquote>
+					<blockquote>
+						<em><p>Well here are some that are not strictly fraudulent, but are way off base in understanding what's relevant: <a href="http://docs.freebsd.org/44doc/psd/18.gprof/paper.pdf">1</a>, <a href="http://www-plan.cs.colorado.edu/klipto/mytkowicz-pldi10.pdf">2</a>, [3](<a href="http://www-plan.cs.colorado.edu/diwan/recentpapers.htm#Compiler">www-plan.cs.colorado.edu/diwan/recentpapers.htm#Compiler</a> Analyses and Optimizations), and that's just in the area I know something about. </p></em>
+						<blockquote>
+							<p>The first paper you cited is the description of "gprof", a useful utility. There is nothing wrong with it that I know of. Number 2 is pointing out a subtle error in sampling for profilers, and it is a very good CS paper. Why would you call it "off base"? What's off base about it? I read it. It's very interesting and important. Note that gprof does not suffer from the problems noted in paper 2.</p>
+							<blockquote>
+								<em><p>The problem with profilers is the speedups you don't get with them. <a href="http://stackoverflow.com/questions/1777556/alternatives-to-gprof/1779343#1779343">Here is a list of the issues</a>. Here's an example of a <a href="http://stackoverflow.com/questions/926266/performance-optimization-strategies-of-last-resort/927773#927773">43x speedup</a> no profiler would have helped to achieve. Profiler-builders see measurement as the goal, assuming all speedup opportunities can be found by measuring. That's the flawed assumption, and any you don't find end up being the speed limit.</p></em>
+								<blockquote>
+									<p>Even if you have a new idea, you still have to evaluate profiler papers on their own merits, not based on a personal philosophy, and these are good papers which solve the difficult problem of "how much time does code X spend in subroutine Y" correctly (up to system calls). In complicated scientific simulations, where you don't use many system calls in the computationally challenging parts, the profilers are very useful, although for user applications, I agree with your criticisms. The papers you cited are still good papers.</p>
+									<blockquote>
+										<em><p>Not to belabor, but even on scientific code, I often find time on stuff not really necessary. Ex: LAPACK routines have character arguments to customize them, & can spend a large fraction of time calling a function to test those args. If you know that, you can do something about it, but only a line-percent-reporting stack sampler like Zoom will tell you that. Ex: large % of time in functions like exp and log where arguments haven't changed. Measurement doesn't tell you that you need to memoize those. You only say "Oh, well, that's just what it is."</p></em>
+										<blockquote>
+											<p>I see your point, but its just not fair to evaluate a profiler paper based on a general criticism of profiler theory. The "gibberish" I was talking about were things that fail on their own terms.</p>
+										</blockquote><br>
+										<blockquote>
+											<p>Reading your factor-of-43 speedup, I believe it (but it is still amazing). In the 80s, you would hand-program your computer in assembly language, and the computers have become 1000 times faster, but the code is not 1000 times faster, more like 10 times. The most significant thing you did for me is the "compiling, not interpreting" step, which is extremely important for efficient operation. I have wanted to make this possible within a C-like language for years, but it's a tough project.</p>
+											<blockquote>
+												<em><p>Yeah, that falls under the general terms of "code generation" and "domain specific languages", which I very much encourage, though people get carried away in generalizing. It's a case of "partial evaluation", which is a useful concept, except it's been given the usual academic treatment of being way over-generalized to the point of uselessness.</p></em>
+											</blockquote><br>
+											<blockquote>
+												<em><p>FYI, here's a <i><a href="https://sourceforge.net/projects/randompausedemo/files/">sourceforge</a></i> project I made that shows a blow-by-blow example of performance tuning. It takes a C++ program through 7 stages, getting a 700x speedup. The exact factor doesn't matter. What matters is how much room for speedup there can be, and, especially, how you find it.</p></em>
+											</blockquote>
+										</blockquote>
+									</blockquote>
+								</blockquote>
+							</blockquote>
+						</blockquote>
+					</blockquote>
+				</blockquote>
+			</blockquote><br><br>
+			<blockquote>
+				<em><p>+1, Ron... ;-) Well, because physicists and especially experimenters must simply know statistics (at least the relevant one) well, usually better than the people who are "just" statisticians. – Luboš Motl</p></em>
+			</blockquote><br>
+			<blockquote>
+				<em><p>I've no idea what you're talking about. The hard part about inference is that we don't know the underlying probability distribution of y. And even if we did, finding the best values for the parameters x is extremely hard - in fact I'm pretty sure it's NP-hard. Bayes theorem is used extensively.</p></em>
+				<blockquote>
+					<p>The issue I am talking about is using "Bayes's theorem" as "Bayesian inference". The y's are observed, the relationship between x and y is known, and from this you deduce that the probability of x is the a-priori probability of x times the probability of x generating y given x. This idea requires you to assume that x has an a-priori probability distribution, or a probability distribution at all, and this is sometimes considered wrong, like when x is the charge of the electron, which has exactly one value, so that the philosophers of statistics don't allow it a probability.</p>
+					<blockquote>
+						<em><p>I've never encountered this attitude. Can you point me to some reasonably cited papers which try to solve a problem that would easily be solved via an application of Bayes' theorem but the authors don't use it for philosophical reasons?</p></em>
+						<blockquote>
+							<p>If you have not encountered this attitude, you have never been around statisticians. See here for a summary of some anti-Bayesian arguments: <a href="badbayesmain.pdf">stat.columbia.edu/~gelman/research/published/badbayesmain.pdf</a> . This is the debate in statistics, going back several hundred years, and the obvious need for Baysian methods is why statisticians are often less than useless--- they hold you back by making you ignore the Bayesian method.</p>
+							<blockquote>
+								<em><p>I'm aware of that controversy. What I meant was I've never encountered an attitude of insisting on the use of frequentist methods for a practical application when the prior is known. There are good reasons to not use a Bayesian approach in many cases - for a description of when a frequentist approach might make sense, you could check out this lecture videolectures.net/mlss09uk_jordan_bfway/ by Michael Jordan. The problem of inference at any rate is certainly not trivial as you imply and the Bayesian appproach is not always the answer.</p></em>
+								<blockquote>
+									<p>Video is tough to skim and this one is too elementary, too general, and too long, but I watched it. Baysian and frequentist is not at all like wave-particle duality, it's exactly like Geo vs. Heliocentrism, and Bayes is Aristarchus. Further, like Aristarchus vs. Ptolmey, Ptolmey comes after Aristarchus, and takes the main results and puts them in a less comprehensive framework that takes care of the feelings of reactionaries when they see a good new idea. I believe that non-Baysian statistics is as bankrupt and fraudulent as Geocentrism. The internet is killing it, good riddance.</p>
+									<blockquote>
+										<em><p>In the video, Michael Jordan gives a mathematical formulation of both approaches and illustrates via that where one approach might be preferable vs. the other. Finding a good prior is not always feasible especially in an automated setting. In many cases in fact, it's almost impossible. A bayesian approach cannot do well under those circumstances.</p></em>
+										<blockquote>
+											<p>I wrote the comment at minute 50, (dude, it's a long video), I am watching the second half now... boy is this an inefficient way to transmit information. But I think that the discussion of priors is needed--- if you don't have a prior, I think you just can't make an inference, automated or not. For example, if you measure energy non-conservation in a collision, you need a prior which reflects your strong belief that energy is conserved. I will try to watch with as much of an open mind as I can muster up.</p>
+										</blockquote>
+									</blockquote>
+								</blockquote>
+							</blockquote>
+						</blockquote>
+					</blockquote>
+				</blockquote>
+			</blockquote>
+		</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
