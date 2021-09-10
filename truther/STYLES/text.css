@@ -36,6 +36,13 @@ h6 span {
   margin-left: 15px;
   color: #000;
 }
+.quote2b { 
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;
+  background-color: #FDFDFD;
+  border: solid 1px #999;
+  padding: 10px;
+  margin-left: 15px;
+}
 
 .quote3 {
   font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
@@ -45,6 +52,27 @@ h6 span {
   margin-left: 15px;
   color: #000;
 }
+
+
+.quote4 {
+  background-color: #FFFFFF;
+  color: #006400;
+  font-family: monospace; 
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 15px;
+  /*border: 1px  dotted #dddddd;*/
+}
+
+.quote5 {
+  display: block;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
 
 .reply1 {
   font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
@@ -74,6 +102,14 @@ h6 span {
   padding-left: 15px;
   /*color: #789922;*/
   color:#e00707;
+}
+
+.reply3bl {
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  padding: 4px;
+  padding-left: 15px;
+  /*color: #789922;*/
+  color:#0715cd;
 }
 
 table {
@@ -120,6 +156,15 @@ td, th {
   padding: 0 10px;
 }
 
+.column2 {
+  float: left;
+  /*
+  width: 50%;
+  */
+  width: 30%;
+  padding: 0 10px;
+}
+
 .row {margin: 0 -5px;}
 
 .row:after {
@@ -133,7 +178,6 @@ td, th {
   color: #006400;
   content: ">  ";
 }
-
 .footnote1 {
   /* font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
   background-color: rgb(255,255,204);
@@ -145,6 +189,35 @@ td, th {
   padding: 4px;
   padding-left: 15px;
   /*border: 1px  dotted #dddddd;*/
+}
+
+
+/*.footnote2:before {
+  color: #000000;
+  content: "—  ";
+}*/
+.footnote2 {
+  background-color: #FDFDFD;
+  font-family: system-ui, monospace; 
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 15px;
+  /*margin-left: 15px;*/
+  border-top: 1px  dotted #dddddd;
+}
+
+.quote2b { 
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;
+  background-color: #FDFDFD;
+  
+  padding: 10px;
+  margin-left: 15px;
+}
+
+
+
+.body2 {
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
 }
 
 
