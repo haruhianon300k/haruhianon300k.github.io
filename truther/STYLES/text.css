@@ -37,6 +37,15 @@ h6 span {
   color: #000;
 }
 
+.quote3 {
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  background-color: #FDFDFD;
+  border: solid 1px #dddddd;
+  padding: 10px;
+  margin-left: 15px;
+  color: #000;
+}
+
 .reply1 {
   font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
   /*
@@ -137,3 +146,11 @@ td, th {
   padding-left: 15px;
   /*border: 1px  dotted #dddddd;*/
 }
+
+
+
+p, ul, ol, li, h4 {
+  font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+}
+
+
