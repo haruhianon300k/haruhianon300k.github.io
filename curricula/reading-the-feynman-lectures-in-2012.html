@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>soft question - Reading the Feynman lectures in 2012 - Physics Stack Exchange</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+  <LINK REL="StyleSheet" href="../truther/STYLES/colors.css" TYPE="text/css"></LINK>
+	<LINK REL="StyleSheet" href="../truther/STYLES/text.css" TYPE="text/css"></LINK>
+  <style type="text/css">
+  	a:link {
+  		text-decoration:none;
+  	}
+  	.reply3 {
+  		font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  		/*padding: 4px;
+  		padding-left: 15px;*/
+  		/*color: #789922;*/
+  		color:#e00707;
+  	}
+  	p, ul, ol, li, h4 {
+  		font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  	}
+  </style>
+</head>
+
+<!--
+https://physics.stackexchange.com/questions/29355/reading-the-feynman-lectures-in-2012/29361#29361
+-->
+
+<body>
+
+	<h4>Reading the Feynman lectures in 2012</h4>
+
+	<p>The Feynman lectures are universally admired, it seems, but also a half-century old. Taking them as a source for self-study, what compensation for their age, if any, should today's reader undertake?  I'm interested both in pointers to particular topics where the physics itself is out-of-date, or topics where the pedagogical approach now admits attestable improvements.</p>
+
+	<hr size="1p" width="100%" color="#ccc">
+
+	<p>The Feynman Lectures need only a little amending, but it's a relatively small amount compared to any other textbook. The great advantage of the Feynman Lectures is that everything is worked out from scratch Feynman's way, so that it is taught with the maximum insight, something that you can only do after you sit down and redo the old calculations from scratch. This makes them very interesting, because you learn from Feynman how the discovering gets done, the type of reasoning, the physical intuition, and so on.</p>
+
+	<br>
+	<p>The original presentation also makes it that Feynman says all sorts of things in a slightly different way than other books. This is good to test your understanding, because if you only know something in a half-assed way, Feynman sounds wrong. I remember that when I first read it a million years ago, a large fraction of the things he said sounded completely wrong. This original presentation is a very important component: it teaches you what originality sounds like, and knowing how to be original is the most important thing.</p>
+
+	<br>
+	<p>I think Vol. I is pretty much OK as an intro, although it should be supplemented at least with this stuff:</p>
+
+	<ol>
+	<li><p>Computational integration: Feynman does something marvellous at the start of Volume I (something unheard of in 1964), he describes how to Euler time-step a differential equation forward in time. Nowadays, it is a simple thing to numerically integrate any mechanical problem, and experience with numerical integration is essential for students. The integration removes the student's paralysis: when you are staring at an equation and don't know what to do. If you have a computer, you know exactly what to do! Integrating reveals many interesting qualitative things, and shows you just how soon the analytical knowledge painstakingly acquired over 4 centuries craps out. For example, even if you didn't know it, you can see the KAM stability appears spontaneously in self-gravitating clusters at a surprisingly large number of particles. You might expect chaotic motion until you reach 2 particles, which then orbit in an ellipse. But clusters with random masses and velocities of some hundreds of particles eject out particles like crazy, until they get to one or two dozen particles, and then they settle down into a mess of orbits, but this mess must be integrable, because nothing else is ejected out anymore! You discover many things like this from piddling around with particle simulations, and this is something which is missing from Volume I, since computers were not available at the time it was written. It's not completely missing, however, and it's much worse elsewhere.</p></li><p></p>
+	<li><p>The Kepler problem: Feynman has an interesting point of view regarding this which is published in the "Lost Lecture" book and audio-book. But I think the standard methods are better here, because the 17th century things Feynman redoes are too specific to this one problem. This can be supplemented in any book on analytical mechanics.</p></li><p></p>
+	<li><p>Thermodynamics: The section on thermodynamics does everything through statistical mechanics and intuition. This begins with the density of the atmosphere, which motivates the Boltzmann distribution, which is then used to derive all sorts of things, culminating in the Clausius-Clayperon equation. This is a great boon when thinking about atoms, but it doesn't teach you the classical thermodynamics, which is really simple starting from modern stat-mech. The position is that the Boltzmann distribution is all you need to know, and that's a little backwards from my perspective. The maximum entropy arguments are better--- they motivate the Boltzmann distribution. The heat-engine he uses is based on rubber-bands too, and yet there is no discussion of why rubber bands are entropic, or of free-energies in the rubber band, or the dependence of stiffness on temperature.</p></li><p></p>
+	<li><p>Monte-Carlo simulation: This is essential, but it obviously requires computers. With Monte-Carlo you can make snapshots of classical statistical systems quickly on a computer and build up intuition. You can make simulations of liquids, and see how the atoms knock around classically. You can simulate rubber-band polymers, and _see_ the stiffness dependence on temperature. All these things are clearly there in Feynman's head, but without a computer, it's hard to transmit it into any of the students' heads.</p></li><p></p>
+	</ol>
+
+	<br>
+	<p>For Volume II, the most serious problem is that the foundations are off. Feynman said he wanted to redo the classical textbook point of view on E&M, but he wasn't sure how to do it. The Feynman Lectures were written at a time just before modern gauge theory took off, and while they emphasize the vector potential a lot compared to other treatments of the time, they don't make the vector potential the main object. Feynman wanted to redo Volume II to make it completely vector-potential-centered, but he didn't get to do it. Somebody else did a vector-potential based discussion of E&M based on this recommendation, but the results were not so great.</p>
+
+	<br>
+	<p>The major things I don't like in Vol. II:</p>
+
+	<ol>
+	<li><p>The derivation of the index of refraction is done by a complicated rescattering calculation which is based on plum-pudding-style electron oscillators. This is essentially just the forward-phase index-of-refraction argument Feynman gives to motivate unitarity in the 1963 ghost paper in Acta Physica Polonika. It is not so interesting or useful in my opinion in Vol. II, but it is the most involved calculation in the series.</p></li><p></p>
+	<li><p>No special functionology: While the subject is covered with a layer of 19th-century mildew, it is useful to know some special functions, especially Bessel functions and spherical harmonics. Feynman always chooses ultra special forms which give elementary functions, and he knows all the cases which are elementary, so he gets a lot of mileage out of this, but it's not general enough.</p></li><p></p>
+	<li><p>The fluid section is a little thin--- you will learn how the basic equations work, but no major results. The treatment of fluid flow could have been supplemented with He4 flows, where the potential flow description is correct (it is clear that this is Feynman's motivation for the strange treatment of the subject, but this isn't explicit).</p></li><p></p>
+	<li><p>Numerical methods in field simulation: Here if one wants to write an introductory textbook, one needs to be completely original, because the numerical methods people use today are not so good for field equations of any sort.</p></li><p></p>
+	</ol>
+
+	<br>
+	<p>Vol. III is extremely good because it is so brief. The introduction to quantum mechanics there gets you to a good intuitive understanding quickly, and this is the goal. It probably could use the following:</p>
+
+	<ol>
+	<li><p>A discussion of diffusion, and the relation between Schrödinger operators and diffusion operators: This is obvious from the path integral, but it was also clear to Schrödinger. It also allows you to quickly motivate the exact solutions to Schrodinger's equation, like the $1/r$ potential, something which Feynman just gives you without motivation. A proper motivation can be given by using SUSY QM (without calling it that, just a continued stochastic equation) and trying out different ground state ansatzes.</p></li><p></p>
+	<li><p>Galilean invariance of the Schrödinger equation: This part is not done in any book, I think only because Dirac omitted it from his. It is essential to know how to boost wavefunctions. Since Feynman derives the Schrödinger equation from a tight-binding model (a lattice approximation), the galilean invariance is not obvious at all.</p></li><p></p>
+	</ol>
+
+	<br>
+	<p>Since the lectures are introductory, everything in there just becomes second nature, so it doesn't matter that they are old. The old books should just be easier, because the old stuff is already floating in the air. If you find something in the Feynman Lectures which isn't completely obvious, you should study it until it is obvious--- there's no barrier, the things are self-contained.</p>
+
+
+	<br>
+	<hr size="1p" width="100%" color="#ccc">
+
+	<div>
+		<ul>
+			<div class="reply3"><p>@RonMaimon I am reading the book myself and find it to be the best piece suitable at my level. But do his arguments still hold in light of modern discoveries? Especially the details of "atmospheric electricity" part? – stochastic13 Jul 13 '13 at 17:28</p></div>
+				<ul>
+					<p>@SatwikPasani: There is nothing that I remember from that chapter that is incorrect, it was mostly qualitative. Perhaps the mechanism of charge separation is understood better today, I don't know. The only point of this thing is to explain why there is a voltage as you go up in the air, and this is due to lightning charging up the ground, and it's a fact, it's still true. I don't follow the atmospheric literature, unfortunately, I don't know if people know more about charge separation through air-droplet rubbing, this was the open mystery he talked about in that chapter. – Ron Maimon Jul 13 '13 at 20:41</p>
+					<ul>
+				</ul>
+			</ul><br>
+
+			<br>
+			<div class="reply3"><hr size="1p" width="100%" color="#ccc"><p>The potential-based approach to EM you mention may be "Collective Electrodynamics" by Feynman's student Carver Mead: <a href="http://en.wikipedia.org/wiki/Carver_Mead">en.wikipedia.org/wiki/Carver_Mead</a> . PS: I recall you writing favorably of Steven Frautschi's S-Matrix book. I saw him recently; in retirement, now 80, he has re-invented himself as a teaching assistant, and won Caltech's Feynman Prize for Excellence in Teaching this year. When I mentioned his S-Matrix work being cited here, he ducked his head and said, "Well, that was a long time ago..." – Art Brown Oct 24 '14 at 0:37</p></div>
+						<ul>
+							<p>@ArtBrown: A long time, a long time, but classic underappreciate work. Thanks for the info, it might have been Mead, I honestly don't remember, I found it in a bookstore and flipped through it, didn't like it that much, but noticed it was based on what Feynman intended. – Ron Maimon Oct 25 '14 at 20:19</p>
+						</ul>
+						
+						<br><br><ul><hr size="1p" width="100%" color="#ccc">
+						<div class="reply3"><p style="margin-left: -15px;">@ArtBrown I've seen the book on Amazon.com and after looking at the contents, I'm still scratching my head over the whole point of it: Physicists use QED, engineers use CED and both models are brilliantly served by main stream text books. – Physiks lover Oct 27 '14 at 16:20</p>
+						</div>
+						<ul>
+							<div class="reply3"><p>@Physikslover, I'm not recommending Mead's monograph; as Ron Maimon mentioned, it wasn't particularly successful. I think the point was to "motivate" Maxwell's equations by showing how they emerge from something simpler. (Ron Maimon may have a different perspective; my default posture is to defer to him!) – Art Brown Oct 27 '14 at 16:33</p>
+						</div>
+					</ul></ul>
+
+		<br><br>
+		<div class="reply3"><hr size="1p" width="100%" color="#ccc"><p>@RonMaimon Your answer inspired me to make an 2D $n$-body simulation to look for this KAM stability. But my naive approach of directly integrating Newton's equation with ode23s is <i>so slow</i> :( I get some great results for <10 planets, but I can't get much more. Do you have any tips for practically implementing such a simulation? – tom Apr 14 '15 at 11:20</p></div>
+			<ul>
+				<p>@tom: On a recent computer, if you just write the most basic code in C, without fancy classes, just the simplest code, 1000 particles do 10 steps a second. I heard this from a layperson (father of a friend) who showed me his code for gravity clusters and noted that he found systems that stabilized to crazy but non-chaotic orbits long before they reached two particles. He wanted to publish this. There are simple tricks--- use a second order method, and when two particles are about to near-collide, use the exact solution two particle scattering in background field as the first approximation. – Ron Maimon Apr 14 '15 at 19:31</p>
+			</ul>
+			<ul>
+				<p>I just did (3d) now, using the most idiotic method. 10 bodies is about right, maybe you can get 20 or 30, I never did it systematically. There are good approaches for blocking up the computation into regions so that you don't have to compute order N^2 forces, rather distant bodies in blocks. You need to deal with drift and the no-control when two bodies collide, you get too-large instantaneous force, and a spurious numerical explosion. You can fix using dynamical timestep that is small enough to ensure energy conservation, or with the two-body in constant+linear background method I described. – Ron Maimon Apr 14 '15 at 19:53</p>
+
+				<div class="reply3"><p>@RonMaimon OK, that sounds about right. Using the exact two particle solution is a good idea - the problem gets quite stiff when two planets get close. Thanks. – tom Apr 14 '15 at 21:34</p></div>
+			</ul>
+
+			<br><br>
+			<div class="reply3"><hr size="1p" width="100%" color="#ccc">
+				<p>@RonMaimon Your comment about Feynman wanting to redo volume 2 based on the vector potential is very interesting. How did you know that he wanted to do that? If you haven't seen the following thread already, please look at it for some further information and please add any additional information you might have: <a href="https://physics.stackexchange.com/questions/100951/what-was-feynmans-much-better-way-of-presenting-the-electrodynamics-which">physics.stackexchange.com/questions/100951/…</a> – littleO Jun 30 '18 at 13:24</p>
+			</div>
+
+		</ul>
+	</div>
+
+
+
+
+
+
+	       
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
