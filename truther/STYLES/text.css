@@ -227,3 +227,44 @@ p, ul, ol, li, h4 {
 }
 
 
+
+
+
+.table0 {
+  display: table; 
+  border-collapse: separate; 
+  box-sizing: border-box; 
+  text-indent: initial;
+
+  /*
+  border-spacing: 2px;
+  */ 
+  border-spacing: 5px; 
+  border-color: gray;
+}
+
+.tbody0 {
+  display: table-row-group; 
+  vertical-align: middle; 
+  border-color: inherit;
+}
+
+.tr0 {
+  display: table-row; 
+ 
+  border-color: inherit;
+  padding: 1px;
+}
+
+.td0 {
+  display: table-cell; 
+
+  box-sizing: content-box;
+
+  /*
+  border: 1px solid #dddddd;
+  */
+  border: 0px;
+  padding: 3px;
+
+}
