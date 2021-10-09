@@ -3,12 +3,29 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
-  <title>MathJax v3 loaded only if there is math</title>
+  <title>How can/does calculus describe the movement of a particle?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+    a:link {
+    text-decoration:none;
+    }
+    .reply3 {
+    font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+    /*padding: 4px;
+    padding-left: 15px;*/
+    /*color: #789922;*/
+    color:#e00707;
+    }
+    p, ul, ol, li, h4 {
+    font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+    }
+  </style>
 </head>
 
-<!-- Write your comments here -->
+<!--
+https://physics.stackexchange.com/questions/28782/how-can-does-calculus-describe-the-movement-of-a-particle/28822#28822
+-->
 
 <body>
 
@@ -104,7 +121,7 @@ $$\sum_{n=a}^b 2^n = 2^{b+1} - 2^a $$</p>
 <p>$$ A_n = A_0 + \Delta A_0 n + \Delta^2 A_0 {n^{(2)}\over 2!} + \Delta^3 A_0 {n^{(4)}\over 4!} + ...$$
 </p>
 
-<p>and this gives an explicit polynomial expression whose first n differences at $0$$ coincide with those of the sequence $A$. This allow you to fit a polynomial to any evenly spaced points easily.</p>
+<p>and this gives an explicit polynomial expression whose first $n$ differences at $0$ coincide with those of the sequence $A$. This allow you to fit a polynomial to any evenly spaced points easily.</p>
 
 <p>The above looks like an infinite sum, but on an integer position, only finitely many terms are nonzero. If it is convergent as an infinite series, you might expect it to interpolate good non-integer values for a reasonably well behaved sequence.</p>
 
