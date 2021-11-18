@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>How did string theory begin?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+  		a:link {
+  		  	text-decoration:none;
+  		}
+  		.reply3 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  			/*padding: 4px;
+  			padding-left: 15px;*/
+  			/*color: #789922;*/
+  			color:#e00707;
+  		}
+  		p, ul, ol, li, h4 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  		}
+  	</style>
+</head>
+
+<!--
+https://www.quora.com/How-did-string-theory-begin/answer/Ron-Maimon
+-->
+
+<body>
+
+	<h4>How did string theory begin?</h4>
+
+	<p>String theory is the culmination of a particularly radical program of physics which has it's roots in the period 1938-1941, when Wheeler formulated the concept of the S-matrix, or scattering matrix, and Heisenberg was very taken with this concept, and proposed that it is the fundamental quantity underlying all relativistic physics.</p>
+
+	<p>Wheeler's S-matrix is a quantity that tells you how incoming particles are turned into outgoing particles. The incoming free particles are energy-eigenstates, meaning they are enormous long plane waves with definite energy, and after scattering, they turn into a superposition of other plane waves. There are annoying intricacies in doing the limit for the S-matrix, because two infinite plane-waves never scatter (the particles are spread out over all space, and so never find each other). The S-matrix is defined as the limit or scattering amplitude density per unit momentum on the mass shell per appropriately scaled unit area of the incoming plane waves.</p>
+
+	<p>The mathematical intricacies are not so important, the S-matrix is a definition of how particles come in turn into particles coming out. The basic idea Heisenberg had was that Wheeler's S-matrix doesn't require following the details of what's going on in-between the input and output, it can describe the whole process without knowing what is going on in the middle. By employing logical positivism, Heisenberg became convinced that the S-matrix was sufficient to reconstruct the whole theory, so that only scattering was necessary to know what was going on in any situation. He then proposed that one should formulate rules for the S-matrix directly, without using quantum field theory to find a series for this. All this was in 1941, in Nazi Germany, and this means nobody paid attention, because everyone else had fled.</p>
+
+	<p>Heisenberg proposed that one should use the principle of unitarity to reconstruct the S-matrix from some postulates. The idea here is that unitarity is the statement that SS*=1, and this condition relates higher orders of scattering to lower orders. Unitarity is a restrictive non-linear condition, and Heisenberg hoped that there would be a unique finite unitary theory, but he had no idea how to formulate it. The reason Heisenberg was interested in this is because, unlike the electron, the proton was discovered to be a big blob in space, it wasn't described well by Dirac theory. It's magnetic moment was more than 4 times bigger than what it should have been for a Dirac particle, and it's charge radius was about a femtometer, it wasn't pointlike like the electron.</p>
+
+	<p>Non-pointlike particles are a problem in relativity, because you need to have consistent communication between the parts of the particle. The idea of space-time points in positivism requires local probes, elementary fields which represent localizable particles. If your particles are blobs, space and time might not be reliable notions. But if you use a unitary S-matrix, you are only referring to asymptotic things--- free cold particles in plane waves coming in and going out, so you aren't making any assumptions about space-time, whatever space-time is doing at short distances, the S-matrix is stable to these phenomena, since it is describing the relation between asymptotic things.</p>
+
+	<p>Wheeler also emphasized the S-matrix (naturally, he discovered the thing, one of the first major natively American discoveries), and he was interested in reconstructing theories of particle interactions from S-matrix alone, without a detailed space-time picture of fields. When Feynman became his student, they made an acausal formulation of classical electrodynamics, and he had Feynman work on the S-matrix for quantum electrodynamics from this classical foundation, and Feynman never learned or used local fields. He constructed the perturbation theory for quantum electrodynamics from pure S-matrix particle considerations, and, in heroic inspirational work, he derived consistent and correct Feynman rules from free-particle propagators, primitive interaction vertices (determined from the classical limit and minimal coupling), and the restriction of unitarity on higher orders, which determines the way loops have to work. His intuition was from the particle path-integral, which he formulated in order to tackle this problem. The results gave consistent scattering formulas, but they didn't mention any local fields, so Feynman thought he had an amazing new kind of physical theory.</p>
+
+	<p>Not quite. Feynman got a rude shock--- other people like Schwinger had derived the exact same rules from local field theory! They didn't use S-matrix, and they got the exact same propagators and vertices, with no herculean efforts. Feynman had to work 10 times harder, and yet the result was equivalent. Dyson showed how to derive Feynman's diagram series from field theory, as Feynman did in the early 1950s, and Schwinger too, each in their own way. Candlin completed the thing by showing how to do path-integrals for local fields.</p>
+
+	<p>This experience soured Feynman at Wheeler's S-matrix, and gave up the idea that this was something radical and new, and became a field theorist. Feynman was one of the critics of string theory when it was prominent, probably because he was already burned once by S-matrix. He heckled proto-string-theory in the 1960s, and his opposition was possibly a reason for the marginalization of the ideas in the 1970s (also, some mistakes made by S-matrixers in the 1960s--- I'll get to those).</p>
+
+	<p>Aside from Wheeler, who came up with the S-matrix, postwar, the S-matrix idea was ignored until the around 1956, when Murray Gell-Mann, Stanley Mandelstam, Tullio Regge, Vladimir Gribov, and Lev Landau started to get interested, really under the influence of Feynman's magic looking derivation of the Feynman rules. In this case, it is Wheeler's ghost, once Feynman gets away from Wheeler, the S-matrix is out the window.</p>
+
+	<p>Anyway, the main results from this era were Tullio Regge's discovery of the fact that particles come in families which have to be scattered together in families with the scattering of all of these together reconstructing the true scattering, which is softer (meaning less divergent at high energies) than the scattering of the particles individually.</p>
+
+	<p>Mandelstam and Gell-Mann were studying dispersion relations, integral laws which determine the scattering from the singularities of the amplitude. Landau discovered the correct physical interpretation of these singularities (from thinking about Feynman diagrams), they are places where you have just the right kind of energy in a subset of the incoming particles to produce a physical particle of another type. The dispersion relations allowed you to compute the amplitude from experimental data on physical scattering, and you would never have to work with a field theory! You could reconstruct the S-matrix from some simple considerations, and experiment.</p>
+
+	<p>Mandelstam realizes that Regge's idea for families of particles with different angular momentum has a more physical interpretation in relativity, where you find that the asymptotic scattering at high energy is related to Regge's prediction for the unphysical scattering at values of "cosine theta" much bigger than 1. These predictions were mathematical curiosities until Mandelstam's interpretation came along, now they turned into experimental predictions: knowing the Regge trajectory function (the rate of increase of mass-squared with angular momentum) you could predict the rate at which the scattering amplitude fell off at high energies at any fixed "t" (meaning angle normalized by a power of energy). These relations were all S-matrix, meaning you didn't need a Lagrangian.</p>
+
+	<p>At the same time, Froissart proved the Froissart bound in S-matrix, showing that there is a strict bound on the amount of scattering you can have in a theory with a mass gap. The scattering can't grow faster than logarithmically. There were many other more minor results in this era, relating S-matrix quantities to physical observables.</p>
+
+	<p>This is where Geoffrey Chew comes in. He was a phenomenological guy, not like the big-shot theorists, and he at some point realizes that the strongly interacting particles, the proton, the pions, the Kaons, are all lying on these Regge trajectories. He says that this means that they are not fundamental, and further, he says that the correct way to describe them is using the dispersion relations of Gell-Mann and Mandelstam, without postulating that there is a quantum field theory underneath. He calls this "nuclear democracy", meaning none of the strongly interacting particles are fundamental, they are all composite, and further, they don't have constituents, they are made up of each other in a self-consistent way.</p>
+
+	<p>Chew and Frautschi showed that the basic law of the strong interactions is that the particles lie on straight-line Regge trajectories (meaning the mass-squared is linear plus offset function of the spin) and the slope is the same for all the mesons. Simultaneously, Gribov formulated the Pomeron trajectory, to explain why cross sections in the strong interaction were maximal--- they saturate the Froissart bound (actually, in experimental data, the cross-sections grow as a small power until now, meaning that they more than saturate the bound, they violate it! This behavior can't go on forever, the scattering has to fall back to logarithmic, and this is called "Pomeron unitarization" in the literature. The mechanism of Pomeron unitarization is not understood, nor is it heavily studied for reasons that will become clear soon)</p>
+
+	<p>Chew went on to develop methods of extracting S-matrix predictions from a few particle interactions and experiment, while Mandelstam continued to press on with the idea of a fundamental theory using only dispersion relations and S-matrix. Feynman thought that the theory should be a field theory, Gell-Mann wasn't sure, and hedged his bets. In the 1960s, people were heavily split, with half the community working on S-matrix and hard mathematical stuff related to dispersion relations, and the other half secretly working on field theory, and nobody knew whether the strong interactions were a field theory or an S-matrix thing.</p>
+
+	<p>In 1968 was the major triumph for the S-matrix folks. Dolen Horn and Schmidt had shown in 1967 that scattering in the strong interaction had a strange property--- normally when you exchange particles, you have a broad background and peaks on top of this background at places where you have particle exchange. But DHS showed that where you have a peak, the background is depressed, as if the background were a sum of broad peaks! This means that the particles you are exchanging that give you peaks (S-channel exchange in Mandelstam jargon) are really responsible for the background (t-channel exchange). In quantum field theory, the two things are completely separate things.</p>
+
+	<p>So people pondered what this meant--- they drew "fishnet" Feynman diagrams. In 1968, without knowing what this meant, Veneziano proposed a scattering amplitude that had the Dolen-Horn-Schmidt property. This property is so ridiculously restrictive that there were essentially only two solutions (modulo some assumptions, like straight line trajectories with parallel slope), Veneziano's and a later amplitude by Shapiro.</p>
+
+	<p>These results were wind in the sails of S-matrix theory. People were confident that there would be a theory, that it would be unique, and it would solve the problem of the strong interactions. This meant that most physicists were working on S-matrix from 1968-1974, and field theory was marginalized. The S-matrix people were saying stupid things, like the fact that field theory has perturbative infinities meant that it was inconsistent, and that there would be one unique S-matrix consistent with relativity, things like that.</p>
+
+	<p>During this time, people like Feynman and Bjorken were still trying to describe the strong interactions with field theory, that is, with point particle constituents. Experimental data from electron-proton scattering showed that there were charged points inside the proton, and this meant quantum field theory, not S-matrix theory (which predicts soft scattering from a diffuse blob). But nobody could figure out how the points were stuck inside the proton, so that we don't see free quarks or gluons. Also, Gell-Mann was dithering, because maybe the quarks are points, and the glue is S-matrix blob.</p>
+
+	<p>Feynman in 1972 book "Photon Hadron interactions" demonstrates that if quantum electrodynamics is a field theory at the proton scale (something well supported by experiment by then), then the things in the proton that are charged should also be described by a locally commuting field theory. This was a strong argument for field theory, rather than S-matrix theory.</p>
+
+	<p>Schwinger had given a toy field theory model with this property in the mid 1960s--- the Schwinger model of 1+1 dimensional electrodynamics. He showed that in this model, the electrons and positrons formed mesons and are permanently confined, because the electric field doesn't die away with distance. Nambu had postulated that the vacuum of the strong interaction was like a superconducting pair-condensate of fermions, and this model was successful in predicting the interactions of pions, as shown by Weinberg. Weinberg also was becoming skeptical of S-matrix theory, because he was able to show that the predictions of Chew for pion scattering could be derived more simply from effective field theory. The finite-number-of-particles form of S-matrix theory was turning into field theory in another form, people were getting burned the same way Feynman got burned.</p>
+
+	<p>But unlike Feynman's quantum electrodynamics S-matrix, or the S-matrix of pion-pion models which turned into the effective field theories of Weinberg, Veneziano's theory was clearly not turning into a field theory--- the scattering was always soft, things were completely composed of Regge trajectories, there was no notion of quantum field, in fact, there was no notion of space and time. The theory was clearly new and different from field theory, and it required infinitely many particles to be consistent. It was also very hard to make work, it demanded all sorts of things that nobody ordered.</p>
+
+	<p>In the early 1970s, there was tremendous progress on what this theory was, and as the theory became fleshed out, it looked less and less correct for the strong interactions. Nambu proposed that the thing described by Veneziano's theory is a string. Susskind also proposed this, and understood how the string modes were Veneziano's things, as did Nielson from fishnet diagrams (good picture), and analogy with vortex lines (not 100% accurate, but whatever).</p>
+
+	<p>By 1974, Lovelace had shown the Veneziano theory needs to live in 26 dimensions, Ramond incorporated fermions, and showed it needs supersymmetry on the world sheet (and the critical dimension shrunk to 10), Scherk showed the theory includes electrodynamics and Yang-Mills theory in low-energy limits, and Yoneya had shown that string theory includes gravity (work which was reproduced and extended in groundbreaking reinterpretation of Schwarz and Scherk). String theory was also predicting soft scattering at large angles, which was conflicting with the experimental data from Bjorken scattering, showing partons, little points. The more it was fiddled with, the less it looked like experimental data, and because it was a self-consistent S-matrix, you couldn't add stuff to fix the contradiction with data, it was determining itself by self-consistency.</p>
+
+	<p>Then in 1974, when the Charm quark was discovered, the whole field realized that the correct theory of the strong interactions was SU(3) gauge theory, with Nambu's color idea, and Gell-Mann and Zweig's quarks being the point particles. Field theory won, and S-matrix theory, including string theory, was thrown out as wrong garbage, and a lot of people lost reputation and jobs.</p>
+
+	<p>The result was a complete counter-revolution in physics. S-matrix theory was mathematically and physically demanding, the stuff was incredibly difficult to understand, in comparison, field theory is kind of trivial (no offense to field theorists). It was easy for field theorists to think that the S-matrix people were engaged in horseshit, publishing garbage that didn't make any sense, and making up stuff by groupthink and consensus thinking, without any mathematically consistent thing underneath. This was especially true when field theory was shown to be correct for the strong interactions, all the motivation dropped out of the S-matrix program. I personally read a lot of the 1960s literature in the late 1980s and early 1990s, and I couldn't understand how all these people could be chasing after such obvious bunk.</p>
+
+	<p>It is very hard to build intuition for string theory, because it is a scattering theory, so it doesn't tell a story in space-time (although this is improved with Mandelstam's 1974 light-cone formulation and Kaku and Kikkawa's string field theory, it is only true that you get a picture in a light-cone coordinates, and the picture is not really local in space-time when you consider the coordinate perpendicular to the light-front).</p>
+
+	<p>The counterrevolution was a terrible thing, although a lot of good physics was done. It was essentially a conservative thing, like the politically conservative reagan movement, or the dismissal of progressive rock in favor of simple commercial rock, or the rejection of Marxism in favor of older ideas. These things were necessary, there was a lot of bunk in communism, progressive rock, and S-matrix theory, and this bunk needed to be purged, but the manner in which these things were purged threw out legitimate stuff along with the overreaching nonsense, and caused a lot of good people a lot of pain.</p>
+
+	<p>Anyway, not everyone gave up on string theory. Scherk and Schwarz understood that this was really a fully consistent S-matrix including gravity, and it is probably uniquely determined, so it would be a theory of everything. The 1976 work of Gliozzi, Scherk, and Olive showed that string theory was supersymmetric in space-time, and the construction of supergravity explained what string theory was predicting to alter General Relativity. These supersymmetry things were very fruitful to study, even within field theory, but string theory remained out.</p>
+
+	<p>In the 1980s, there was a new young superstar, Edward Witten, who was a mathematics powerhouse with stunning physical intuition. He was following string theory, as were all the young people, and he was never sure if it was bunk or not. But he was very good with General Relativity, and he discovered a bunch of annoying things for traditional approaches to quantum gravity:</p>
+
+	<ul>
+		<li><p>Kaluza Klein theory is unstable: this was a disaster, the space-time falls apart semi classically, due to a weird instanton you would never guess in a million years, and you would never see this instability in perturbation theory. You need to stabilize the vacuum.</p></li><p></p>
+		
+		<li><p>Gravitational anomalies: you can't introduce chiral matter in gravity theories arbitrarily, there are insanely stringent consistency conditions on chiral stuff, and nearly all field theories of gravity are inconsistent.</p></p></li><p></p>
+	</ul>
+
+	<p>Further, it was clear that the path-integral for gravity was no good, the sum was over topologies, and included parts that diverge in ways that can't be fixed by going to imaginary time.</p>
+
+	<p>Also, Hawking had made progress in quantum gravity, the first real progress, by showing that black holes were thermal. This meant that you needed to formulate the theory somewhat differently. There couldn't be any global conservation laws (you can't have Baryon number conservations, because you can make a black hole out of neutrons, and have it decay to gravitons and photons). The theory had to have an infrared ultraviolet link, because high energies produce big black holes, not small localized collisions.</p>
+
+	<p>Now string theory was shown to solve all these problems. It was soft at high energies, and it was shown to have ultraviolet-infrared duality, and also T-duality by Schwarz and collaborators like Green. String theory makes every global symmetry a gauge symmetry, something which was known since the early days, from Scherk's work. So it was consistent with post-Hawking expectations, in a way no field theory could be.</p>
+
+	<p>Further the supersymmetry in string theory showed that there is no process which would destroy a supersymmetric Kaluza Klein vacuum, so Witten's instability was also fixed.</p>
+
+	<p>Then in 1984 Michael Green and John Schwarz showed that the gravity theories which come out of string theories, in those cases where they have chiral fermions, are magically just the ones that cancel all the anomalies. This was the last straw for Witten--- there is absolutely no reason that an inconsistent theory would produce anomaly-free low energy limits, especially that the cancellation was magic, relying on a conspiracy of certain bosonic fields and chiral fermions together. This kind of thing absolutely demanded that string theory makes sense mathematically.</p>
+
+	<p>Further, the anomaly cancellation mechanism suggested there should be an E8xE8 string theory, which was duly found in 1985 by Rohm, Gross, Martinek, Harvey. The heterotic string was sort of "het" (different) and "erotic" (sexy) because it could immediately produce realistic physics with gravity.</p>
+
+	<p>The main problem in string theory is because it was constructed as a self-consistent theory, you couldn't be sure if it was the right theory, because there was no data to support it specifically, and there was no physical principle to derive the theory.</p>
+
+	<p>In the 1990s, Susskind, following 'tHooft's prescient analysis of Hawking's information loss argument, formulated the string-theoretic holographic principle. The principle Susskind gave explained why string theory had to look the way it looks, and explained what the strings are: they are little extremally charged black holes. The black hole oscillations have to describe all the matter that can fall in, and further, any one black hole can oscillate to reproduce any other, because anything can fall into a black hole.</p>
+
+	<p>So in the 1990s, string theory was explained in a deep sense, through the holographic principle: it's the theory of black holes with just enough charge to be extremal. Then their shaking tells you how to reproduce the behavior of stuff near the black hole, and any one black hole can be made a constituent for any other, in the sense that the other black hole (if it is localized, like by closing the sheet into a compact shape) can fall into a big black hole of any other type.</p>
+
+	<p>This led to the golden age in the mid 1990s, when string theory was extended to the AdS/CFT correspondence. The results of this era showed that string theory was definitely unique, definitely consistent, and almost certainly the only possibility consistent with the holographic idea, because it is a-priori impossible to construct a holographic theory, except that string theory does it.</p>
+
+	<p>This evidence is persuasive. Further, string theory now has regimes where it can be calculated to arbitrary accuracy on a computer, in principle, so we know it is well defined, at least on certain backgrounds. This means that we have actually solved the problem of quantum gravity in principle, although we have not solved the problem of the quantum gravity in our universe.</p>
+
+	<p>The main barriers to string theory are that you can't predict anything at low energies yet, because we don't know our vacuum. This problem will be solved at some point when an exhaustive search of vacua is complete (this is not an insurmountable problem--- it's about the same as the classification of finite simple groups in complexity). The more fundamental problem is that the theory doesn't describe finite-area cosmological horizons, like the one surrounding us, and so there is still a domain which needs to be understood theoretically.</p>
+
+	<p>I am optimistic that the theory will make predictions about black hole emissions in our universe, relatively independently of the high-energy details. The reason is that there are still mysteries in big black hole emissions, in the charged and rotating case, which we definitely know how to calculate in principle in string theory, but we haven't figured out what the general prediction is. String theory is the only way to be sure we understand black hole physics.</p>
+
+	<p>This is not a review, and I have told a mostly personal story. Apologies to anyone I neglected, these were just what I thought of at this moment. Wikipedia has a reasonable history in the page on "String Theory" (which I wrote after thinking a little, and a few things were fixed up later).</p>
+
+	<hr>
+
+	<ul>
+		<div class="reply3">
+			<p>I wish to up vote this answer more than once! You boldly expressed the secrete suppressed stories. No complain whatsoever!</p>
+		</div>
+		<ul>
+			<p>This story is never told anywhere, it needs to be told somewhere. The traumatic life death and rebirth of S-matrix theory is physics Jesus and the reason physicists never tell it, is because most were playing the role of Pontius Pilate.</p>
+		</ul>
+	</ul>
+
+	<br>
+	<ul>
+		<div class="reply3">
+			<p>I am truly overwhelmed at the fact you took your time to actually give me a thorough answer. I can not wait to look up and read all the history of field work spent on this particular subject since S-matrix theories. Thank You!!!<br>
+			Paul</p>
+		</div>
+		<ul>
+			<p>This answer is not a big deal--- I didn't do any mathematical development, which is the only thing that takes time, so it took about as long to write as to type. The reason I wrote this is not for you specifically, it's because of the horrible history--- the S-matrix people were doing the most subtle and beautiful work that has ever been done in physics (it puts everything earlier to shame in scope and beauty, put together it is 10 times as subtle and difficult as General Relativity, maybe about twice as subtle as Quantum Mechanics), they were groping towards this masterpiece we now have, and their ranks are littered with uncomprehending peers, tenure-denial, rejected papers, job loss, depression, neglect, and suicide. These are the most awful things an academic field can endure. This was their reward for discovering the greatest theory we will ever see.</p>
+
+			<p>Even when their work was accepted, they were still marginalized, because the new generation didn't want to give them credit for the theory properly. I heard people talking about John Schwarz as if he doesn't understand path integrals. Stanley Mandelstam's work is hardly ever cited or extended, Mandelstam for decades would say "This is the year of the great S-matrix revival", a revival that never really came (and should have decades ago). In the mid 1990s, CERN verified the Pomeron to great accuracy, showing that p-p and p-pbar collisions had the same cross sections, as predicted. But no attention to this, nothing. it was a conspiracy of silence, as if these people never existed. I never once in my formal physics education heard these people or their work mentioned (except occasionally by old collider folks in conversation), and this includes classes on string theory! You could go through a whole class on string theory without ever hearing the word "Regge trajectory" mentioned. This is like learning General Relativity and never hearing the word "connection coefficient". Imagine if General Relativity were taught without mentioning Einstein, and with all the credit accruing to Hilbert, and Einstein dismissed as a bumbling guy ranting about "equivalence principles" and "Mach's principle" nonsense. It's just as unimaginably awful.</p>
+
+			<p>It is hard to convey what it is like to understand something new and how no one takes you seriously, how crazy you sound. Joel Scherk walked around Paris in the middle of the night, sending crackpot-style letters to Feynman, saying he understood how to do quantum gravity. He was institutionalized throughout the seventies. Schwarz and Green would have little in-jokes about them at Caltech that they were "Murray's pet project" of keeping crackpots with overarching theories around. Knizhnik in the Soviet Union dies in 1986 at 26 under mysterious circumstances, perhaps a suicide, you can't find out what happened. Other folks disappear from the literature entirely in the 1970s, never to be heard from again. Dyson called them "The Lost Generation".</p>
+
+			<p>I found Gribov's "The Theory of Complex Angular Momentum" indespensible, although I found it late. There is a nice series of review articles in 1974 by Schwarz, Mandelstam, Veneziano, Scherk, which are reprinted somewhere under the title "dual models". The project continues in the 1980s, but there the S-matrix foundations are taken for granted, and people are really doing supergravity with strings as an afterthought. True string theory, S-matrix stuff, is never completely revived, although in the 1990s, it is extended greatly, and perhaps we don't need the earlier insights as much today (but I doubt this is true, as one gets new ideas from reading the old stuff). Polchinsky's book is good, once you understand the motivations, and it introduces streamlined modern techniques, and modern results.</p>
+
+			<p>To call the original literature impenetrable is an understatement, it is the most difficult literature in physics. Even if you are completely fluent in field theory, it still looks like bunk. Even if you work through Polchinsky, you will have a hard time recognizing the modern concepts in the old papers. You need to persist, to understand Regge theory intuitively, and really understand the S-matrix intuitions.</p>
+
+			<p>Ed Witten understands all these things, and he was always respectful of the older guys, this might not be his fault, he entered physics right after the great purge happened, and he was the only field theorist who had his hands clean, so he was perfect for rehabilitating strings. Others were simply waiting for the right time, like Gross, or Susskind. But there is still uncomprehending annoying belittling of the older S-matrix folks. For instance, in Green Schwarz Witten, you read that the "Dolen Horn Schmidt" results on what became known as world-sheet duality were a "guess" motivate by scant evidence, when, if you read the actual paper, it is actually a very good completely neglected theory of sum-rules for scattering in the strong interactions that is overwhelmingly supported by a mountain of evidence, and supports the idea that the s-channel and t-channel exchange are truly dual with strong evidence.</p>
+
+			<p>In this regard, I should say that 'tHooft's "Large N" paper showed how to reproduce string theory from gauge theory to a certain extent, so a lot of field theorists who wanted to study strings studied "large N". In the 1990s, with AdS/CFT, it became clear that large N is related to gravitational strings, so it really is correct, but it isn't a field-theory explaining strings, rather it's an alternate field theoretical holographic construction that gives rise to the same strings as in the fundamental gravity theory.</p>
+
+			<p>Anyway, I could talk about this forever, it is something that I am very ashamed about, because it took me a long time to recognize the importance of the 1960s work on S-matrix, because I was brought up with the entire body of work described as nonsense in every modern source, and it was embarassingly hard for me to reject this political crap, understand what these folks were saying, and give these people their due.</p>
+		</ul>
+	</ul>
+	
+
+
+	
+
+
+
+
+
+
+	       
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

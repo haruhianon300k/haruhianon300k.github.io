@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>What is S-matrix theory and what was its role in the development of modern physics?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+  		a:link {
+  		  	text-decoration:none;
+  		}
+  		.reply3 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  			/*padding: 4px;
+  			padding-left: 15px;*/
+  			/*color: #789922;*/
+  			color:#e00707;
+  		}
+  		p, ul, ol, li, h4 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  		}
+  	</style>
+</head>
+
+<!--
+https://www.quora.com/What-is-S-matrix-theory-and-what-was-its-role-in-the-development-of-modern-physics/answer/Ron-Maimon
+-->
+
+<body>
+
+	<h4>What is S-matrix theory and what was its role in the development of modern physics?</h4>
+
+	<p>S-matrix theory is the program of describing physics using only asymptotic states and transitions between these, the asymptotic states in flat space-time are particles coming in to a collision, and going out afterwards. It is today subsumed into the holographic principle--- it is holographic physics in flat space-time. But it predates holography by 40 years, and it is the central principle that gives rise to string theory.</p>
+
+	<p>There is an important physical detail to understand regarding this: particles in infinite plane waves are noninteracting (except in 1+1d) they are free field theory states, because the particles have negligible probability of finding each other in an infinite space. The S-matrix is defined to be the residual non-identity transformation between the past-asymptotic states and the future asymptotic states, it is mostly a delta function doing nothing.</p>
+
+	<p>There is also with a less singular delta function which contains the scattering information, which appears as deflections and phases when you superpose the asymptotic states into wave packets that collide. In math: S = I + iA, where I is delta functions for each incoming momentum, while A is the relativistically invariant amplitude when used between relativistically normalized asymptotic states. A has only an overall energy-momentum conserving delta function, so it is less singular than the I.</p>
+
+	<p>In S-matrix theory, you are supposed to extract every other observable from this asymptotic thing, the invariant amplitude A, at least in principle. So you aren't allowed to speak about any state at intermediate times, except inasmuch as you know how to build it up from superpositions of asymptotic free particles.</p>
+
+	<p>This was extremely counterintuitive, because the notion of things happening in space and time doesn't appear, only the asymptotic states are fully consistent to talk about. So the whole history of the world starts to look like an interlude between free cold particles that form the Earth, and free cold particles which fly out when it reaches heat death! It sounds completely crazy. Consider that you haveno idea how to build up anything like a dewer of He3 from asymptotic cold states.</p>
+
+	<p>The reason people took this seriously is because the S-matrix was made to get around the issues of short distances in quantum field theory, which introduces arbitrarily high-energy intermediates to describe any scattering process, and also to get around ambiguities of field definition. In Feynman diagrams, you integrate over arbitrarily localized collisions, and you need to deal with arbitrarily short distances. The idea in S-matrix theory is to integrate instead over arbitrary asymptotic states in intermediate expressions, so that you don't have to deal with arbitrarily localized objects. The S-matrix is also real observable quantities defined using real asymptotic particle states, so it doesn't depend on which fields you choose to declare fundamental and do a path integral over.</p>
+
+	<p>The idea was to provide quantum fields with an invariant formulation using observable processes, much like what Heisenberg gave quantum mechanics with the energy representation. It's another application of positivism, this time to relativistic physics, and in this form, the idea is also due to Heisenberg, although the mathematical S-matrix formalism is Wheeler's.</p>
+
+	<p>The main problem with the approach is that you usually end up easily reconstructing a sum over localized events just from extrapolations of the sum over asymptotic states to arbitrarily high momenta. For example, if you consider asymptotic electron states and photon states, they reconstruct a free photon field and free electron field. Then using the scattering of the photon and electron, you can build up an S-matrix perturbation theory, and it is just the same Feynman diagrams you get from the interacting theory of the Dirac field with the E&M field. The sum over high-energy photons and electrons just reproduces a localized field theory of photons and electrons, and the S-matrix is just the least detailed way of describing what is going on.</p>
+
+	<p>I'll call this "Feynman's chagrin": S-matrix theory, without extra physics, has a way of turning right back into field theory. It's what Feynman realized when he formulated S-matrix style diagrams, thought he had a radical new theory, and compared notes with Schwinger and realized he didn't. The perturbative contribution to scattering from a sum over intermediate asymptotic electron states of arbitrarilu high momentum turns into a particle propagator for an idealized electron between space-time points, but these point particle path sums are exactly the field correlators in an interacting field theory, expanded in powers of the interaction!</p>
+
+	<p>The same thing happens for S-matrix theories of Pion scattering, they turn into effective field theories, as laboriously shown by Weinberg in the 1960s. In general, when there are a finite number of asymptotic free particle states that you sum over, you reproduce a field theory by defining effective fields for these, and adding interactions locally is the way to satisfy causality conditions on the S-matrix.</p>
+
+	<p>This path for S-matrix theory sort of died in the early 1970s, because it was equivalent to effective field theory. In this context, the S-matrix physics is just a subset of field theory physics, and you can very nearly prove that the only S-matrix is some field theory, Weinberg gives an elegant exposition of this near-proof in his books, the main implicit assumption is that the asymptotic states are exhausted by a finite number of free particle states.</p>
+
+	<p>But there is another path for S-matrix theory---- when there are infinitely many families of particles in the asymptotic states. This is the case in idealizations of strong interaction physics, where you assume the pions and hadrons are stable in first approximation. This is the "Narrow Resonance approximation", it is described pedagogically in Feynman's classic monograph "Photon Hadron Interactions".</p>
+
+	<p>In the narrow resonance approximation, the strongly interacting particles lie on Regge trajectories, families of particles of arbitrarily high spin and mass, with a law relating the mass-squared to the spin. These families are the natural representation of bound states in scattering problems, and Geoffrey Chew postulated that Hadronic resonances (particles) lie on straight-line Regge trajectories, with mass-squared proportional to spin, and a universal slope. This was conjectured from the famous Chew-Frautschi plot.</p>
+
+	<p>Then S-matrix theory is the statement that all hadrons are composite (true), that they have no field theory constituents (false), and that they can be used to make a theory of pure Regge trajectories on asymptotic states, so that only composite particles appear in the formulation of the theory (revolutionary, inspiring, but perhaps only partly true for the strong interactions).</p>
+
+	<p>Constructing S-matrix theories for Regge trajectories is what took up the attention of about half of the theorists in the 1960s. There were several solid insights about scattering near the beam line from this:</p>
+
+	<ul><p><b>1.</b>&ensp;Exchange of Regge trajectories produces soft scattering which piles up near the beam line in a superposition of power-laws, one for each trajectory.</p>
+
+		<ul><p>This was experimentally confirmed, it still is, and it dominated theoretical thinking until 1969. In 1969, Bjorken and others studying deep-inelastic scattering noted that there are hard collisions at large angles, something which doesn't come from naive Regge theory, but requires points inside, a confining field theory.</p>
+		</ul>
+	</ul>
+
+	<ul><p><b>2.</b>&ensp;There is a Pomeron trajectory which is responsible for the slowly rising cross section</p>
+
+		<ul><p>The Pomeron was proposed in the early 1960s by Gribov, perhaps Chew and Frautschi later. The Pomeron is the trajectory which has vacuum quantum numbers and zero falloff rate. It's somehow related to the vacuum structure of a confining theory, and also the closed string. The precise relationship is still mysterious.</p>
+			<p>The pomeron predicted that p-p and p-pbar cross sections would stop falling, start rising, and eventually become equal. This wasn't true in 1960, but it is spectacularly confirmed in the mid 1990s.</p>
+		</ul>
+	</ul>
+
+	<ul><p><b>3.</b>&ensp;There are Regge cuts, conspiracies, and a heck of a lot of nonsense required to make a sensible phenomenological theory.</p>
+		<ul><p>The details are in Gribov's classic "The Theory of Complex Angular Momentum". The Reggeon formalism culminated in Reggeon Field Theory, a sophisticated formalism to produce a consistent near-beam calculation method for multiple Regge exchange. It's not field theory as such, and Gribov's wild intuition connected it somehow with wee partons, I don't know the relation, and it isn't studied anymore.</p>
+		</ul>
+	</ul>
+
+	<p>But the main coup of the S-matrix theory was the discovery of a fully consistent leading order scattering amplitude for straight line Regge trajectories, the Veneziano amplitude. Since this amplitude scattered trajectories, it did not turn into field theory, it wouldn't Weinbergify into a field theory, no Feynman chagrin.</p>
+
+	<p>Instead there was Scherky triumph, because Scherk showed that exchange of the objects in Veneziano's model reproduced field theory only when you got rid of the higher excitations by making them infinitely massive. This means that this was a genuine generalization of quantum field theory, it was the radical new theory that Feynman thought he had in the early 1950s, the radical theory that Chew wanted in 1960.</p>
+
+	<p>This thoery is string theory, and the gravitational re-interpretation of string theory explains why it was natural to discover it this way. In gravity hugh energy objects are big floppy black holes, with internal motion, so that the asymptotic states of quantum gravity do not have a finite number of particles, but whole classes of highly boosted spinning black holes, which don't decay because they're going so fast. These family sums over asymptotic states can never produce a field theory, because any ultraviolet divergence is due to enormously extended black holes, or "infrared" strings.</p>
+
+	<p>The history of strings from this point onwards is well known, but the roots of this in S-matrix theory is unfairly buried. Part of the reason is pure politics. S-matrix stuff was big in the Soviet Union. Another understandable reason is that QCD is correct.</p>
+
+	<p>I wrote a little more on stackexchange: <a href="http://physics.stackexchange.com/questions/17966/what-are-bootstraps">What are bootstraps?</a></p>
+
+	<hr>
+
+	<ul>
+		<div class="reply3">
+			<p>This is really interesting. I've been trying to parse Polyakov's conformal bootstrap paper and so far it has seemed like pure magic to me. Your answer helped me understand a little better where he was coming from.</p>
+		</div>
+		<ul>
+			<p>The conformal bootstrap (if I am remembering the paper) is a different set of ideas, starting with Kadanoff's ideas. The idea there is to make consistency relations for critical exponents using associativity of the OPE. The connection to the S-matrix theory is remote, although if you see a connection (or if I misremembered the paper) tell me.</p>
+			<ul>
+				<div class="reply3"><p>I agree that the usual approach to conformal bootstrap is pretty far removed from S-matrix theory. In particular there are some neat modern results due to Rychkov et. al and Dolan and Osborn that just use crossing symmetry, conformal invariance, and a positive-definite Hilbert space.</p>
+					<p>But it seems to me like Polyakov did take some inspiration from S-matrix theory. He has an additional input in addition to the above, which is that there is some analog of the optical theorem in CFT's. He claims to derive this by considering the unitarity of the S-matrix in a massive theory and then taking the mass to zero. Then he gives an ansatz for the four-point function which is crossing symmetric and has the correct discontinuities and analyticity properties.</p>
+					<p>I'm slightly skeptical about the analysis because there's no S-matrix for CFTs, but he does get the Wilson-Fisher results to one-loop, which is pretty convincing.</p>
+				</div>
+				<ul>
+					<p>For sure Polyakov knew S-matrix ideas, but I didn't know this work. Can you link the paper, or provide title/date? Sounds interesting--- I think I read only later articles, I don't remember optical theorem.</p>
+					<ul>
+						<div class="reply3">
+							<p>Sure, it's called "Non-hamiltonian approach to conformal field theory", <a href="http://www.jetp.ac.ru/cgi-bin/dn/e_039_01_0010.pdf">Page on Jetp</a>. The unitarity stuff is in Section 3. I might have abused terminology by calling it the optical theorem, I just meant the theorem that relates the discontinuity of the scattering amplitude to the factorization into intermediate states.</p>
+						</div>
+						<ul>
+							<p>This is the first time I see this paper, (JETP is free? Unbelievable!). I only saw much later stuff, where he claims that OPE associativity determines the critical exponents. I see now where his ideas are coming from.</p>
+
+							<p>The section 3, the one you are puzzling over, is supposed to be showing that a self-consistent OPE in a conformal field theory implies unitarity, but not the other way around (in other words, that unitarity as a condition on CFTs is strictly weaker than OPE associativity). By "bootstrap", Polyakov means here, as he does later, the associativity of the OPE as a dynamical condition, rather than using a detailed Hamiltonian. This is only tenuously related to string bootstrap, where there is no space-time OPE (only a world-sheet OPE), but this is his point of view regarding the bootstrap, it's the same terminology he uses in his later papers.</p>
+
+							<p>It's not a good use of the term "bootstrap", because the conformal field theory still has local fields inside, so it's not what Chew has in mind in a pure Regge theory, like string theory. But it's extremely interesting, of course.</p>
+
+							<p>I haven't looked over the argument in detail yet, just getting the big picture. I am sure you can streamline it a lot, reading Polyakov is like navigating a maze of operator analytic relations, sometimes you can jump to the conclusion by a hokier argument avoiding the intermediate steps. I'll try to figure it out completely, not there yet. The derivation of the Wilson-Fisher result from these considerations looks amazing, I have to see how that works in more detail.</p>
+
+							<p>Thanks for showing me this paper. Now that I know JETP is scanned and available, I can read all the old Soviet stuff! Incredible, great day.</p>
+
+							<ul>
+								<div class="reply3">
+									<p>No problem. I agree with most of what you said, but there is one nitpicky point - he needs both unitarity of the S-matrix in the finite mass theory, as well as consistency of the OPE, to prove unitarity in the CFT. This is said right before (3.6), and it's where one might be concerned that the argument breaks down due to IR divergences associated with the massless limit. At any rate, these are just technicalities.</p>
+									<p>If you end up reading the paper and have any insights on how to streamline the argument, let me know. He does some pretty gnarly integrals, must be Russian or something...</p>
+								</div>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+
+	
+
+
+	
+
+
+
+
+
+
+	       
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
