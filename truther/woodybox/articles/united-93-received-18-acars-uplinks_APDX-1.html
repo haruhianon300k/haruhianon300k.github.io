@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width">
+	<title>United 93 received 18 ACARS uplinks after alleged Shanksville crash: CONFIRMED</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="load-mathjax.js" defer></script>
+	<style type="text/css">
+		a:link {
+			text-decoration:none;
+		}
+
+		h6 {
+			width: 100%; 
+			text-align: center; 
+			border-bottom: 1px solid #dddddd; 
+			line-height: 0.1em;
+			margin: 10px 0 20px;
+		}
+		h6 span { 
+			background:#fff; 
+			padding:0 10px; 
+		}
+
+		.MyQuote {
+			/* font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+			background-color: rgb(255,255,204);
+			*/
+			background-color: #FDFDFD;
+			padding: 4px;
+			border: 1px  solid #dddddd; 
+		}
+	</style>
+</head>
+
+<!-- 
+http://911woodybox.blogspot.com/2012/10/united-93-received-18-acars-uplinks.html
+-->
+
+<body>
+
+	<!--<center><p>Mineta</p><pre>2007</pre></center><hr size="1p" width="10%" color="#dddddd">-->
+	<!--
+	<h4 style="font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;">Appendix: CSMA and the hidden transmitter problem&nbsp;</h4><p></p>
+	-->
+	
+	<!-- <br><br><p></p> --> <!--  <br><br><p></p>  -->
+
+	<div style="font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;">
+		<h3>
+			<b>Appendix: CSMA and the hidden transmitter problem&nbsp;</b>
+		</h3>
+		<br>
+		Warren Stutt's assertion that United 93 did not receive the last 18 uplinks is not tenable. But what happened to them - why have they not been acknowledged? I've already stressed that an answer to this question is not requisite for the main thesis. Nevertheless I will now propose a simple solution without claiming to have found final proof.<br />
+		<br />
+		CSMA (Carrier Sense Multiple Access) is a technique used in communication technologies dealing with the situation that one single data carrier (or data bus/data channel) is shared by several users to exchange messages, but is only able to convey one message at one time because two simultaneous messages disrupt each other. Therefore a user must check ("sense") if the channel is clear, i.e. no transmission is occurring, before dispatching a message. If it's not clear, the user has to wait a couple of milliseconds before checking the channel again. This procedure is repeated until the user finally senses a free channel and thus gets the okay to send the message.<br />
+		<br />
+		This is the basic CSMA algorithm. There are more sophisticated versions like CSMA with Collison Avoidance and CSMA with Collision Detection but "Plain Old ACARS", which was in effect on 9/11, uses basic CSMA. The carrier is a "very high frequency" (VHF), and the users are, of course, ground stations and planes. If a ground station senses that the channel is occupied, it waits for a randomly chosen time (between 30 and 300 milliseconds according to ARINC 618) before trying again.<br />
+		<br />
+		Basic CSMA suffers from a fundamental hitch with a sizeable impact on ACARS, making it even slower than it is already. It's called the <i>hidden transmitter</i> (or hidden node/hidden station/hidden terminal) problem.<br />
+		
+
+		<br><br>
+		Diagram 1 illustrates this situation: two ground stations A and B are separated by a mountain. If A wants to send a message and checks the frequency while B has already started a transmission, A will not sense B's transmission: B is a hidden transmitter. The system will conclude that the channel is free and A transmits the message. This will result in a collision of the two transmissions and corrupt at least one, if not both of them, depending on the relative strength of the signals. The addressed plane will not send an acknowledgment to A because it did not receive the complete message. After 10 seconds, A will try to resend the uplink, check the frequency, and so on.
+
+
+		<br><br>
+		<div class="separator" style="clear: both; text-align: center;"></div>
+		<div class="separator" style="clear: both; text-align: center;"></div>
+		<div class="separator" style="clear: both; text-align: center;"></div>
+		<table align="left" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: left;">
+			<tbody>
+				<tr><!--http://1.bp.blogspot.com/-_yIf8JTdGlE/UIF5rzzuI_I/AAAAAAAAADU/kPdDmb44fSI/s400/ACARS7.png-->
+					<td style="text-align: left; font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;"><img border="0" height="320" src="IMG/ACARS7.png" style="margin-left: auto; margin-right: auto;" width="450" /></td>
+				</tr>
+				<tr>
+					<td class="tr-caption" style="text-align: center;"><i><b>Diagram 1</b></i></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="separator" style="clear: both; text-align: center;"></div>
+
+		<br><br>
+		Hidden transmitters generate corrupted messages, and corrupted messages are not acknowledged. So they might well have been the reason for the 18 unacknowledged ULBLKs. We have to discern two cases: the ULBLK was corrupted and the plane didn't send an acknowledging DLBLK, or the acknowledging DLBLK was corrupted. In the first case UA 93 didn't receive the ULBLK contentually, in the second case it did. But in both cases it received the ULBLK physically, making both of them toxic for the official UA 93 version.<br />
+		<br />
+		If a plane is flying high, at cruising altitude, it is certainly within line of sight of all ground stations and planes in the vicinity, so downlinks can't bump into transmissions from hidden transmitters, but uplinks are prone to them. This case is shown in Diagram 1.<br />
+		<br />
+		A statistical analysis of the Stutt ARINC file (comprising all three planes) shows that as much as 32% of all ULBLKs based on an ULMSG had to be resent after 10 seconds because they were not acknowledged. I factored in all ULSMGs from 15 minutes after take-off until the first error messages (exclusively), so in most cases the plane was certainly flying at cruising altitude.&nbsp; Here's the result:<br />
+		<br />
+		Overall number of ULMSG: <b>29</b><br />
+		ULBLK acknowledged at 1st attempt:&nbsp; <b>18</b><br />
+		ULBLK acknowledged at 2nd attempt:&nbsp; <b>9</b><br />
+		ULBLK acknowledged at 3rd attempt: <b>1</b><br />
+		ULBLK acknowledged at 4th attempt: <b>1</b><br />
+		Overall number of ULBLK: <b>43</b><br />
+		Overall number of unacknowledged ULBLK: <b>14</b>
+
+		<br><br>
+		This shows that hidden ground stations jamming uplinks is a common, inherent flaw of Plain Old ACARS.
+
+		<br><br>
+		<table align="left" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: left;">
+			<tbody>
+				<tr><!--http://3.bp.blogspot.com/-KMTRA8PlQEk/UIFsb1iIMVI/AAAAAAAAACE/-d0rvLTfUNQ/s1600/ACARS6.png-->
+					<td style="text-align: left; font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif;"><a href="IMG/ACARS6.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><!--http://3.bp.blogspot.com/-KMTRA8PlQEk/UIFsb1iIMVI/AAAAAAAAACE/-d0rvLTfUNQ/s400/ACARS6.png--><img border="0" height="320" src="IMG/ACARS6.png" width="450" /></a></td>
+				</tr>
+				<tr>
+					<td class="tr-caption" style="text-align: center;"><i><b>Diagram 2</b></i></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		Diagram 2 shows that the situation changes drastically when the plane is flying low. The lower the altitude, the bigger the probability that the line-of-sight to any ground station is blocked by terrain. So this situation generates hidden transmitters for downlinks. Conversely the probability that uplinks suffer from hidden transmitters decreases. This is because at low altitude, the line-of-sight between the plane and a potential hidden transmitter for the sending ground station may be blocked. The hidden transmitter turns into a "no transmitter" and is no gadfly for the station anymore. In the extreme case that the plane is in radio contact with only one ground station, this station has a 100% chance of success to uplink a message, while the chances of success for a downlink is very small due to the potential big number of ground stations functioning as hidden transmitters.<br />
+		<br />
+		Besides of message #18 and #19 for United 93 there are five more messages in the Stutt ARINC file ending up in an ICPUL 311 NO ACK message after a sequence of several (usually 9) unacknowledged ULBLKs: one for American 77, and four for American 11. Interestingly, the first two ICPUL 311 (after 9 resp.10 repeated ULBLKs)  for American 11 occurred when the plane was idling at the gate, between 7:30 and 7:35. Here's an outprint of the second one. - note the similarity to the ICPUL 311 at the beginning, which belongs to message #18 for United 93.<br />
+		<br /><br>
+		<div class="separator" style="clear: both; text-align: left;">
+			<!--http://2.bp.blogspot.com/-qBFgC4xNtGc/UIgMS7gk9nI/AAAAAAAAAH0/lNs2AMxcQQo/s1600/icpul311-10versuche.png-->
+			<a href="IMG/icpul311-10versuche.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="373" src="IMG/icpul311-10versuche.png" width="600" /></a>
+		</div>
+		<br /><br>
+		Apart from Boston, it was certainly out of line-of sight of any other (potentially jamming) ground station. So an ULBLK sent from Boston to the plane had probably a 100% chance&nbsp; to come through. This makes corrupted DLBLKs the best explanation for the missing acknowledgments. In all probability
+		another plane idling at a distant corner of the airport and blocked by several buildings jammed American 11's DLBLKs. Does this case help explain what happened to messages #18 and #19 for United 93?<br />
+		<br />
+		Another odd quote from David Knerr gives a valuable hint: "<i>In the final moments, at 10:12 AM EST, of UA Flight 93's flight, ACARS messages were being sent from ground communications but were not being received. This was causing the ACARS messages to be rejected. Knerr advised that Flight 93's low altitude may have caused this dilemma or the fact that Flight 93 had already crashed at the time messages were sent.</i>"<br />
+		<br />
+		The crash at 10:03 was viewed as a fact. There's absolutely no need to mention the alternative possibility that United 93 was flying low - why is it mentioned then? Again we have to read between the lines. The fact that the "low altitude" remark made it into the final FBI report makes only sense if Knerr, the ACARS expert, professed himself unable to explain messages #18 and #19 by a crash and proposed a better solution: the plane's low altitude. Which fits perfectly the model of Diagram 2. <br />
+		<br />
+		Knerr's statement together with the similar appearance of the grounded Flight 11 suggests that the 18 ULBLKs were correctly received by United 93, but the acknowledging DLBLKs were corrupted by hidden transmitters as a consequence of the low altitude.<br />
+		<br />
+		The following diagram is based on ARINC 618 and the Stutt ARINC file and is, with one exception, able to explain the flow of all uplink messages including the rejections. The exception is the ULMSG for Flight 11 which ended up int the above outprinted ICUL 311 at 7:35 - this ICPUL 311 was not generated after 9 ULBLKs, but 10, presumably due to a glitch of the VGC counter.
+
+		<br><br><br><br>
+		<div class="separator" style="clear: both; text-align: left;">
+			&nbsp;<!--http://2.bp.blogspot.com/-OcPPNFWThzE/UIF9lPWGsVI/AAAAAAAAADk/daqi1c19gS0/s1600/ACARSFlussdiagramm.png--><a href="IMG/ACARSFlussdiagramm.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><!--http://2.bp.blogspot.com/-OcPPNFWThzE/UIF9lPWGsVI/AAAAAAAAADk/daqi1c19gS0/s400/ACARSFlussdiagramm.png--><img border="0" height="540" src="IMG/ACARSFlussdiagramm.png" width="800" /></a>
+		</div>
+		
+
+		<br><br>
+		A few explanations: <br />
+		<br />
+		When the dispatcher releases the ULMSG, it is first checked if the last downlink from the plane happened more than 10 minutes ago. In this case the DSP doesn't know which ground station it has to use for the uplink and generates a ICPUL 231. This doesn't mean that the plane is out of radio range, but it's impossible for the DSP to establish contact because "time has run out".<br />
+		<br />
+		If the message has taken this hurdle, the CSMA check is performed. In the diagram the check is omitted and it's presumed that the channel is clear. <br />
+		<br />
+		VGC1 is a transmission counter. It is incremented by 1 each time the ULBLK is sent or resent, i.e. it counts the attempts to transmit it. After 9 futile attempts, the loop is aborted and a ICPUL 311 generated.<br />
+		<br />
+		After a successful handshake, the ULBLK is sent, and VGT1, the "NO ACK timer" is started or reset. <br />
+		<br />
+		"ULBLK received" must be understood as received <i>physically</i>. <br />
+		<br />
+		If the ULBLK is not jammed by a hidden transmitter, the plane's MU initiates an ACK-DLBLK. If this DLBLK is not jammed either, the message routine has been succesfully conducted.<br />
+		<br />
+		If the DSP doesn't receive an ACK within 10 seconds, measured by the VGT1 timer, a new uplink attempt is initiated. <br />
+		<br />
+		After the sixth attempt, the transmitting ground station is changed, and after three more attempts, the system generates a ICPUL 311.<br />
+		<br />
+		Every new uplink attempt requires a new handshake. In case it fails because the plane has moved out of radio meanwhile, the cycle is interrupted and an ICPUL 311 is generated. This apparently happened with the ULMSG of Flight 77 sent at 10:41. It was uplinked only two times.<br />
+		<br />
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
