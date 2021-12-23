@@ -3,16 +3,37 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
-  <title>MathJax v3 loaded only if there is math</title>
+  <title>Does Gödel preclude a workable ToE?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+  	a:link {
+  		text-decoration:none;
+  	}
+  	.reply3 {
+  		font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  		/*padding: 4px;
+  		padding-left: 15px;*/
+  		/*color: #789922;*/
+  		color:#e00707;
+  	}
+  	p, ul, ol, li, h4 {
+  		font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  	}
+    </style>
 </head>
 
 <body>
 
-	<h3>Does Gödel preclude a workable ToE?</h3>
 
-	<div class="s-prose js-post-body" itemprop="text">
+<!--
+https://physics.stackexchange.com/a/14944/291449
+-->
+
+
+	<h4>Does Gödel preclude a workable ToE?</h4>
+
+
 	<p>The answer is no, because although a "Theory of Everything" means a computational method of describing any situation, it does not allow you to predict the <em>eventual outcome</em> of the evolution an infinite time into the future, but only to plod along, predicting the outcome little by little as you go on.</p>
 
 	<p>Gödel's theorem is a statement that it is impossible to predict the infinite time behavior of a computer program.</p>
@@ -22,9 +43,11 @@
 	<p>Proof: Given the program "THEOREMS" which outputs theorems (it could be doing deductions in Peano Arithmetic, for example), write the computer program SPITE to do this:</p>
 
 	<ul>
-	<li>SPITE prints its own code into a variable R</li>
-	<li>SPITE runs THEOREMS, and scans the output looking for the theorem "R does not halt"</li>
-	<li>If it finds this theorem, it halts.</li>
+		<li>SPITE prints its own code into a variable R</li><p></p>
+
+		<li>SPITE runs THEOREMS, and scans the output looking for the theorem "R does not halt"</li><p></p>
+
+		<li>If it finds this theorem, it halts.</li><p></p>
 	</ul>
 
 	<p>If you think about it, the moment THEOREMS says that "R does not halt", it is really proving that "SPITE does not halt", and then SPITE halts, making THEOREMS into a liar. So if "THEOREMS" only outputs true theorems, SPITE does not halt, and THEOREMS does not prove it. There is no way around it, and it is really trivial.</p>
@@ -32,8 +55,9 @@
 	<p>The reason it has a reputation for being complicated is due to the following properties of the logic literature:</p>
 
 	<ul>
-	<li>Logicians are studying formal systems, so they tend to be overly formal when they write. This bogs down the logic literature in needless obscurity, and holds back the development of mathematics. There is very little that can be done about this, except exhorting them to try to clarify their literature, as physicists strive to do.</li>
-	<li>Logicians made a decision in the 1950s to not allow computer science language in the description of algorithms within the field of logic. They did this purposefully, so as to separate the nascent discipline of CS from logic, and to keep the unwashed hordes of computer programmers out of the logic literature.</li>
+		<li>Logicians are studying formal systems, so they tend to be overly formal when they write. This bogs down the logic literature in needless obscurity, and holds back the development of mathematics. There is very little that can be done about this, except exhorting them to try to clarify their literature, as physicists strive to do.</li><p></p>
+
+		<li>Logicians made a decision in the 1950s to not allow computer science language in the description of algorithms within the field of logic. They did this purposefully, so as to separate the nascent discipline of CS from logic, and to keep the unwashed hordes of computer programmers out of the logic literature.</li><p></p>
 	</ul>
 
 	<p>Anyway, what I presented is the entire proof of Gödel's theorem, using a modern translation of Gödel's original 1931 method. For a quick review of other results, and for more details, see this MathOverflow answer: <a href="https://mathoverflow.net/a/72151/36526">https://mathoverflow.net/a/72151/36526</a>. </p>
@@ -42,23 +66,27 @@
 
 	<p>A ToE is like the instruction set of the universe's computer. It doesn't tell you what the output is, only what the rules are. A ToE would be useless for predicting the future, or rather, it is no more useful for prediction than Newtonian mechanics, statistics, and some occasional quantum mechanics for day-to-day world. But it is extremely important philosophically, because when you find it, you have understood the basic rules, and there are no more surprises down beneath.</p>
 
-	<h3>Incorporating Comments</h3>
 
+	<br>
+	<p><b>Incorporating Comments</b></p>
 	<p>There were comments which I will incorporate into this answer. It seems that comments are only supposed to be temporary, and some of these observations I think are useful.</p>
 
 	<p>Hilbert's program was an attempt to establish that set theoretic mathematics is consistent using only finitary means. There is an interpretation of Gödel's theorem that goes like this:</p>
 
 	<ul>
-	<li>Gödel showed that no system can prove its own consistency</li>
-	<li>Set theory proves the consistency of Peano Arithmetic</li>
-	<li>Therefore Gödel kills Hilbert's program of proving the consistency of set theory using arithmetic.</li>
+		<li>Gödel showed that no system can prove its own consistency</li><p></p>
+
+		<li>Set theory proves the consistency of Peano Arithmetic</li><p></p>
+
+		<li>Therefore Gödel kills Hilbert's program of proving the consistency of set theory using arithmetic.</li><p></p>
 	</ul>
 
 	<p>This interpretation is false, and does not reflect Hilbert's point of view, in my opinion. Hilbert left the definition of "finitary" open. I think this was because he wasn't sure exactly what should be admitted as finitary, although I think he was pretty sure of what should <em>not</em> be admitted as finitary:</p>
 
 	<ol>
-	<li>No real numbers, no analysis, no arbitrary subsets of ${\Bbb Z}$. Only axioms and statements expressible in the language of Peano Arithmetic.</li>
-	<li>No structure which you cannot realize explicitly and constructively, like an integer. So no uncountable ordinals, for example.</li>
+		<li>No real numbers, no analysis, no arbitrary subsets of ${\Bbb Z}$. Only axioms and statements expressible in the language of Peano Arithmetic.</li><p></p>
+
+		<li>No structure which you cannot realize explicitly and constructively, like an integer. So no uncountable ordinals, for example.</li><p></p>
 	</ol>
 
 	<p>Unlike his followers, he did <em>not</em> say that "finitary" means "provable in Peano Arithmetic", or "provable in primitive recursive Arithmetic", because I don't think he believed this was strong enough. Hilbert had experience with transfinite induction, and its power, and I think that he, unlike others who followed him in his program, was ready to accept that transfinite induction proves more theorems than just ordinary Peano induction.</p>
@@ -69,8 +97,9 @@
 
 	<p>Hilbert wrote a book on the foundations of mathematics after Gödel's theorem, and I wish it were translated into English, because I don't read German. I am guessing that he says in there what I am about to say here.</p>
 
-	<h3>What Finitary Means</h3>
 
+	<br>
+	<p><b>What Finitary Means</b></p>
 	<p>The definition of finitary is completely obvious today, after 1936. A finitary statement is a true statement about computable objects, things that can be represented on a computer. This is equivalent to saying that a finitary statement is a proposition about integers which can be <em>expressed</em> (not necessarily <em>proved</em>) in the language of Peano Arithmetic.</p>
 
 	<p>This includes integers, finite graphs, text strings, symbolic manipulations, basically, anything that Mathematica handles, and it includes ordinals too. You can represent the ordinals up to $\epsilon_0$, for example, using a text string encoding of their Cantor Normal form.</p>
@@ -79,28 +108,31 @@
 
 	<p>So when you are doing finitary mathematics, it means that you are talking about objects you can represent on a machine, you should be restricting yourself to ordinals less than Church-Kleene. The following argues that this is no restriction at all, since the Church-Kleene ordinal can establish the consistency of any system.</p>
 
-	<h3>Ordinal Religion</h3>
 
+	<br>
+	<p><b>Ordinal Religion</b></p>
 	<p>Gödel's theorem is best interpreted as follows: Given any (consistent, omega-consistent) axiomatic system, you can make it stronger by adding the axiom "consis(S)". There are several ways of making the system stronger, and some of them are not simply related to this extension, but consider this one.</p>
 
 	<p>Given any system and a computable ordinal, you can iterate the process of strengthening up to a the ordinal. So there is a map from ordinals to consistency strength. This implies the following:</p>
 
 	<ul>
-	<li>Natural theories are linearly ordered by consistency strength.</li>
-	<li>Natural theories are well-founded (there is no infinite descending chain of theories $A_k$ such that $A_k$ proves the consistency of $A_{k+1}$ for all k).</li>
-	<li>Natural theories approach the Church Kleene ordinal in strength, but never reach it.</li>
+		<li>Natural theories are linearly ordered by consistency strength.</li><p></p>
+
+		<li>Natural theories are well-founded (there is no infinite descending chain of theories $A_k$ such that $A_k$ proves the consistency of $A_{k+1}$ for all k).</li><p></p>
+
+		<li>Natural theories approach the Church Kleene ordinal in strength, but never reach it.</li><p></p>
 	</ul>
 
 	<p>It is natural to assume the following:</p>
 
 	<ul>
-	<li>Given a sequence of ordinals which approaches the Church-Kleene ordinal, the theories corresponding to this ordinal will prove every theorem of Arithmetic, including the consistency of arbitrarily strong consistent theories.</li>
+		<li>Given a sequence of ordinals which approaches the Church-Kleene ordinal, the theories corresponding to this ordinal will prove every theorem of Arithmetic, including the consistency of arbitrarily strong consistent theories.</li><p></p>
 	</ul>
 
 	<p>Further, the consistency proofs are often carried out in constructive logic just as well, so really:</p>
 
 	<ul>
-	<li>Every theorem that can be proven, in the limit of Church-Kleene ordinal, gets a constructive proof.</li>
+		<li>Every theorem that can be proven, in the limit of Church-Kleene ordinal, gets a constructive proof.</li><p></p>
 	</ul>
 
 	<p>This is not a contradiction with Gödel's theorem, because generating an ordinal sequence which approaches $\Omega$ cannot be done algorithmically, it cannot be done on a computer. Further, any finite location is not really philosophically much closer to Church-Kleene than where you started, because there is always infinitely more structure left undescribed.</p>
@@ -109,14 +141,15 @@
 
 	<p>You can believe that this is not true, that there are statements that remain undecidable no matter how close you get to Church-Kleene, and I don't know how to convince you otherwise, other than by pointing to longstanding conjectures that could have been absolutely independent, but fell to sufficiently powerful methods. To believe that a sufficiently strong formal system resolves all questions of arithmetic is an article of faith, explicitly articulated by Paul Cohen in <a href="http://www.goodreads.com/book/show/5598689" rel="noreferrer"><em>Set Theory and the Continuum Hypothesis</em></a>. I believe it, but I cannot prove it.</p>
 
-	<h3>Ordinal Analysis</h3>
 
+	<br>
+	<p><b>Ordinal Analysis</b></p>
 	<p>So given any theory, like ZF, one expects that there is a computable ordinal which can prove its consistency. How close have we come to doing this?</p>
 
 	<p>We know how to prove the consistency of Peano Arithmetic--- this can be done in PA, in PRA, or in Heyting Arithmetic (constructive Peano Arithmetic), using only the axiom</p>
 
 	<ul>
-	<li>Every countdown from $\epsilon_0$ terminates.</li>
+		<li>Every countdown from $\epsilon_0$ terminates.</li><p></p>
 	</ul>
 
 	<p>This means that the proof theoretic ordinal of Peano Arithmetic is $\epsilon_0$. That tells you that Peano arithmetic is consistent, because it is manifestly obvious that $\epsilon_0$ is an ordinal, so all its countdowns terminate.</p>
@@ -127,8 +160,9 @@
 
 	<p>Doing so would complete Hilbert's program--- it would removes any need for an ontology of infinite sets in doing mathematics. You can disbelieve in the set of all real numbers, and still accept the consistency of ZF, or of inaccessible cardinals (using a bigger ordinal), and so on up the chain of theories.</p>
 
-	<h3>Other interpretations</h3>
 
+	<br>
+	<p><b>Other interpretations</b></p>
 	<p>Not everyone agrees with the sentiments above. Some people view the undecidable propositions like those provided by Gödel's theorem as somehow having a random truth value, which is not determined by anything at all, so that they are absolutely undecidable. This makes mathematics fundamentally random at its foundation. This point of view is often advocated by Chaitin. In this point of view, undecidability is a fundamental limitation to what we can know about mathematics, and so bears a resemblence to a popular misinterpretation of Heisenberg's uncertainty principle, which considers it a limitation on what we can know about a particle's simultaneous position and momentum (as if these were hidden variables).</p>
 
 	<p>I believe that Gödel's theorem bears absolutely no resemblence to this misinterpretation of Heisenberg's uncertainty principle. The preferred interpretation of Gödel's theorem is that every sentence of Peano Arithmetic is still true or false, not random, and it should be provable in a strong enough reflection of Peano Arithmetic. Gödel's theorem is no obstacle to us knowing the answer to every question of mathematics eventually.</p>
@@ -137,8 +171,9 @@
 
 	<p>Gödel's theorem does not establish undecidability, only undecidability relative to a fixed axiomatization, and this procedure produces a new axiom which should be added to strengthen the system. This is an essential ingredient in ordinal analysis, and ordinal analysis is just Hilbert's program as it is called today. Generally, everyone gets this wrong except the handful of remaining people in the German school of ordinal analysis. But this is one of those things that can be fixed by shouting loud enough.</p>
 
-	<h3>Torkel Franzén</h3>
 
+	<br>
+	<p><b>Torkel Franzén</b></p>
 	<p>There are books about Gödel's theorem which are more nuanced, but which I think still get it not quite right. Greg P says, regarding Torkel Franzén:</p>
 
 	<blockquote>
@@ -154,7 +189,7 @@
 	</blockquote>
 
 	<p>When the ordinal is not computable, if it is bigger than the Church-Kleene ordinal, then it is infinitary. If you use the set of all reals, or the powerset of $\Bbb Z$ as a set with discrete elements, that's infinitary. Ordinals which can be represented on a computer are finitary, and this is the point of view that I believe Hilbert pushes in the <a href="http://en.wikipedia.org/wiki/Grundlagen_der_Mathematik">Grundlagen</a>, but it's not translated.</p>
-	    </div>
+
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
