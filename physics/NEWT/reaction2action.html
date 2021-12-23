@@ -6,13 +6,28 @@
   <title>Where does the reaction to action come from?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+    a:link {
+        text-decoration:none;
+    }
+    .reply3 {
+        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+        /*padding: 4px;
+        padding-left: 15px;*/
+        /*color: #789922;*/
+        color:#e00707;
+    }
+    p, ul, ol, li, h4 {
+        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+    }
+  </style>
 </head>
 
 <!-- Write your comments here -->
 
 <body>
 
-	<h3>Where does the reaction to action come from?</h3>
+	<h4>Where does the reaction to action come from?</h4>
 
 	<p>Third Newton's law, $F_{1->2} = -F_{2->1}$</p>
 
@@ -34,8 +49,9 @@
 
 	<p>This answers the question, but I think it is good to explain the modern formulation of Newton's third law too, because there the third law is replaced by general analysis of conservation laws, but a recognizable version of Newton's third law appears in a simple form in the end. I sort of went overboard here, in terms of length, but I hope you will be indulgent.</p>
 
-	<h4>Currents for Momentum</h4>
 
+	<br>
+	<p><b>Currents for Momentum</b></p>
 	<p>Charge conservation is usually expressed by giving the flow of charge through any infinitesimal surface, by the current density, whose components are $j_i$. The density of current and density of charge are related by the conservation law:</p>
 
 	<p>$$ \rho_{,0} + j_{i,i} = 0$$</p>
@@ -60,8 +76,9 @@
 
 	<p>The quantity $T_{ij}$ is the stress-energy tensor--- it's space components tell you the forces between two adjacent regions of space, or equivalently, the flow of momentum across any surface. A tensor like this is just a vector of vectors. The momentum is a vector, and its current is separately vectorial for each of the vector components individually.</p>
 
-	<h4>Angular momentum conservation and improved stress-tensor</h4>
 
+	<br>
+	<p><b>Angular momentum conservation and improved stress-tensor</b></p>
 	<p>The angular momentum of an object is best viewed as an antisymmetric two-index tensor, but in three dimensions, you can map antisymmetric two-index tensors to vectors using the $\epsilon$ tensor, which in mathematics is called "taking the Poincare dual". The tensor language is important for higher dimensions, and also for your own peace of mind, because each use of the $\epsilon$ tensor is a right hand rule, it distinguishes left from right.</p>
 
 	<p>So to represent angular momentum as a vector you need to use a right hand rule. This is annoying, because physics at ordinary scales is reflection invariant, so you shouldn't be breaking this symmetry with your notation. But people do this to avoid using tensors, because they have more intuition for vectors. But the angular momentum vector ends up pointing in counterintuitive directions, while the angular momentum tensor points in the natural planes you would expect it to, so I don't think this is a good trade-off.</p>
@@ -88,8 +105,9 @@
 
 	<p>But now, you can use this symmetric $T$ tensor (which can be defined anywhere, just by moving the center of rotation far away) to define a new $L$ tensor by the formula above. This rearrangement of the $T$ tensor gives the symmetric Belinfante stress energy.</p>
 
-	<h4>Center of Mass</h4>
 
+	<br>
+	<p><b>Center of Mass</b></p>
 	<p>Newton's third law is used to establish a separate conservation law, it is used to show that the total motion of the center of mass is at a constant speed equal to the total momentum over the total mass. This law can be violated even when momentum and angular momentum are conserved, because it is derived from the Lagrangian symmetry under Galilean/Lorentz boosts, which doesn't hold when the equal and opposite forces depend on the absolute velocity.</p>
 
 	<p>To see it violated, consider a Lagrangian for two particles interacting with a rotationally invariant potential which keeps them together, and factorize it in the usual way into center of mass and relative coordinates:</p>
@@ -118,8 +136,9 @@
 
 	<p>A real physical system which conserves momentum and angular momentum but does not conserve center of mass is given by the motion of slow particles in liquid Helium at low enough temperatures that the fluid is a superfluid empty of quasi-particle excitations. The particles have forces which are fully translational and rotational invariant, but they are dependent on the velocity relative to the rest-frame of the Helium. I did not use this as an example only because I have no idea what the velocity dependent effective particle Lagrangian is for this system.</p>
 
-	<h4>Center of mass conservation in relativity</h4>
 
+	<br>
+	<p><b>Center of mass conservation in relativity</b></p>
 	<p>In relativity, center of mass and angular momentum conservation laws are unified in the Belinfonte form of the angular momentum:</p>
 
 	<p>$$ L_{ijk} = x_i T_{jk} - x_j T_{ik} $$</p>
@@ -130,8 +149,9 @@
 
 	<p>Where the first term can be seen to be the current time times the total momentum, while the second term is the center of mass position times the total mass. That this is constant is the content of the center of mass theorem.</p>
 
-	<h4>Modern Statement of Newton's Third Law</h4>
 
+	<br>
+	<p><b>Modern Statement of Newton's Third Law</b></p>
 	<p>When there is translational, rotational, and Lorentz invariance, there is a conserved stress-energy-momentum tensor $T_{\mu\nu}$, so that the conserved angular-momentum/center-of-mass tensor is given by the simple expression:</p>
 
 	<p>$$L_{\alpha\mu\nu} = x_\alpha T_{\mu\nu} - x_\mu T_{\alpha\nu}$$</p>
@@ -142,15 +162,14 @@
 
 
 	<hr>
-
 	       <div>
 	           
-	           <blockquote>
-	               <em><p>+10 for the incredible effort you've put in. If you're going to compare movement of mass and charge, then you need to be comparing conservation of charge and rest mass, not charge and momentum. In fact, I don't think you need to bring in charge at all because the answer is clear as it is just focusing on movement of mass and its conservation.</p></em>
-	               <blockquote>
+	           <ul>
+	               <div class="reply3"><p>+10 for the incredible effort you've put in. If you're going to compare movement of mass and charge, then you need to be comparing conservation of charge and rest mass, not charge and momentum. In fact, I don't think you need to bring in charge at all because the answer is clear as it is just focusing on movement of mass and its conservation.</p></div>
+	               <ul>
 	                   <p>You haven't understood. Mass is like charge, and momentum is its current, but Momentum is also like charge, it is conserved, and stress is its current. This is very important! It's the key point in this answer and in leftroundabout's earlier answer as well.</p>
-	               </blockquote>
-	           </blockquote>
+	               </ul>
+	           </ul>
 	       </div>
 
 
