@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <title>What is the significance of the S-matrix in physics?</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="load-mathjax.js" defer></script>
+  <style type="text/css">
+  		a:link {
+  		  	text-decoration:none;
+  		}
+  		.reply3 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  			/*padding: 4px;
+  			padding-left: 15px;*/
+  			/*color: #789922;*/
+  			color:#e00707;
+  		}
+  		p, ul, ol, li, h4 {
+  			font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+  		}
+  	</style>
+</head>
+
+<!--
+https://www.quora.com/What-is-the-significance-of-the-S-matrix-in-physics/answer/Ron-Maimon
+-->
+
+<body>
+
+	<h4>What is the significance of the S-matrix in physics?</h4>
+
+	<p>The S-matrix is an asymptotic operator which describes how particles going into a scattering event transform into particles going out. The S-matrix can be calculated from a Hamiltonian description, but the nice thing about it is that it does not require a Hamiltonian or Lagrangian description of the intermediate details of the scattering at all, it can be built up without regard to the local space-time structure. Because of this, you can use it to construct theories which are insensitive to a breakdown of naive space-time structure. You don't need any knowledge of the local structure of space and time to talk about incoming and outgoing particles, since these are defined at far away locations and far away times, so you know they can be described in the ordinary way, using plane waves.</p>
+
+	<p>From the S-matrix idea, you can reconstruct physics, but you need some assumptions. Feynman started with the idea of an electron and a photon, and classical electrodynamics in the classical limit, and found the Feynman rules for QED. Schwinger and Dyson found the same rules from the Hamiltonian description of QED, and it required a renormalization procedure to make sense of the diagrams in both pictures. So Feynman decided S-matrix was equivalent to field theory, and stuck with field theory for the rest of his career.</p>
+
+	<p>But others pursued a pure S-matrix theory. Chew and Mandelstam, working with consistency conditions, decided that there was enough information in the S-matrix to reconstruct all of physics. People worked hard throughout the 60s to show how this program would work, and a lot of people accepted this, but a lot of people also stuck to field theory too. At the time, the focus was the strong interaction.</p>
+
+	<p>The S-matrix description of Pions and Nucleons developed by Chew in the early 1960s transmuted into the effective field theory of Nambu and Weinberg in the late 1960s. Weinberg became convinced that the only solution to the S-matrix consistency conditions was a form of field theory, and he was sort of right, under the assumption of finitely many fundamental particles.</p>
+
+	<p>But Tullio Regge showed that particles can come in families, and Chew and Mandelstam persisted in looking for a theory of exchange of Regge trajectories. Vladimir Gribov described these Regge proceses with a calculus of diagrams, but this calculus ultimately had an interpretation in terms of a two-dimensional light-cone picture developed by Feynman, Gribov, and later followed up by Kenneth Wilson and nowadays is developed further by Sarada Rajeev. It still wasn't a new theory.</p>
+
+	<p>But in 1968, Veneziano found a formula for an S-matrix approximation (a first-order scattering amplitude) that was clearly completely different from field theory. This was the foundation of string theory, it developed into string theory over the following decades.</p>
+
+	<p>In the mid 1990s, the S-matrix picture was understood more completely as the form of holographic principle appropriate to asymptotically flat space time. The statement that "everything is in the S-matrix" is then more properly reinterpreted as the statement that the local physics is reconstructed from dynamics on holographic boundaries at the edge of the universe. This became accepted when it was demonstrated to work in AdS/CFT models, and now all this old stuff is water under the bridge. But betwee 1960 and 1974, there were two camps in physics who hated each other and did not hire each other, or read each other, the S-matrix people and the field theory people.</p>
+
+	<p>Both sides made spectacular progress, but the S-matrix folks made more progress and got beat up more for it, so I prefer to laud them more.</p>
+
+	<hr>
+
+	<br>
+	<ul>
+		<div class="reply3">
+			<p>In QFT there are observables that cannot be extracted from the S-Matrix, do you agree?<br>
+			Paul</p>
+		</div>
+		<ul>
+			<p>Maybe, sort of, in principle perhaps, but in real life they can still be extracted from S-matrix by a trick in realistic theories.</p>
+
+			<p>For a specific example of what looks like a clearly non S-matrix quantity, consider the thermal correlation functions, the correlation functions in an infinite thermal bath. The first interesting thing is that this doesn't make sense in gravity! A thermal state isn't stable to gravitational collapse if it is infinite, and it is unstable to turning into an S-matrix if it is bounded in extent in asymptotically flat space.</p>
+
+			<p>The same is true for any other quantity you think is not encoded in the S-matrix, although the encoding obviously becomes more and more horrible as the number of particles increases.</p>
+
+			<p>The basic principle is that if you can measure it by some device, consider assembling a robot, some hydrogen bombs, doing the experiment, encoding the result in the S-matrix by the robot beaming photons to inifinity, and then detonating the H-bombs to blow up the whole experiment. This is clearly an S-matrix process. So there's no obstacle in principle, but it's always a horrendously nonlocal thing, and it is extremely positivist sounding--- does nature really unscramble all this nonlocal data to make a field theory?</p>
+
+			<p>The way you would measure the properties of a thermal state is the way they do it at RHIC, by blasting enough particles together to construct the thermal state, and extracting data about it from the decay. This is a realistic version of the robot-H-bomb Coleman scenario.</p>
+
+			<p>This argument isn't wrong. the answer is clear in holographic string theory, nature really is unscrambling asymptotic data to make the local field theory, because it has to do this to even reconstruct the space-time.</p>
+
+			<p>But there are probably artificial field theories where there are additional non S-matrix observables, but these should not be possible to couple to gravity. An example might be theories with fractional dispersion, the Levi field theories, which are fundamentally nonlocal already, and might have additional things show up in local observables that don't translate to S-matrix. It's really a gravitational principle, although it was historically discovered in high energy with no regard to gravitational physics.</p>
+
+			<p>I thought about this for a long time as an undergraduate, and I always thought I could cook up a field theory with a non S-matrix observable, which is why I never took S-matrix seriously back then, and thought everyone had briefly gone mad in the 1960s. I now understand that even if I had managed to construct such a field theory (my idea was to find a field theory with nontrivial correlators and a unity S-matrix, which is not equivalent by change of variables to free field theory, because there is reversing dynamics in the middle, where a process happens, and then the reverse) it wouldn't make any difference to physics, because it wouldn't make sense in gravity. Understanding this was the epiphane which allowed me to grasp string theory.</p>
+		</ul>
+	</ul>
+	
+
+
+	
+
+
+
+
+
+
+	       
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
