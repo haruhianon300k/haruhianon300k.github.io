@@ -7,28 +7,35 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="load-mathjax.js" defer></script>
   <style type="text/css">
-    a:link {
-        text-decoration:none;
-    }
-    .reply3 {
-        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
-        /*padding: 4px;
-        padding-left: 15px;*/
-        /*color: #789922;*/
-        color:#e00707;
-    }
-    p, ul, ol, li, h4 {
-        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
-    }
+	    a:link {
+	        text-decoration:none;
+	    }
+	    .reply3 {
+	        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+	        /*padding: 4px;
+	        padding-left: 15px;*/
+	        /*color: #789922;*/
+	        color:#e00707;
+	    }
+	    p, ul, ol, li, h4 {
+	        font-family: Arial, Helvetica, Geneva, Sans-serif, sans-serif; 
+	    }
   </style>
 </head>
 
-<!-- Write your comments here -->
+
+
+<!--
+https://physics.stackexchange.com/q/15958
+-->
+
+
 
 <body>
 
 	<h4>Why the Principle of Least Action?</h4>
 
+	<div class="reply3">
 		<p>I'll be generous and say it might be reasonable to assume that nature would tend to minimize, or maybe even maximize, the integral over time of $T-V$.  Okay, fine.  You write down the action functional, require that it be a minimum (or maximum), and arrive at the Euler-Lagrange equations.  Great.  But now you want these Euler-Lagrange equations to not just be derivable from the Principle of Least Action, but you want it to be <i>equivalent</i> to the Principle of Least Action.  After thinking about it for awhile, you realize that this implies that the Principle of Least Action isn't really the Principle of Least Action at all:  it's the "Principle of Stationary Action".  Maybe this is just me, but as generous as I may be, I will not grant you that it is "natural" to assume that nature tends to choose the path that is stationary point of the action functional.  Not to mention, it isn't even obvious that there is such a path, or if there is one, that it is unique.</p>
 
 		<p>But the problems don't stop there.  Even if you grant the "Principle of Stationary Action" as fundamentally and universally true, you realize that not all the equations of motions that you would like to have are derivable from this if you restrict yourself to a Lagrangian of the form $T-V$.  As far as I can tell, from here it's a matter of playing around until you get a Lagrangian that produces the equations of motion you want.</p>
@@ -36,6 +43,7 @@
 		<p>From my (perhaps naive point of view), there is nothing at all particularly natural (although I will admit, it is quite useful) about the formulation of classical mechanics this way.  Of course, this wouldn't be such a big deal if these classical ideas stayed with the classical physics, but these ideas are absolutely fundamental to how we think about things as modern as quantum field theory.</p>
 
 		<p>Could someone please convince me that there is something natural about the choice of the Lagrangian formulation of classical mechanics (I don't mean in comparison with the Hamiltonian formulation; I mean <i>period</i>), and in fact, that it is so natural that we would not even dare abandon these ideas?</p>
+	</div>
 
 		<hr>
 
@@ -67,7 +75,7 @@
 	           <ul>
 	               <div class="reply3"><p>What do you mean by conservation of information?</p></div>
 	               <ul>
-	                   <p>When you don't know the initial conditions, you place a probability distribution ρ on these, then you evolve ρ by evolving the initial conditions according to Newton's laws. Then the information missing in the encoded ignorance of the probability distribution ρ, which up to an infinite log-divergent constant (depending on the phase space discretization), ∫ρlogρdxdp over phase space, is constant. This is the 19th century law of conservation of entropy in classical reversible mechanics, basically uncovered by Boltzmann/Lorschmidt, Liouville's theorem.</p>
+	                   <p>When you don't know the initial conditions, you place a probability distribution $\rho$ on these, then you evolve $\rho$ by evolving the initial conditions according to Newton's laws. Then the information missing in the encoded ignorance of the probability distribution $\rho$, which up to an infinite log-divergent constant (depending on the phase space discretization), $\int \rho\log\rho dx dp$ over phase space, is constant. This is the 19th century law of conservation of entropy in classical reversible mechanics, basically uncovered by Boltzmann/Lorschmidt, Liouville's theorem.</p>
 	               </ul>
 
 	           </ul>

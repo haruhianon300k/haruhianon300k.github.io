@@ -23,12 +23,17 @@
   </style>
 </head>
 
-<!-- Write your comments here -->
+
+<!--
+https://physics.stackexchange.com/q/15006
+-->
+
 
 <body>
 
-	<h3>Mathematically-oriented Treatment of General Relativity</h3>
+	<h4>Mathematically-oriented Treatment of General Relativity</h4>
 
+	<div class="reply3">
 	<p>Can someone suggest a textbook that treats general relativity from a rigorous mathematical perspective? Ideally, such a book would</p>
 
 	<ol>
@@ -43,12 +48,15 @@
 	<p><b>Addendum (1):</b> I did not intend to start a war over notation. As I said in one of the comments below, I think indicial notation together with the summation convention is very useful. The coordinate-free approach has its uses as well and I see no reason why the two can't peacefully coexist. What I meant by "mathematics notation" vs. "physics notation" is the following: Consider, as an example, one of the leading texts on smooth manifolds, John Lee's Introduction to Smooth Manifolds. I am very accustomed to this notation and it very similar to the notation used by Tu's Introduction to Manifolds, for instance, and other popular texts on differential geometry. On the other hand, take Frankel's Geometry of Physics. Now, this is a nice book but it is very difficult for me to follow it because 1) Lack of proofs and 2)the notation does not agree with other math texts that I'm accustomed to. Of course, there are commonalities but enough is different that I find it really annoying to try to translate between the two...</p>
 
 	<p><b>Addendum (2):</b> For the benefit of future readers, In addition to suggestions below, I have found another text that also closely-aligns with the criteria I stated above. It is, *Spacetime: Foundations of General Relativity and Differential Geometry* by Marcus Kriele. The author begins by discussing affine geometry, analysis on manifolds, multilinear algebra and other underpinnings and leads into general relativity at roughly the midpoint of the text. The notation is also fairly consistent with the books on differential geometry I mentioned above.</p>
+	</div>
 
 	<hr>
 
 	<p>The Physics work in this field is rigorous enough. Hawking and Ellis is a standard reference, and it is perfectly fine in terms of rigor.</p>
 
-	<h4>Digression on notation</h4>
+
+	<br>
+	<p><b>Digression on notation</b></p>
 
 	<p>If you have a tensor contraction of some sort of moderate complexity, for example:</p>
 
@@ -66,7 +74,10 @@
 
 	<p>This means that any attempt at an index free notation which uses parentheses, like mathematicians do, is bound to fail miserably: it will have exponentially many different expressions for the same tensor expression. In the mathematics literature, you often see tensor spaces defined in terms of maps, with many "natural isomorphisms" between different classes of maps. This reflects the awful match between functional notation and index notation.</p>
 
-	<h4>Diagrammatic Formalisms fix Exponential Growth</h4>
+
+
+	<br>
+	<p><b>Diagrammatic Formalisms fix Exponential Growth</b></p>
 
 	<p>Because the parenthesized notation fails for tensors, and index contraction matches objects in pairs, there are many useful diagrammatic formalisms for tensorial objects. Diagrams represent contractions in a way that does not require a name for each index, because the diagram lines match up sockets to plugs with a line, without using a name.</p>
 
@@ -82,11 +93,13 @@
 
 	<p>But now, what about adverb modifiers, like <b>"very"</b>, as in <b>"John is running very quickly"</b>? You can represent these are functions from adverbs to adverbs, or as functions from predicates to predicates, depending on how you parenthesize:</p>
 
-	<p><b>(("very"("quickly"))("Is running"))("John")</b></p>
+	<ul>
+		<p><b>(("very"("quickly"))("Is running"))("John")</b></p>
 
-	<p>vs.</p>
+		<p><i>vs.</i></p>
 
-	<p><b>(("very")(("quickly")("Is running"))("John")</b></p>
+		<p><b>(("very")(("quickly")("Is running"))("John")</b></p>
+	</ul>
 
 	<p>Which of these two parenthetization is correct define two schools of semantic philosophy. There is endless debate on the proper Fregian representation of different parts of speech. The resolution, as always, is to identify the proper diagrammatic form, which removes the exponential ambiguity of parenthesized functional representation. The fact that philosophers have not done this in <i>100 years</i> of this type of debate on Fregian semantics shows that the field is not healthy.</p>
 
