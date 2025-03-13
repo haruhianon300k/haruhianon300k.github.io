@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extending Row of Cells - Direction Controls</title>
+  
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        overflow-x: auto;
+      }
+
+      #row-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .row {
+        display: flex;
+        min-width: 100%;
+        margin-bottom: 5px;
+      }
+
+      .row.rtl {
+        flex-direction: row-reverse;
+      }
+
+      .cell {
+        display: inline-block;
+        width: 63px;
+        height: 37px;
+        border: 1px solid #ccc;
+        margin-right: -1px;
+        vertical-align: top;
+        text-align: center;
+        background-color: white;
+      }
+
+      .symbol-container {
+        height: 35px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .symbol-container img {
+        max-width: 65px;
+        max-height: 90px;
+        transform: scaleX(-1); /* Flip images horizontally by default in LTR mode */
+      }
+
+      .row.rtl .symbol-container img {
+        transform: scaleX(1); /* Unflip images in RTL mode */
+      }
+
+      .number {
+        color: white;
+      }
+
+      #controls {
+        margin-bottom: 80px;
+      }
+
+      .control-group {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+      }
+
+      button {
+        padding: 8px 12px;
+        margin-right: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+
+      label {
+        margin-right: 5px;
+        font-weight: bold;
+      }
+
+      input[type="number"] {
+        padding: 8px;
+        width: 80px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      .stats-container {
+        background-color: #f8f8f8;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+      
+      .stat-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      
+      .stat-item {
+        margin-right: 30px;
+        font-weight: bold;
+      }
+      
+      .stat-item span {
+        font-weight: normal;
+      }
+      
+      .repeat-cell {
+        background-color: #a5d6a7 !important;
+      }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <div class="control-group">
+      <label for="cell-count">Cells to add:</label>
+      <input type="number" id="cell-count" min="1" max="100" value="13">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn">Stop</button>
+      <button id="add-instant-btn">Add Instant</button>
+      <button id="add-cell-btn">Add Cell</button>
+      <button id="reset-btn">Reset</button>
+      <button id="toggle-direction-btn">Right-to-Left</button>
+    </div>
+    
+    <div class="control-group">
+      <label for="initial-symbol">Initial Symbol:</label>
+      <select id="initial-symbol"></select>
+      
+      <label for="initial-number">Initial Number:</label>
+      <select id="initial-number"></select>
+      
+      <label for="cycles-per-row">Cycles per Row:</label>
+      <input type="number" id="cycles-per-row" min="1" max="20" value="4">
+      
+      <button id="apply-initial-btn">Apply</button>
+    </div>
+    
+    <div id="stats-container" class="stats-container">
+      <div class="stat-row">
+        <div class="stat-item">Initial Pair: <span id="initial-pair">-</span></div>
+        <div class="stat-item">Current Pair: <span id="current-pair">-</span></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-item">Total Cells: <span id="total-cells">0</span></div>
+        <div class="stat-item">Cells Until Repeat: <span id="cells-until-repeat">-</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="row-container"></div>
+  
+  <script>
+    // Configuration
+    let cellCount = 0;
+    const initialCells = 0;
+    const totalSymbols = 20;
+    const maxNumber = 13;
+    let cyclesPerRow = 4;
+    let intervalId = null;
+    let initialSymbolIndex = 0;
+    let initialNumberIndex = 0;
+    let isRTL = false;
+    let pairsTracking = new Set();
+    let firstRepeatAt = -1;
+    let initialPair = '';
+    let currentPair = '';
+    
+    // DOM elements for stats
+    const initialPairElement = document.getElementById('initial-pair');
+    const currentPairElement = document.getElementById('current-pair');
+    const totalCellsElement = document.getElementById('total-cells');
+    const cellsUntilRepeatElement = document.getElementById('cells-until-repeat');
+    const cyclesPerRowInput = document.getElementById('cycles-per-row');
+    
+    // Tonalli sequence (20 day signs, using the exact filenames)
+    const tonalliSequence = [
+      "Cipatli",    
+      "Ehecatl",    
+      "Calli",      
+      "Cuetzpalin", 
+      "Coatl",      
+      "Miquiztli",  
+      "Mazatl2",    
+      "Totchli",    
+      "Atl",        
+      "Itzcuintli", 
+      "Ozomahtli",  
+      "Malinalli",  
+      "Acatl",      
+      "Ocelotl",    
+      "Cuauthli",   
+      "Cozcuauhtli",
+      "Ollin",      
+      "Tecpatl",    
+      "Tlaloc2",    
+      "Xochitl2"    
+    ];
+    
+    // Better names for display purposes
+    const tonalliDisplayNames = [
+      "Cipatli (Alligator)",
+      "Ehecatl (Wind)",
+      "Calli (House)",
+      "Cuetzpalin (Lizard)",
+      "Coatl (Snake)",
+      "Miquiztli (Death)",
+      "Mazatl (Deer)",
+      "Totchli (Rabbit)",
+      "Atl (Water)",
+      "Itzcuintli (Dog)",
+      "Ozomahtli (Monkey)",
+      "Malinalli (Grass)",
+      "Acatl (Reed)",
+      "Ocelotl (Jaguar)",
+      "Cuauthli (Eagle)",
+      "Cozcuauhtli (Vulture)",
+      "Ollin (Movement)",
+      "Tecpatl (Flint)",
+      "Tlaloc (Rain)",
+      "Xochitl (Flower)"
+    ];
+    
+    // DOM elements
+    const rowContainer = document.getElementById('row-container');
+    const startBtn = document.getElementById('start-btn');
+    const stopBtn = document.getElementById('stop-btn');
+    const addCellBtn = document.getElementById('add-cell-btn');
+    const addInstantBtn = document.getElementById('add-instant-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const toggleDirectionBtn = document.getElementById('toggle-direction-btn');
+    const cellCountInput = document.getElementById('cell-count');
+    const initialSymbolSelect = document.getElementById('initial-symbol');
+    const initialNumberSelect = document.getElementById('initial-number');
+    const applyInitialBtn = document.getElementById('apply-initial-btn');
+    
+    // Event listeners
+    startBtn.addEventListener('click', startAdding);
+    stopBtn.addEventListener('click', stopAdding);
+    addCellBtn.addEventListener('click', addSingleCell);
+    addInstantBtn.addEventListener('click', addInstantCells);
+    resetBtn.addEventListener('click', resetCells);
+    toggleDirectionBtn.addEventListener('click', toggleDirection);
+    applyInitialBtn.addEventListener('click', applyInitialSettings);
+    
+    // Initialize controls
+    function initializeControls() {
+      // Populate initial symbol dropdown
+      initialSymbolSelect.innerHTML = '';
+      tonalliDisplayNames.forEach((name, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = name;
+        initialSymbolSelect.appendChild(option);
+      });
+      
+      // Populate initial number dropdown
+      initialNumberSelect.innerHTML = '';
+      for (let i = 1; i <= maxNumber; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        initialNumberSelect.appendChild(option);
+      }
+      
+      // Set default values
+      initialSymbolSelect.value = initialSymbolIndex;
+      initialNumberSelect.value = initialNumberIndex + 1;
+      
+      // Disable stop button initially
+      stopBtn.disabled = true;
+    }
+    
+    // Initialize with cells
+    initializeControls();
+    initializeCells();
+    
+    function createNewRow() {
+      const row = document.createElement('div');
+      row.className = isRTL ? 'row rtl' : 'row';
+      rowContainer.appendChild(row);
+      return row;
+    }
+    
+    function getCurrentRow() {
+      let rows = rowContainer.querySelectorAll('.row');
+      if (rows.length === 0) {
+        return createNewRow();
+      }
+      return rows[rows.length - 1];
+    }
+    
+    function initializeCells() {
+      rowContainer.innerHTML = '';
+      cellCount = 0;
+      
+      // Create first row
+      createNewRow();
+      
+      for (let i = 0; i < initialCells; i++) {
+        addCell();
+      }
+    }
+    
+    function toggleDirection() {
+      isRTL = !isRTL;
+      
+      // Update the button text
+      toggleDirectionBtn.textContent = isRTL ? "Left-to-Right" : "Right-to-Left";
+      
+      // Reset and reinitialize to apply direction change
+      resetCells();
+    }
+    
+    function addCell() {
+      cellCount++;
+      
+      // Calculate how many cells per row based on cycles
+      const cellsPerRow = cyclesPerRow * maxNumber;
+      
+      // Check if we need to create a new row (after completing X cycles)
+      if ((cellCount - 1) % cellsPerRow === 0 && cellCount > 1) {
+        createNewRow();
+      }
+      
+      // Get current row
+      const currentRow = getCurrentRow();
+      
+      // Get the base name from the tonalli sequence based on the current cell index and initial settings
+      const symbolIndex = (initialSymbolIndex + cellCount - 1) % totalSymbols;
+      const baseName = tonalliSequence[symbolIndex];
+      
+      // Calculate display number (cycling 1 to 13)
+      const displayNumber = ((initialNumberIndex + cellCount - 1) % maxNumber) + 1;
+      
+      // Create pair identifier
+      const pairKey = `${baseName}-${displayNumber}`;
+      
+      // Update current pair
+      currentPair = `${tonalliDisplayNames[symbolIndex % totalSymbols].split(' ')[0]} - ${displayNumber}`;
+      
+      // If this is the first cell, set initial pair
+      if (cellCount === 1) {
+        initialPair = currentPair;
+      }
+      
+      // Check if this pair has appeared before
+      const isRepeat = pairsTracking.has(pairKey);
+      
+      // Add current pair to tracking set
+      pairsTracking.add(pairKey);
+      
+      // Record first repeat if found and not already recorded
+      if (isRepeat && firstRepeatAt === -1) {
+        firstRepeatAt = cellCount;
+      }
+      
+      // Create cell element
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      
+      // If this is a repeat, add the repeat class
+      if (isRepeat) {
+        cell.classList.add('repeat-cell');
+      }
+      
+      // Create symbol container and image element
+      const symbolContainer = document.createElement('div');
+      symbolContainer.className = 'symbol-container';
+      const img = document.createElement('img');
+      img.alt = `Symbol ${baseName}`;
+      
+      // Attempt to load the image with various filename variations
+      tryLoadImage(img, baseName);
+      symbolContainer.appendChild(img);
+      
+      // Create number element
+      const numberElement = document.createElement('div');
+      numberElement.className = 'number';
+      numberElement.textContent = displayNumber;
+      
+      // Append everything to the cell
+      cell.appendChild(symbolContainer);
+      cell.appendChild(numberElement);
+      
+      // Add cell to the row
+      currentRow.appendChild(cell);
+      
+      // Update stats display
+      updateStats();
+      
+      // Scroll to the new cell
+      cell.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+    
+    function addSingleCell() {
+      addCell();
+    }
+    
+    function addInstantCells() {
+      const count = parseInt(cellCountInput.value) || 1;
+      for (let i = 0; i < count; i++) {
+        addCell();
+      }
+    }
+    
+    function startAdding() {
+      if (intervalId === null) {
+        const count = parseInt(cellCountInput.value) || 1;
+        let cellsAdded = 0;
+        
+        intervalId = setInterval(() => {
+          addCell();
+          cellsAdded++;
+          
+          if (cellsAdded >= count) {
+            stopAdding();
+          }
+        }, 500);
+        
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+      }
+    }
+    
+    function stopAdding() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
+      }
+    }
+    
+    function resetCells() {
+      stopAdding();
+      rowContainer.innerHTML = '';
+      cellCount = 0;
+      pairsTracking = new Set();
+      firstRepeatAt = -1;
+      initialPair = '';
+      currentPair = '';
+      updateStats();
+      createNewRow();
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+    }
+    
+    function updateStats() {
+      initialPairElement.textContent = initialPair || '-';
+      currentPairElement.textContent = currentPair || '-';
+      totalCellsElement.textContent = cellCount;
+      cellsUntilRepeatElement.textContent = (firstRepeatAt > 0) ? firstRepeatAt : '-';
+    }
+    
+    function applyInitialSettings() {
+      initialSymbolIndex = parseInt(initialSymbolSelect.value) || 0;
+      initialNumberIndex = parseInt(initialNumberSelect.value) - 1 || 0;
+      cyclesPerRow = parseInt(cyclesPerRowInput.value) || 4;
+      resetCells();
+    }
+    
+    // Modified function to handle filename variations with relative paths
+    function tryLoadImage(img, baseName, attempt = 0) {
+      const variations = [
+        `img/svg/${baseName}.svg`,
+        `img/svg/${baseName.toUpperCase()}.svg`,
+        `img/svg/${baseName + "1"}.svg`,
+        `img/svg/${baseName.toUpperCase() + "1"}.svg`,
+        `img/svg/${baseName}.jpg`,
+        `img/svg/${baseName.toUpperCase()}.jpg`,
+        `img/svg/${baseName + "1"}.jpg`,
+        `img/svg/${baseName.toUpperCase() + "1"}.jpg`,
+        `/api/placeholder/65/65`
+      ];
+      
+      if (attempt < variations.length) {
+        img.src = variations[attempt];
+        img.onerror = function() {
+          tryLoadImage(img, baseName, attempt + 1);
+        };
+      }
+    }
+  </script>
+</body>
+</html>
